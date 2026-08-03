@@ -470,8 +470,23 @@ export async function downloadLogos(
       }
     }
 
-    const errors: string[] = [];
+    // Some og:image paths carry a bogus "uploads-images/" segment (the file
+    // actually sits one level up), and the 180px variant occasionally 404s
+    // where the 100px one exists — try those shapes too.
+    const candidates: string[] = [];
     for (const candidate of station.logoCandidates) {
+      for (const variant of [
+        candidate,
+        candidate.replace('/uploads-images/', '/'),
+        candidate.replace('/180/', '/100/'),
+        candidate.replace('/uploads-images/', '/').replace('/180/', '/100/'),
+      ]) {
+        if (!candidates.includes(variant)) candidates.push(variant);
+      }
+    }
+
+    const errors: string[] = [];
+    for (const candidate of candidates) {
       const extension = extname(new URL(candidate).pathname) || '.png';
       const file = `${station.slug}${extension}`;
       try {
