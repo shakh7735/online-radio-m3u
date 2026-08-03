@@ -54,8 +54,6 @@ https://hls.newradio.ru/novoeradio/112/playlist.m3u8
 https://cdn.pifm.ru/mp3
 #EXTINF:-1 tvg-id="pioner-fm" tvg-name="Пионер FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/pioner-fm.png" group-title="Радиостанции России",Пионер FM (Березники 98.7 FM)
 https://myradio24.org/pionerfm_256
-#EXTINF:-1 tvg-id="piter-fm" tvg-name="Питер FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/piter-fm.png" group-title="Радиостанции России",Питер FM (Санкт-Петербург 100.9 FM)
-https://radiosolo.ru/radio/piterfm/icecast.audio
 #EXTINF:-1 tvg-id="107" tvg-name="Радио 107" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/107.jpg" group-title="Радиостанции России",Радио 107 (Анапа 99.4 FM)
 https://online.radio107.ru:8443/radio107_256.mp3
 #EXTINF:-1 tvg-id="radio-7" tvg-name="Радио 7" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-7.png" group-title="Радиостанции России",Радио 7 (Волгоград 94.9 FM)
@@ -66,16 +64,10 @@ https://radioadam.hostingradio.ru/radioadam256.mp3
 https://radio.mediacdn.ru/ashkadar.mp3
 #EXTINF:-1 tvg-id="baltik-plyus" tvg-name="Радио Балтик Плюс" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/baltik-plyus.png" group-title="Радиостанции России",Радио Балтик Плюс (Калининград 105.2 FM)
 https://bp.koenig.ru:8443/Baltic_Plus_mp3_128.mp3
-#EXTINF:-1 tvg-id="vanya" tvg-name="Радио ВАНЯ" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/vanya.png" group-title="Радиостанции России",Радио ВАНЯ (Омск 88.1 FM)
-https://radiokrug.ru/radio/vanya/icecast.audio
-#EXTINF:-1 tvg-id="radio-sahalii-viktoriya" tvg-name="Радио Виктория Саха" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-sahalii-viktoriya.png" group-title="Радиостанции России",Радио Виктория Саха (Якутск 104.5 FM)
-https://radiosolo.ru/radio/viksaha/icecast.audio
 #EXTINF:-1 tvg-id="radio-gordost" tvg-name="Радио Гордость" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-gordost.webp" group-title="Радиостанции России",Радио Гордость (Волгоград 106.4 FM)
 https://rgordost.hostingradio.ru/rgordost128.aacp
 #EXTINF:-1 tvg-id="dacha" tvg-name="Радио Дача" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/dacha.png" group-title="Радиостанции России",Радио Дача (Волгоград 97.6 FM)
 https://www.radiodacha.ru/player.htm
-#EXTINF:-1 tvg-id="dlya-dvoix" tvg-name="Радио для двоих" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/dlya-dvoix.jpg" group-title="Радиостанции России",Радио для двоих (Красноярск 68.9 УКВ)
-https://radiokrug.ru/radio/radiofortwo/icecast.audio
 #EXTINF:-1 tvg-id="zvezda" tvg-name="Радио ЗВЕЗДА" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/zvezda.jpg" group-title="Радиостанции России",Радио ЗВЕЗДА (Волгоград 99.6 FM)
 https://zvezda-radio-rzv.mediacdn.ru/radio/zvezda/zvezda_128
 #EXTINF:-1 tvg-id="intervolna" tvg-name="Радио Интерволна" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/intervolna.png" group-title="Радиостанции России",Радио Интерволна (Челябинск 102.9 FM)
@@ -130,8 +122,6 @@ https://icecast-vgtrk.cdnvideo.ru/rrzonam_mp3_192kbps
 http://www.ruhit.fm/player.htm
 #EXTINF:-1 tvg-id="rus" tvg-name="Радио Русь" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/rus.png" group-title="Радиостанции России",Радио Русь (Армавир 96.1 FM)
 https://radio-holding.ru:9433/rus
-#EXTINF:-1 tvg-id="si" tvg-name="Радио СИ" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/si.png" group-title="Радиостанции России",Радио СИ (Екатеринбург 103.7 FM)
-https://www.radioc.ru/broadcast.php
 #EXTINF:-1 tvg-id="sibir" tvg-name="Радио Сибирь" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sibir.png" group-title="Радиостанции России",Радио Сибирь (Красноярск 95.8 FM)
 https://stream.radiosibir.ru:8093/rp
 #EXTINF:-1 tvg-id="chocolate" tvg-name="Радио Шоколад" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/chocolate.png" group-title="Радиостанции России",Радио Шоколад (Екатеринбург 91.9 FM)
@@ -158,8 +148,6 @@ https://retro.hostingradio.ru:8043/retro256.mp3
 https://myradio24.org/2761
 #EXTINF:-1 tvg-id="russkoe" tvg-name="Русское Радио" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/russkoe.png" group-title="Радиостанции России",Русское Радио (Волгоград 105.6 FM)
 https://hls-01-rusradio.hostingradio.ru/rusradio/96/playlist.m3u8
-#EXTINF:-1 tvg-id="sol-fm" tvg-name="Соль FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sol-fm.jpg" group-title="Радиостанции России",Соль FM (Кудымкар 101.5 FM)
-https://solfm.ru:8443/online320
 #EXTINF:-1 tvg-id="sputnik-fm" tvg-name="Спутник ФМ" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sputnik-fm.png" group-title="Радиостанции России",Спутник ФМ (Уфа 107.0 FM)
 https://radio.mediacdn.ru/sputnik_fm.mp3
 #EXTINF:-1 tvg-id="tavan" tvg-name="Таван радио" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/tavan.jpg" group-title="Радиостанции России",Таван радио (Чебоксары 100.3 FM)
