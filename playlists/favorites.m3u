@@ -1,0 +1,16 @@
+#EXTM3U
+#PLAYLIST:Избранное
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/aurora.png" group-title="Избранное",Aurora
+https://de.auroramedia.am/aurora.mp3
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sputnik-armenia.png" group-title="Избранное",Sputnik Армения
+https://icecast-rian.cdnvideo.ru/voicearm1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sputnik-russia.png" group-title="Избранное",Sputnik Россия
+https://icecast-rian.cdnvideo.ru/voicerus
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/comedy-radio.png" group-title="Избранное",Comedy Radio
+https://hls-01-gpm.hostingradio.ru/comedyradio495/128/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/standup-comedy-radio.png" group-title="Избранное",StandUP — Comedy Radio
+https://pub0102.101.ru:8443/stream/pro/aac/64/447
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/comedy-club.png" group-title="Избранное",Comedy Club
+https://pub0202.101.ru:8443/stream/pro/aac/64/446
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/women-standup.png" group-title="Избранное",Women StandUP
+https://pub0102.101.ru:8443/stream/pro/aac/64/448

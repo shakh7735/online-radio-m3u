@@ -1,0 +1,38 @@
+#EXTM3U
+#PLAYLIST:Онлайн-радио
+#EXTINF:-1 tvg-id="avtoradio" tvg-name="Авторадио" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/avtoradio.png" group-title="Радиостанции Армении",Авторадио (Ереван 89.8 FM)
+https://hls-01-gpm.hostingradio.ru/avtoradio495/playlist.m3u8
+#EXTINF:-1 tvg-id="evropa-plyus" tvg-name="Европа Плюс" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/evropa-plyus.png" group-title="Радиостанции Армении",Европа Плюс (Ереван 87.5 FM)
+https://hls-02-europaplus.emgsound.ru/11/112/playlist.m3u8
+#EXTINF:-1 tvg-id="arm" tvg-name="Общественное радио Армении" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/arm.png" group-title="Радиостанции Армении",Общественное радио Армении (Ереван 107.6 FM)
+https://eu1.stream4cast.com/proxy/publicra/stream
+#EXTINF:-1 tvg-id="mir" tvg-name="Радио МИР" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/mir.jpg" group-title="Радиостанции Армении",Радио МИР (Ереван 93.7 FM)
+https://icecast-mirtv.cdnvideo.ru/radio_mir_256
+#EXTINF:-1 tvg-id="shanson-armeniya" tvg-name="Радио Шансон Армения" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/shanson-armeniya.png" group-title="Радиостанции Армении",Радио Шансон Армения (Ереван 90.1 FM)
+https://chanson.hostingradio.ru:8041/chanson128.mp3
+#EXTINF:-1 tvg-id="russkoe-radio-am" tvg-name="Русское Радио Армения" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/russkoe-radio-am.png" group-title="Радиостанции Армении",Русское Радио Армения (Ереван 104.9 FM)
+https://hls-01-rusradio.webcaramba.com/rusradio-yerevan/96/playlist.m3u8
+#EXTINF:-1 tvg-id="siti-fm" tvg-name="Сити-ФМ" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/siti-fm.jpg" group-title="Радиостанции Армении",Сити-ФМ (Ереван 106.0 FM)
+https://icecast-rian.cdnvideo.ru/voicearm1
+#EXTINF:-1 tvg-id="armenian-news-radio-fm-1065" tvg-name="Armenian News Radio FM 106.5" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/armenian-news-radio-fm-1065.png" group-title="Радиостанции Армении",Armenian News Radio FM 106.5 (Ереван 106.5 FM)
+http://212.34.233.78:8000/live
+#EXTINF:-1 tvg-id="kiss-fm-am" tvg-name="Kiss FM Armenia" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/kiss-fm-am.png" group-title="Радиостанции Армении",Kiss FM Armenia (Ереван 88.3 FM)
+https://de.auroramedia.am/kissfm.mp3
+#EXTINF:-1 tvg-id="jan" tvg-name="Radio Jan" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/jan.jpg" group-title="Радиостанции Армении",Radio Jan (Ереван 90.7 FM)
+http://s7.voscast.com:10258/radiojan
+#EXTINF:-1 tvg-id="radio-marshall" tvg-name="Radio Marshall" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-marshall.png" group-title="Радиостанции Армении",Radio Marshall (Ереван 103.5 FM)
+https://eu.stream4cast.com/proxy/marshallfm/stream
+#EXTINF:-1 tvg-id="vem" tvg-name="Vem Radio" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/vem.png" group-title="Радиостанции Армении",Vem Radio (Ереван 91.1 FM)
+https://eu1.stream4cast.com/proxy/vemradio/stream
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/aurora.png" group-title="Избранное",Aurora
+https://de.auroramedia.am/aurora.mp3
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sputnik-russia.png" group-title="Избранное",Sputnik Россия
+https://icecast-rian.cdnvideo.ru/voicerus
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/comedy-radio.png" group-title="Избранное",Comedy Radio
+https://hls-01-gpm.hostingradio.ru/comedyradio495/128/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/standup-comedy-radio.png" group-title="Избранное",StandUP — Comedy Radio
+https://pub0102.101.ru:8443/stream/pro/aac/64/447
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/comedy-club.png" group-title="Избранное",Comedy Club
+https://pub0202.101.ru:8443/stream/pro/aac/64/446
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/women-standup.png" group-title="Избранное",Women StandUP
+https://pub0102.101.ru:8443/stream/pro/aac/64/448
