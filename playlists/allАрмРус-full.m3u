@@ -28,14 +28,26 @@ https://chanson.hostingradio.ru:8041/chanson128.mp3
 https://hls-01-rusradio.webcaramba.com/rusradio-yerevan/96/playlist.m3u8
 #EXTINF:-1 tvg-id="armenian-news-radio-fm-1065" tvg-name="Armenian News Radio FM 106.5" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/armenian-news-radio-fm-1065.png" group-title="Армения",Armenian News Radio FM 106.5 (Ереван 106.5 FM)
 http://212.34.233.78:8000/live
+#EXTINF:-1 tvg-id="fm-1055" tvg-name="FM 105.5" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/fm-1055.png" group-title="Армения",FM 105.5 (Ереван 105.5 FM)
+http://14842.cloudrad.io:9536/live?ver=658784
 #EXTINF:-1 tvg-id="kiss-fm-am" tvg-name="Kiss FM Armenia" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/kiss-fm-am.png" group-title="Армения",Kiss FM Armenia (Ереван 88.3 FM)
 https://de.auroramedia.am/kissfm.mp3
+#EXTINF:-1 tvg-id="pop-fm" tvg-name="POP FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/pop-fm.png" group-title="Армения",POP FM (Ереван 89.3 FM)
+https://eu1.stream4cast.com/proxy/pop/stream
+#EXTINF:-1 tvg-id="aurora" tvg-name="Radio Aurora" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/aurora.png" group-title="Армения",Radio Aurora (Ереван 100.7 FM)
+https://am.radioaurora.am/al.mp3
+#EXTINF:-1 tvg-id="radio-hay" tvg-name="Radio Hay" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-hay.png" group-title="Армения",Radio Hay (Ереван 104.1 FM)
+http://14678.cloudrad.io:9440/live?ver=684682
 #EXTINF:-1 tvg-id="jan" tvg-name="Radio Jan" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/jan.jpg" group-title="Армения",Radio Jan (Ереван 90.7 FM)
 http://s7.voscast.com:10258/radiojan
 #EXTINF:-1 tvg-id="radio-marshall" tvg-name="Radio Marshall" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-marshall.png" group-title="Армения",Radio Marshall (Ереван 103.5 FM)
 https://eu.stream4cast.com/proxy/marshallfm/stream
+#EXTINF:-1 tvg-id="van-fm" tvg-name="Radio Van" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/van-fm.jpg" group-title="Армения",Radio Van (Ереван 103.0 FM)
+https://stream.radiovan.fm:8000/96_stereo
 #EXTINF:-1 tvg-id="vem" tvg-name="Vem Radio" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/vem.png" group-title="Армения",Vem Radio (Ереван 91.1 FM)
 https://eu1.stream4cast.com/proxy/vemradio/stream
+#EXTINF:-1 tvg-id="yerevan-fm" tvg-name="Yerevan FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/yerevan-fm.jpg" group-title="Армения",Yerevan FM (Ереван 101.9 FM)
+https://eu1.stream4cast.com/proxy/arradioi/stream
 #EXTINF:-1 tvg-id="100-radio" tvg-name="100% Радио Москва 71.3 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/100-radio.jpg" group-title="Москва",100% Радио Москва 71.3 FM
 https://myradio24.org/93299
 #EXTINF:-1 tvg-id="detskoe" tvg-name="Детское радио Москва 96.8 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/detskoe.png" group-title="Москва",Детское радио Москва 96.8 FM
@@ -134,6 +146,8 @@ https://hls-01-gpm.hostingradio.ru/relaxfm495/128/playlist.m3u8
 https://nashe1.hostingradio.ru/rock-256
 #EXTINF:-1 tvg-id="russkoe" tvg-name="Русское радио Москва 105.7 FM, 71.30 УКВ" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/russkoe.png" group-title="Москва",Русское радио Москва 105.7 FM, 71.30 УКВ
 https://hls-01-rusradio.hostingradio.ru/rusradio/96/playlist.m3u8
+#EXTINF:-1 tvg-id="kiss-fm" tvg-name="KISS FM Москва 107.0 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/kiss-fm.png" group-title="Москва",KISS FM Москва 107.0 FM
+https://a7.radioheart.ru:9015/RH73674
 #EXTINF:-1 tvg-id="studio-21" tvg-name="STUDIO 21 Москва 93.2 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/studio-21.png" group-title="Москва",STUDIO 21 Москва 93.2 FM
 https://stream.studio21.ru/studio2196.aacp
 #EXTINF:-1 tvg-id="avtoradio" tvg-name="Авторадио Санкт-Петербург 88.4 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/avtoradio.png" group-title="Санкт-Петербург",Авторадио Санкт-Петербург 88.4 FM
@@ -142,6 +156,8 @@ https://hls-01-gpm.hostingradio.ru/avtoradio812/128/playlist.m3u8
 https://hls-01-regions.emgsound.ru/15_spb/112/playlist.m3u8
 #EXTINF:-1 tvg-id="novoe" tvg-name="Новое радио Санкт-Петербург 91.1 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/novoe.png" group-title="Санкт-Петербург",Новое радио Санкт-Петербург 91.1 FM
 https://hls-01-regions.emgsound.ru/29_spb/112/playlist.m3u8
+#EXTINF:-1 tvg-id="vanya" tvg-name="Радио ВАНЯ Санкт-Петербург 90.6 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/vanya.png" group-title="Санкт-Петербург",Радио ВАНЯ Санкт-Петербург 90.6 FM
+https://radiokrug.ru/radio/vanya_spb/icecast.audio
 #EXTINF:-1 tvg-id="evropa-plyus" tvg-name="Радио Европа Плюс Санкт-Петербург 100.5 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/evropa-plyus.png" group-title="Санкт-Петербург",Радио Европа Плюс Санкт-Петербург 100.5 FM
 https://hls-01-regions.emgsound.ru/11_spb/112/playlist.m3u8
 #EXTINF:-1 tvg-id="zenit" tvg-name="Радио Зенит Санкт-Петербург 89.7 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/zenit.jpg" group-title="Санкт-Петербург",Радио Зенит Санкт-Петербург 89.7 FM
@@ -154,6 +170,8 @@ https://montecarloreg.hostingradio.ru/spb.montecarlo96.aacp
 https://nashe1.hostingradio.ru/nashespb128.mp3
 #EXTINF:-1 tvg-id="peterburg" tvg-name="Радио Петербург Санкт-Петербург 69.47 УКВ" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/peterburg.jpg" group-title="Санкт-Петербург",Радио Петербург Санкт-Петербург 69.47 УКВ
 https://radio.5-tv.ru/radio.mp3
+#EXTINF:-1 tvg-id="piter-fm" tvg-name="Радио Питер FM Санкт-Петербург 100.9 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/piter-fm.png" group-title="Санкт-Петербург",Радио Питер FM Санкт-Петербург 100.9 FM
+https://radiosolo.ru/radio/piterfm/icecast.audio
 #EXTINF:-1 tvg-id="retro-fm" tvg-name="Радио Ретро FM Санкт-Петербург 88.0 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/retro-fm.png" group-title="Санкт-Петербург",Радио Ретро FM Санкт-Петербург 88.0 FM
 https://hls-01-regions.emgsound.ru/12_spb/112/playlist.m3u8
 #EXTINF:-1 tvg-id="rossii" tvg-name="Радио России Санкт-Петербург 99.0 FM, 66.30 УКВ" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/rossii.png" group-title="Санкт-Петербург",Радио России Санкт-Петербург 99.0 FM, 66.30 УКВ
@@ -184,12 +202,18 @@ https://hls.newradio.ru/novoeradio/112/playlist.m3u8
 https://radio7.hostingradio.ru:8040/radio7256.mp3
 #EXTINF:-1 tvg-id="volgograd-24" tvg-name="Радио Волгоград 24 Волгоград 93.4 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/volgograd-24.jpg" group-title="Волгоград",Радио Волгоград 24 Волгоград 93.4 FM
 http://79.170.161.42:8000/Volgograd24FM
+#EXTINF:-1 tvg-id="volgograd-fm" tvg-name="Радио Волгоград FM Волгоград 101.5 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/volgograd-fm.png" group-title="Волгоград",Радио Волгоград FM Волгоград 101.5 FM
+https://volgogradfm.ru/online
 #EXTINF:-1 tvg-id="novaya-volna" tvg-name="Радио Новая Волна Волгоград 102.0 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/novaya-volna.png" group-title="Волгоград",Радио Новая Волна Волгоград 102.0 FM
 https://stream.radionv.ru:4845/radio
 #EXTINF:-1 tvg-id="retro-fm" tvg-name="Радио Ретро FM Волгоград 102.6 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/retro-fm.png" group-title="Волгоград",Радио Ретро FM Волгоград 102.6 FM
 https://retro.hostingradio.ru:8043/retro256.mp3
+#EXTINF:-1 tvg-id="sputnik" tvg-name="Радио Спутник Волгоград 105.1 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sputnik.jpg" group-title="Волгоград",Радио Спутник Волгоград 105.1 FM
+https://www.sputnikfm.ru/broadcast.php
 #EXTINF:-1 tvg-id="energy" tvg-name="Радио Energy Волгоград 98.8 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/energy.webp" group-title="Волгоград",Радио Energy Волгоград 98.8 FM
 https://hls-01-gpm.hostingradio.ru/energyfm495/128/playlist.m3u8
+#EXTINF:-1 tvg-id="smorodina-fm" tvg-name="Смородина эФэМ Волгоград 107.0 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/smorodina-fm.jpg" group-title="Волгоград",Смородина эФэМ Волгоград 107.0 FM
+https://radio.dline-media.com/smorodina
 #EXTINF:-1 tvg-id="dorozhnoe" tvg-name="Дорожное радио Воронеж 102.3 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/dorozhnoe.png" group-title="Воронеж",Дорожное радио Воронеж 102.3 FM
 https://emgregion.hostingradio.ru:8064/voronezh.dorognoe.mp3
 #EXTINF:-1 tvg-id="nashe" tvg-name="НАШЕ Радио Воронеж 100.7 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/nashe.png" group-title="Воронеж",НАШЕ Радио Воронеж 100.7 FM
@@ -202,6 +226,8 @@ https://hls-01-regions.emgsound.ru/13_voronezh/112/playlist.m3u8
 https://hls-01-regions.emgsound.ru/11_voronezh/112/playlist.m3u8
 #EXTINF:-1 tvg-id="komsomolskaya-pravda" tvg-name="Радио Комсомольская Правда Воронеж 97.7 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/komsomolskaya-pravda.png" group-title="Воронеж",Радио Комсомольская Правда Воронеж 97.7 FM
 https://kpradio.hostingradio.ru:8003/voroneg.radiokp128.mp3
+#EXTINF:-1 tvg-id="melodiya" tvg-name="Радио Мелодия Воронеж 106.8 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/melodiya.jpg" group-title="Воронеж",Радио Мелодия Воронеж 106.8 FM
+https://radiokrug.ru/radio/melody/icecast.audio
 #EXTINF:-1 tvg-id="monte-karlo" tvg-name="Радио Монте-Карло Воронеж 107.2 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/monte-karlo.png" group-title="Воронеж",Радио Монте-Карло Воронеж 107.2 FM
 https://live.borneo.ru:8888/rmc128
 #EXTINF:-1 tvg-id="radio-rbk" tvg-name="Радио РБК Воронеж 101.1 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-rbk.webp" group-title="Воронеж",Радио РБК Воронеж 101.1 FM
@@ -212,3 +238,5 @@ https://hls-01-regions.emgsound.ru/12_voronezh/112/playlist.m3u8
 https://icecast-vgtrk.cdnvideo.ru/rrzonam_mp3_128kbps
 #EXTINF:-1 tvg-id="shanson" tvg-name="Радио Шансон Воронеж 102.8 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/shanson.png" group-title="Воронеж",Радио Шансон Воронеж 102.8 FM
 https://live.borneo.ru:8888/csn128
+#EXTINF:-1 tvg-id="dfm" tvg-name="Радио DFM Воронеж 104.3 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/dfm.webp" group-title="Воронеж",Радио DFM Воронеж 104.3 FM
+https://radiokrug.ru/radio/dfm-vrn/icecast.audio
