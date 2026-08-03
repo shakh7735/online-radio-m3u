@@ -1,0 +1,1442 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>top-radio → M3U</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --panel-2: #1e222b;
+    --line: #2b303b;
+    --text: #e7e9ee;
+    --muted: #9aa3b2;
+    --accent: #4c8dff;
+    --ok: #3fb950;
+    --bad: #f85149;
+    --warn: #d29922;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f4f5f7; --panel: #ffffff; --panel-2: #f0f2f5; --line: #d8dce3;
+      --text: #14161a; --muted: #5c6472; --accent: #1a6dff; --ok: #1a7f37; --bad: #cf222e; --warn: #9a6700;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  header {
+    display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+    padding: 14px 18px; border-bottom: 1px solid var(--line); background: var(--panel);
+  }
+  header h1 { margin: 0; font-size: 16px; font-weight: 650; }
+  header .path { color: var(--muted); font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  main { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: calc(100vh - 52px); }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+  section { padding: 16px 18px; min-width: 0; }
+  section.left { border-right: 1px solid var(--line); }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 10px; }
+  fieldset { border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin: 0 0 12px; background: var(--panel); }
+  legend { padding: 0 6px; color: var(--muted); font-size: 12px; }
+  label { display: block; margin-bottom: 8px; }
+  label > span.lbl { display: block; color: var(--muted); font-size: 12px; margin-bottom: 3px; }
+  select, input[type=text], input[type=url], textarea {
+    width: 100%; padding: 7px 9px; border-radius: 8px; border: 1px solid var(--line);
+    background: var(--panel-2); color: var(--text); font: inherit;
+  }
+  textarea { min-height: 68px; resize: vertical; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
+  .row > * { flex: 1 1 140px; }
+  .checks { display: flex; gap: 14px; flex-wrap: wrap; }
+  .checks label { display: flex; align-items: center; gap: 6px; margin: 0; }
+  .checks input { margin: 0; }
+  button {
+    padding: 8px 13px; border-radius: 8px; border: 1px solid var(--line);
+    background: var(--panel-2); color: var(--text); font: inherit; cursor: pointer;
+  }
+  button:hover:not(:disabled) { border-color: var(--accent); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  button:disabled { opacity: .5; cursor: default; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .log {
+    background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11.5px; color: var(--muted);
+    max-height: 110px; overflow: auto; white-space: pre-wrap; margin-bottom: 12px;
+  }
+  ul.stations { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  ul.stations li {
+    display: grid; grid-template-columns: 22px 34px 1fr auto; gap: 10px; align-items: center;
+    padding: 7px 10px; border-bottom: 1px solid var(--line); background: var(--panel);
+  }
+  ul.stations li:last-child { border-bottom: none; }
+  ul.stations li.playing { background: color-mix(in srgb, var(--accent) 16%, var(--panel)); }
+  ul.stations img { width: 34px; height: 34px; object-fit: contain; border-radius: 6px; background: var(--panel-2); }
+  .name { min-width: 0; }
+  .name b { display: block; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .name small { color: var(--muted); font-size: 11.5px; }
+  .tag { font-size: 10.5px; padding: 1px 6px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+  .tag.hls { border-color: var(--warn); color: var(--warn); }
+  .tag.ok { border-color: var(--ok); color: var(--ok); }
+  .tag.bad { border-color: var(--bad); color: var(--bad); }
+  .player {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 12px;
+    display: grid; grid-template-columns: 84px 1fr; gap: 14px; align-items: center;
+  }
+  .player img { width: 84px; height: 84px; object-fit: contain; border-radius: 10px; background: var(--panel-2); }
+  .player .now b { font-size: 15px; display: block; }
+  .player .now small { color: var(--muted); }
+  .player audio { width: 100%; margin-top: 8px; }
+  .hint { color: var(--muted); font-size: 12px; margin: 6px 0 0; }
+  .hint code { background: var(--panel-2); padding: 1px 4px; border-radius: 4px; }
+  .status { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .status b { color: var(--text); }
+  a { color: var(--accent); }
+  .banner {
+    margin: 0; padding: 12px 18px; background: color-mix(in srgb, var(--warn) 18%, var(--panel));
+    border-bottom: 1px solid var(--line); font-size: 13px;
+  }
+  .banner code { background: var(--panel-2); padding: 2px 6px; border-radius: 5px; }
+  fieldset.locked { opacity: .55; }
+  fieldset.locked .lockedHint { color: var(--warn); }
+  fieldset#driveFs { transition: box-shadow .2s; }
+  fieldset#driveFs.active { box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 45%, transparent); }
+  .who { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .who .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bad); }
+  .who.on .dot { background: var(--ok); }
+</style>
+</head>
+<body>
+<div class="banner" id="fileBanner" hidden>
+  Страница открыта как файл — парсер и Drive работать не будут.
+  Закрой её и запусти <code>index.command</code> (двойной клик) — он поднимет сервер и откроет приложение сам.
+</div>
+<header>
+  <h1>top-radio → M3U</h1>
+  <span class="path" id="workdir"></span>
+</header>
+
+<main>
+  <!-- ===================== LEFT: PARSER ===================== -->
+  <section class="left">
+    <h2>Парсер</h2>
+
+    <fieldset>
+      <legend>Источник</legend>
+      <div class="row">
+        <label>
+          <span class="lbl">Страна</span>
+          <select id="country">
+            <option value="armeniya">Армения</option>
+            <option value="rossiya">Россия</option>
+          </select>
+        </label>
+        <label>
+          <span class="lbl">Город (необязательно)</span>
+          <select id="city"><option value="">— топ станций страны —</option></select>
+        </label>
+      </div>
+      <div class="checks">
+        <label><input type="checkbox" id="probe" checked> проверять потоки</label>
+        <label><input type="checkbox" id="onlyWorking"> только рабочие в M3U</label>
+      </div>
+      <div class="actions" style="margin-top:10px">
+        <button class="primary" id="scrape">Собрать станции</button>
+        <button id="recheck" disabled>Перепроверить потоки</button>
+      </div>
+      <div class="log" id="log">Готов к работе.</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Логотипы</legend>
+      <p class="hint" style="margin-top:0">
+        Скачиваются один раз в <code id="logosPath">logos/</code> рядом с приложением; уже имеющиеся файлы не перекачиваются.
+      </p>
+      <div class="actions">
+        <button id="getLogos" disabled>Скачать локально</button>
+        <span class="status" id="logoStatus"></span>
+      </div>
+
+      <label>
+        <span class="lbl">Ссылки на логотипы в плейлисте</span>
+        <select id="logoMode">
+          <option value="github">GitHub raw (рекомендуется)</option>
+          <option value="drive">Google Drive</option>
+          <option value="base">свой базовый URL</option>
+          <option value="local">локальный путь logos/файл</option>
+          <option value="site">ссылки top-radio.ru</option>
+        </select>
+      </label>
+      <label id="logoBaseWrap" hidden>
+        <span class="lbl">Базовый URL</span>
+        <input type="url" id="logoBase" placeholder="https://example.com/radio-logos">
+      </label>
+    </fieldset>
+
+    <fieldset id="ghFs" class="locked">
+      <legend>GitHub — хостинг логотипов</legend>
+      <p class="hint lockedHint" id="ghLocked" style="margin-top:0">
+        Выбери «GitHub raw» в списке ссылок выше — секция включится.
+      </p>
+
+      <div id="ghBody" hidden>
+        <div class="who" id="ghWho">
+          <span class="dot"></span>
+          <span id="ghWhoText">токен не задан</span>
+        </div>
+
+        <details id="ghTokenBox">
+          <summary style="cursor:pointer;color:var(--muted);font-size:12px">Personal access token</summary>
+          <p class="hint">
+            <a href="https://github.com/settings/tokens" target="_blank">github.com/settings/tokens</a> →
+            classic со scope <code>public_repo</code>, либо fine-grained с правом
+            <code>Contents: read and write</code> на нужный репозиторий.
+            Токен хранится только локально, в <code>github-token.txt</code>.
+          </p>
+          <label>
+            <span class="lbl">Token</span>
+            <input type="text" id="ghToken" placeholder="ghp_… / github_pat_…">
+          </label>
+          <div class="actions">
+            <button id="ghTokenSave">Сохранить токен</button>
+            <button id="ghTokenClear">Убрать</button>
+          </div>
+        </details>
+
+        <div class="row">
+          <label>
+            <span class="lbl">Владелец</span>
+            <input type="text" id="ghOwner" placeholder="твой-логин">
+          </label>
+          <label>
+            <span class="lbl">Репозиторий</span>
+            <input type="text" id="ghRepo" placeholder="radio-logos">
+          </label>
+        </div>
+        <div class="row">
+          <label>
+            <span class="lbl">Ветка</span>
+            <input type="text" id="ghBranch" value="main">
+          </label>
+          <label>
+            <span class="lbl">Папка в репозитории</span>
+            <input type="text" id="ghDir" value="logos">
+          </label>
+        </div>
+        <label>
+          <span class="lbl">Формат ссылки</span>
+          <select id="ghLinkStyle">
+            <option value="raw">raw.githubusercontent.com</option>
+            <option value="jsdelivr">cdn.jsdelivr.net (CDN, кэш)</option>
+          </select>
+        </label>
+
+        <div class="actions">
+          <button id="ghCheck">Проверить репозиторий</button>
+          <button id="ghCreate">Создать репозиторий</button>
+          <button id="ghUpload" disabled>Загрузить логотипы</button>
+        </div>
+        <div class="status" id="ghStatus"></div>
+
+        <div class="actions">
+          <button id="ghPushProject">Залить проект в репозиторий</button>
+          <label class="checks" style="flex:0 0 auto;margin:0">
+            <input type="checkbox" id="ghPushLogos" checked> вместе с логотипами
+          </label>
+        </div>
+        <div class="log" id="ghLog" hidden></div>
+        <p class="hint">
+          Файл, который уже есть в репозитории, повторно не заливается. Репозиторий должен быть публичным —
+          иначе raw-ссылки не откроются в плеерах.
+        </p>
+      </div>
+    </fieldset>
+
+    <fieldset id="driveFs" class="locked">
+      <legend>Google Drive</legend>
+      <p class="hint lockedHint" id="driveLocked" style="margin-top:0">
+        Выбери «Google Drive» в списке ссылок выше — секция включится.
+      </p>
+
+      <div id="driveBody" hidden>
+        <div class="who" id="driveWho">
+          <span class="dot"></span>
+          <span id="driveWhoText">не подключено</span>
+          <button id="driveLogin">Войти в Google</button>
+          <button id="driveLogout" hidden>Сменить аккаунт</button>
+        </div>
+        <div class="log" id="driveLog" hidden></div>
+
+        <details id="tokenBox" style="margin-bottom:10px">
+          <summary style="cursor:pointer;color:var(--muted);font-size:12px">
+            Google блокирует вход? Вставить access token вручную
+          </summary>
+          <p class="hint">
+            Скоуп Drive «ограниченный», поэтому клиент gcloud (или политика рабочего домена) может блокировать вход.
+            Обход: получи токен в
+            <a href="https://developers.google.com/oauthplayground/" target="_blank">OAuth 2.0 Playground</a>
+            для скоупа <code>https://www.googleapis.com/auth/drive</code> и вставь сюда.
+            Токен живёт ~1 час — этого хватит: ID файлов кэшируются и переиспользуются потом всегда.
+          </p>
+          <label>
+            <span class="lbl">Access token</span>
+            <input type="text" id="driveToken" placeholder="ya29....">
+          </label>
+          <div class="actions">
+            <button id="driveTokenSave">Использовать токен</button>
+            <button id="driveTokenClear">Убрать токен</button>
+          </div>
+        </details>
+
+        <label>
+          <span class="lbl">Ссылка на папку Диска (или на файл в ней)</span>
+          <input type="text" id="driveLink" placeholder="https://drive.google.com/drive/folders/...">
+        </label>
+        <div class="actions">
+          <button id="driveCheck" disabled>Подключить папку</button>
+          <button id="driveUpload" disabled>Загрузить логотипы на Диск</button>
+        </div>
+        <div class="status" id="driveStatus"></div>
+
+        <label>
+          <span class="lbl">Формат прямой ссылки</span>
+          <select id="driveLinkStyle">
+            <option value="lh3">lh3.googleusercontent.com/d/ID (надёжнее для картинок)</option>
+            <option value="uc">drive.google.com/uc?export=view&amp;id=ID</option>
+          </select>
+        </label>
+        <p class="hint">
+          Вход выполняется через gcloud и запоминается — при следующем запуске повторно логиниться не нужно.
+          Файлы заливаются один раз и получают доступ «для всех, у кого есть ссылка», иначе плееры не покажут логотип.
+        </p>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Плейлист</legend>
+      <div class="row">
+        <label>
+          <span class="lbl">Битрейт</span>
+          <select id="bitrate">
+            <option value="max">максимальный</option>
+            <option value="min">минимальный</option>
+            <option value="all">все (по записи на поток)</option>
+          </select>
+        </label>
+        <label>
+          <span class="lbl">Имя файла</span>
+          <input type="text" id="filename" value="armeniya.m3u">
+        </label>
+      </div>
+      <div class="actions">
+        <button class="primary" id="download" disabled>Скачать M3U</button>
+        <button id="saveNear" disabled>Сохранить рядом с приложением</button>
+      </div>
+      <div class="status" id="saveStatus"></div>
+    </fieldset>
+
+    <h2 id="listTitle">Станции</h2>
+    <ul class="stations" id="list"></ul>
+  </section>
+
+  <!-- ===================== RIGHT: PLAYER ===================== -->
+  <section class="right">
+    <h2>Плеер — проверка плейлиста</h2>
+
+    <div class="player">
+      <img id="npLogo" alt="">
+      <div class="now">
+        <b id="npName">— ничего не играет —</b>
+        <small id="npMeta">выбери станцию слева или загрузи .m3u</small>
+        <audio id="audio" controls preload="none"></audio>
+      </div>
+    </div>
+
+    <div class="actions">
+      <label style="flex:0 0 auto;margin:0">
+        <input type="file" id="m3uFile" accept=".m3u,.m3u8,audio/x-mpegurl" style="display:none">
+        <button id="loadM3u">Загрузить .m3u в плеер</button>
+      </label>
+      <button id="playFirst" disabled>Проиграть по очереди</button>
+      <button id="stopAll">Стоп</button>
+      <span class="status" id="playerStatus"></span>
+    </div>
+
+    <div class="status" id="hlsStatus"></div>
+
+    <ul class="stations" id="playlist"></ul>
+  </section>
+</main>
+
+<script>
+// ============================================================================
+// STATE
+// ============================================================================
+
+/** Scraped stations from the parser side. */
+let stations = [];
+/** slug → local logo file name, filled after the logos download. */
+let logoFiles = {};
+/** slug → direct Google Drive link, filled after a Drive upload. */
+let driveLinks = {};
+/** slug → raw GitHub link, filled after a GitHub upload. */
+let githubLinks = {};
+/** Entries currently shown in the player: {name, url, logo, hls}. */
+let playerEntries = [];
+let currentIndex = -1;
+let hlsReady = false;
+let hlsInstance = null;
+let sequential = false;
+
+const $ = (id) => document.getElementById(id);
+const audio = $('audio');
+
+// ============================================================================
+// HELPERS
+// ============================================================================
+
+function log(message) {
+  const box = $('log');
+  box.textContent += (box.textContent ? '\n' : '') + message;
+  box.scrollTop = box.scrollHeight;
+}
+
+function resetLog(message) {
+  $('log').textContent = message ?? '';
+}
+
+function isHls(url) {
+  return /\.m3u8(\?|$)/i.test(url);
+}
+
+/** Logo reference written into the playlist, per the selected mode. */
+function logoForPlaylist(station) {
+  const mode = $('logoMode').value;
+  const file = logoFiles[station.slug];
+  const siteUrl = station.logoCandidates[0] ?? '';
+
+  if (mode === 'github') return githubLinks[station.slug] ?? siteUrl;
+  if (mode === 'drive') return driveLinks[station.slug] ?? siteUrl;
+  if (mode === 'site') return siteUrl;
+  if (!file) return siteUrl;
+  if (mode === 'base') {
+    const base = $('logoBase').value.trim().replace(/\/+$/, '');
+    return base ? `${base}/${file}` : `logos/${file}`;
+  }
+  return `logos/${file}`;
+}
+
+/** Logo shown in this page (always the local copy when we have it). */
+function logoForUi(station) {
+  const file = logoFiles[station.slug];
+  return file ? `/logos/${encodeURIComponent(file)}` : (station.logoCandidates[0] ?? '');
+}
+
+function pickStreams(station) {
+  const mode = $('bitrate').value;
+  const onlyWorking = $('onlyWorking').checked;
+  let usable = station.streams;
+  if (onlyWorking) usable = usable.filter((s) => s.reachable !== false);
+  if (usable.length === 0) return [];
+  if (mode === 'all') return [...usable].sort((a, b) => b.bitrate - a.bitrate);
+  const sorted = [...usable].sort((a, b) => a.bitrate - b.bitrate);
+  return [mode === 'min' ? sorted[0] : sorted[sorted.length - 1]];
+}
+
+function buildM3U(title) {
+  const lines = ['#EXTM3U', `#PLAYLIST:${title}`];
+  const seen = new Set();
+
+  for (const station of stations) {
+    if (!station.selected) continue;
+    for (const stream of pickStreams(station)) {
+      if (seen.has(stream.url)) continue;
+      seen.add(stream.url);
+
+      const frequency = station.frequencies[0]?.label;
+      const suffix = $('bitrate').value === 'all' && stream.bitrate ? ` [${stream.bitrate}k]` : '';
+      const logo = logoForPlaylist(station);
+      const attrs = [
+        `tvg-id="${station.slug}"`,
+        `tvg-name="${station.name.replace(/"/g, "'")}"`,
+        logo ? `tvg-logo="${logo}"` : '',
+        `group-title="${title}"`,
+      ].filter(Boolean).join(' ');
+
+      lines.push(`#EXTINF:-1 ${attrs},${station.name}${frequency ? ` (${frequency})` : ''}${suffix}`);
+      lines.push(stream.url);
+    }
+  }
+  return lines.join('\n') + '\n';
+}
+
+function currentTitle() {
+  const country = $('country').selectedOptions[0].textContent;
+  const city = $('city').value ? ` — ${$('city').selectedOptions[0].textContent}` : '';
+  return `Радиостанции ${country === 'Армения' ? 'Армении' : 'России'}${city}`;
+}
+
+// ============================================================================
+// PARSER SIDE
+// ============================================================================
+
+async function loadStatus() {
+  const info = await (await fetch('/api/status')).json();
+  $('workdir').textContent = info.workDir;
+  $('logosPath').textContent = info.logosDir;
+  hlsReady = info.hlsReady;
+  $('logoStatus').textContent = info.logoCount ? `на диске: ${info.logoCount} файл(ов)` : '';
+  renderHlsStatus();
+}
+
+async function loadCities() {
+  const country = $('country').value;
+  const select = $('city');
+  select.innerHTML = '<option value="">— топ станций страны —</option>';
+  try {
+    const data = await (await fetch(`/api/cities?country=${encodeURIComponent(country)}`)).json();
+    for (const city of data.cities ?? []) {
+      const option = document.createElement('option');
+      option.value = city.slug;
+      option.textContent = city.count ? `${city.name} (${city.count})` : city.name;
+      select.append(option);
+    }
+  } catch (error) {
+    log(`Не удалось получить города: ${error.message}`);
+  }
+}
+
+async function runScrape() {
+  const country = $('country').value;
+  const city = $('city').value || null;
+
+  stations = [];
+  renderStations();
+  resetLog('');
+  $('scrape').disabled = true;
+
+  try {
+    const response = await fetch('/api/scrape', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ country, city }),
+    });
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop() ?? '';
+
+      for (const line of lines) {
+        if (!line.trim()) continue;
+        const event = JSON.parse(line);
+
+        if (event.kind === 'status') log(event.message);
+        else if (event.kind === 'skip') log(`  пропуск ${event.name}: ${event.reason}`);
+        else if (event.kind === 'station') {
+          const station = event.station;
+          station.selected = true;
+          stations.push(station);
+          log(`  [${stations.length}] ${station.name} — ${station.streams.length} поток(ов)`);
+          renderStations();
+        } else if (event.kind === 'done') {
+          stations = event.stations.map((s) => ({ ...s, selected: true }));
+          log(`Готово: ${stations.length} станций`);
+          renderStations();
+        } else if (event.kind === 'error') {
+          log(`Ошибка: ${event.message}`);
+        }
+      }
+    }
+
+    $('filename').value = `${city || country}.m3u`;
+    if ($('probe').checked) await probeAll();
+    syncPlayerFromStations();
+  } catch (error) {
+    log(`Ошибка: ${error.message}`);
+  } finally {
+    $('scrape').disabled = false;
+    const has = stations.length > 0;
+    $('getLogos').disabled = !has;
+    $('download').disabled = !has;
+    $('saveNear').disabled = !has;
+    $('recheck').disabled = !has;
+    $('driveUpload').disabled = !has || !driveFolder;
+    $('ghUpload').disabled = !has || !ghRepoReady;
+  }
+}
+
+async function probeAll() {
+  const urls = [...new Set(stations.flatMap((s) => s.streams.map((x) => x.url)))];
+  if (urls.length === 0) return;
+
+  log(`Проверяю ${urls.length} поток(ов)…`);
+  const data = await (await fetch('/api/probe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ urls }),
+  })).json();
+
+  let dead = 0;
+  for (const station of stations) {
+    for (const stream of station.streams) {
+      stream.reachable = data.results[stream.url];
+      if (stream.reachable === false) dead++;
+    }
+  }
+  log(`Проверка: живых ${urls.length - dead}, мёртвых ${dead}`);
+  renderStations();
+  syncPlayerFromStations();
+}
+
+async function fetchLogos() {
+  $('getLogos').disabled = true;
+  $('logoStatus').textContent = 'качаю…';
+
+  try {
+    const data = await (await fetch('/api/logos', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        stations: stations.map((s) => ({ slug: s.slug, logoCandidates: s.logoCandidates })),
+      }),
+    })).json();
+
+    logoFiles = { ...logoFiles, ...data.files };
+    $('logoStatus').textContent =
+      `скачано ${data.downloaded}, уже было ${data.cached}` +
+      (data.failed.length ? `, без логотипа ${data.failed.length}` : '');
+    renderStations();
+    syncPlayerFromStations();
+  } catch (error) {
+    $('logoStatus').textContent = `ошибка: ${error.message}`;
+  } finally {
+    $('getLogos').disabled = false;
+  }
+}
+
+function renderStations() {
+  const list = $('list');
+  list.innerHTML = '';
+  $('listTitle').textContent = `Станции (${stations.filter((s) => s.selected).length}/${stations.length})`;
+
+  stations.forEach((station, index) => {
+    const li = document.createElement('li');
+
+    const check = document.createElement('input');
+    check.type = 'checkbox';
+    check.checked = station.selected !== false;
+    check.onchange = () => {
+      station.selected = check.checked;
+      renderStations();
+      syncPlayerFromStations();
+    };
+
+    const img = document.createElement('img');
+    img.src = logoForUi(station);
+    img.alt = '';
+    img.loading = 'lazy';
+
+    const name = document.createElement('div');
+    name.className = 'name';
+    const frequency = station.frequencies[0]?.label ?? '';
+    const bitrates = station.streams.map((s) => s.bitrate || '?').join('/');
+    name.innerHTML = `<b></b><small></small>`;
+    name.querySelector('b').textContent = station.name;
+    name.querySelector('small').textContent = [frequency, `${bitrates} kbps`].filter(Boolean).join(' · ');
+
+    const tags = document.createElement('div');
+    const best = station.streams[0];
+    if (station.streams.some((s) => s.hls)) tags.append(tag('HLS', 'hls'));
+    const reach = station.streams.map((s) => s.reachable);
+    if (reach.some((r) => r === true)) tags.append(tag('online', 'ok'));
+    else if (reach.some((r) => r === false)) tags.append(tag('offline', 'bad'));
+
+    const play = document.createElement('button');
+    play.textContent = '▶';
+    play.title = 'Проиграть';
+    play.onclick = () => {
+      syncPlayerFromStations();
+      const target = playerEntries.findIndex((entry) => entry.slug === station.slug);
+      if (target >= 0) playIndex(target);
+    };
+    tags.append(play);
+
+    li.append(check, img, name, tags);
+    list.append(li);
+  });
+}
+
+function tag(text, kind) {
+  const span = document.createElement('span');
+  span.className = `tag ${kind}`;
+  span.textContent = text;
+  return span;
+}
+
+async function downloadM3U() {
+  const content = buildM3U(currentTitle());
+  const blob = new Blob([content], { type: 'audio/x-mpegurl' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = $('filename').value || 'playlist.m3u';
+  link.click();
+  URL.revokeObjectURL(link.href);
+}
+
+async function saveNear() {
+  const data = await (await fetch('/api/save', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ filename: $('filename').value || 'playlist.m3u', content: buildM3U(currentTitle()) }),
+  })).json();
+  $('saveStatus').textContent = data.path ? `сохранено: ${data.path}` : `ошибка: ${data.error}`;
+}
+
+// ============================================================================
+// GOOGLE DRIVE
+// ============================================================================
+
+let driveFolder = null;
+
+async function loadDriveStatus() {
+  const who = $('driveWho');
+  const text = $('driveWhoText');
+
+  try {
+    const info = await (await fetch('/api/drive/status')).json();
+
+    // Remembered folder / link style come back even before sign-in
+    if (info.settings?.linkStyle) $('driveLinkStyle').value = info.settings.linkStyle;
+    if (info.folder) {
+      driveFolder = info.folder;
+      $('driveLink').value = info.folder.url;
+      $('driveStatus').innerHTML =
+        `папка: <a href="${info.folder.url}" target="_blank">${info.folder.name}</a>` +
+        (info.uploaded ? ` · файлов на Диске: ${info.uploaded}` : '');
+    } else if (info.settings?.folderId && !$('driveLink').value) {
+      $('driveLink').value = `https://drive.google.com/drive/folders/${info.settings.folderId}`;
+    }
+
+    if (!info.gcloudAvailable && info.tokenSource === 'none') {
+      who.classList.remove('on');
+      text.textContent = 'gcloud CLI не найден — вход невозможен';
+      $('driveLogin').disabled = true;
+      return;
+    }
+
+    if (info.signedIn) {
+      who.classList.add('on');
+      text.innerHTML =
+        `подключено: <b>${info.email ?? '—'}</b>` +
+        (info.tokenSource === 'file' ? ' <span class="tag">по вставленному токену</span>' : '');
+      $('driveLogin').hidden = true;
+      $('driveLogout').hidden = false;
+      $('driveCheck').disabled = false;
+      $('driveUpload').disabled = stations.length === 0 || !driveFolder;
+      return;
+    }
+
+    who.classList.remove('on');
+    $('driveLogin').hidden = false;
+    $('driveLogout').hidden = Boolean(!info.email);
+    $('driveCheck').disabled = true;
+    $('driveUpload').disabled = true;
+
+    if (info.needsApiEnable) {
+      text.innerHTML = `аккаунт <b>${info.email ?? '—'}</b>: Drive API не включён`;
+      if (!$('driveEnable')) {
+        const button = document.createElement('button');
+        button.id = 'driveEnable';
+        button.textContent = 'Включить Drive API';
+        button.onclick = driveEnableApi;
+        who.append(button);
+      }
+    } else if (info.email && !info.hasDriveScope) {
+      text.innerHTML = `аккаунт <b>${info.email}</b>: нет доступа к Диску — нажми «Войти в Google»`;
+    } else {
+      text.textContent = info.settings?.account
+        ? `последний вход: ${info.settings.account} — нажми «Войти в Google»`
+        : 'не подключено';
+    }
+  } catch (error) {
+    text.textContent = `не удалось проверить доступ: ${error.message}`;
+  }
+}
+
+async function connectDriveFolder(extra = {}) {
+  const link = $('driveLink').value.trim();
+  if (!link) {
+    $('driveStatus').textContent = 'вставь ссылку на папку Диска';
+    return;
+  }
+
+  $('driveCheck').disabled = true;
+  $('driveStatus').textContent = 'проверяю…';
+
+  try {
+    const data = await (await fetch('/api/drive/folder', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ link, ...extra }),
+    })).json();
+
+    if (data.error) {
+      $('driveStatus').innerHTML = '';
+      const message = document.createElement('div');
+      message.textContent = data.error;
+      $('driveStatus').append(message);
+      return;
+    }
+
+    if (data.needsChoice) {
+      $('driveStatus').innerHTML = '';
+      const message = document.createElement('div');
+      message.textContent = data.message;
+      const actions = document.createElement('div');
+      actions.className = 'actions';
+      actions.style.marginTop = '6px';
+
+      if (data.file.hasParent) {
+        const useParent = document.createElement('button');
+        useParent.textContent = 'Использовать папку этого файла';
+        useParent.onclick = () => connectDriveFolder({ useParent: true });
+        actions.append(useParent);
+      }
+      const createSub = document.createElement('button');
+      createSub.textContent = 'Создать папку top-radio-logos';
+      createSub.onclick = () => connectDriveFolder({ useParent: true, createName: 'top-radio-logos' });
+      actions.append(createSub);
+
+      $('driveStatus').append(message, actions);
+      return;
+    }
+
+    driveFolder = data.folder;
+    $('driveLink').value = data.folder.url;
+    $('driveStatus').innerHTML =
+      `${data.note ? data.note + ' ' : ''}папка: <a href="${data.folder.url}" target="_blank">${data.folder.name}</a>`;
+    $('driveUpload').disabled = stations.length === 0;
+  } catch (error) {
+    $('driveStatus').textContent = `ошибка: ${error.message}`;
+  } finally {
+    $('driveCheck').disabled = false;
+  }
+}
+
+async function uploadToDrive() {
+  if (!driveFolder) {
+    $('driveStatus').textContent = 'сначала подключи папку';
+    return;
+  }
+
+  $('driveUpload').disabled = true;
+  $('driveStatus').textContent = 'скачиваю недостающие логотипы и загружаю на Диск…';
+
+  try {
+    const data = await (await fetch('/api/drive/sync', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        linkStyle: $('driveLinkStyle').value,
+        stations: stations.map((s) => ({ slug: s.slug, logoCandidates: s.logoCandidates })),
+      }),
+    })).json();
+
+    if (data.error) {
+      $('driveStatus').textContent = `ошибка: ${data.error}`;
+      return;
+    }
+
+    driveLinks = { ...driveLinks, ...data.links };
+    logoFiles = { ...logoFiles, ...data.files };
+    $('logoMode').value = 'drive';
+    onLogoModeChange();
+
+    const failed = (data.failed ?? []).length;
+    $('driveStatus').innerHTML =
+      `<a href="${driveFolder.url}" target="_blank">${driveFolder.name}</a>: ` +
+      `загружено ${data.uploaded}, уже было ${data.existing}` +
+      (failed ? `, ошибок ${failed}` : '') +
+      ` · локально: скачано ${data.localDownloaded}, из кэша ${data.localCached}`;
+    $('logoStatus').textContent = `на диске: скачано ${data.localDownloaded}, из кэша ${data.localCached}`;
+    renderStations();
+    syncPlayerFromStations();
+  } catch (error) {
+    $('driveStatus').textContent = `ошибка: ${error.message}`;
+  } finally {
+    $('driveUpload').disabled = false;
+  }
+}
+
+/** The Drive section only unlocks when the playlist actually needs Drive links. */
+function onLogoModeChange() {
+  const mode = $('logoMode').value;
+  $('logoBaseWrap').hidden = mode !== 'base';
+
+  const wantsDrive = mode === 'drive';
+  const driveFs = $('driveFs');
+  driveFs.classList.toggle('locked', !wantsDrive);
+  driveFs.classList.toggle('active', wantsDrive);
+  $('driveBody').hidden = !wantsDrive;
+  $('driveLocked').hidden = wantsDrive;
+
+  const wantsGithub = mode === 'github';
+  const ghFs = $('ghFs');
+  ghFs.classList.toggle('locked', !wantsGithub);
+  ghFs.classList.toggle('active', wantsGithub);
+  $('ghBody').hidden = !wantsGithub;
+  $('ghLocked').hidden = wantsGithub;
+
+  if (wantsDrive) {
+    loadDriveStatus();
+    driveFs.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  if (wantsGithub) {
+    loadGithubStatus();
+    ghFs.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
+// ============================================================================
+// GITHUB
+// ============================================================================
+
+let ghRepoReady = false;
+
+function ghLog(message, reset = false) {
+  const box = $('ghLog');
+  box.hidden = false;
+  box.textContent = reset ? message : (box.textContent ? box.textContent + '\n' : '') + message;
+  box.scrollTop = box.scrollHeight;
+}
+
+function ghSettingsFromForm() {
+  return {
+    owner: $('ghOwner').value.trim(),
+    repo: $('ghRepo').value.trim(),
+    branch: $('ghBranch').value.trim() || 'main',
+    dir: $('ghDir').value.trim(),
+    linkStyle: $('ghLinkStyle').value,
+  };
+}
+
+async function loadGithubStatus() {
+  const who = $('ghWho');
+  const text = $('ghWhoText');
+
+  try {
+    const info = await (await fetch('/api/github/status')).json();
+    const settings = info.settings ?? {};
+
+    if (settings.owner && !$('ghOwner').value) $('ghOwner').value = settings.owner;
+    if (settings.repo && !$('ghRepo').value) $('ghRepo').value = settings.repo;
+    if (settings.branch) $('ghBranch').value = settings.branch;
+    if (settings.dir !== undefined) $('ghDir').value = settings.dir;
+    if (settings.linkStyle) $('ghLinkStyle').value = settings.linkStyle;
+
+    if (!info.hasToken) {
+      who.classList.remove('on');
+      text.textContent = 'токен не задан — открой «Personal access token»';
+      $('ghTokenBox').open = true;
+      ghRepoReady = false;
+      $('ghUpload').disabled = true;
+      return;
+    }
+
+    if (info.error) {
+      who.classList.remove('on');
+      text.textContent = info.error;
+      return;
+    }
+
+    who.classList.add('on');
+    text.innerHTML = `токен аккаунта <b>${info.account}</b>${info.scopes ? ` · scopes: ${info.scopes}` : ''}`;
+    $('ghTokenBox').open = false;
+
+    if (info.repo) {
+      ghRepoReady = info.repo.canPush && !info.repo.private;
+      $('ghStatus').innerHTML =
+        `репозиторий: <a href="${info.repo.htmlUrl}" target="_blank">${info.repo.fullName}</a>` +
+        (info.repo.private ? ' · <span class="tag bad">приватный</span>' : ' · <span class="tag ok">публичный</span>');
+      $('ghUpload').disabled = stations.length === 0 || !ghRepoReady;
+    } else if (info.repoError) {
+      $('ghStatus').textContent = info.repoError;
+    }
+  } catch (error) {
+    text.textContent = `не удалось получить статус: ${error.message}`;
+  }
+}
+
+async function ghSaveToken(token) {
+  const data = await (await fetch('/api/github/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ token }),
+  })).json();
+
+  if (data.error) ghLog(`Ошибка: ${data.error}`, true);
+  else if (data.cleared) ghLog('Токен удалён', true);
+  else ghLog(`Токен принят: ${data.account}`, true);
+
+  $('ghToken').value = '';
+  await loadGithubStatus();
+}
+
+async function ghCheckRepo(create = false) {
+  const body = { ...ghSettingsFromForm(), create };
+  if (!body.repo) {
+    $('ghStatus').textContent = 'укажи имя репозитория';
+    return;
+  }
+
+  $('ghStatus').textContent = create ? 'создаю…' : 'проверяю…';
+  const data = await (await fetch('/api/github/repo', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  })).json();
+
+  if (data.error) {
+    $('ghStatus').textContent = data.error + (data.canCreate ? ' — можно нажать «Создать репозиторий»' : '');
+    ghRepoReady = false;
+    $('ghUpload').disabled = true;
+    return;
+  }
+
+  ghRepoReady = data.repo.canPush && !data.repo.private;
+  $('ghOwner').value = data.settings.owner;
+  $('ghBranch').value = data.settings.branch;
+  $('ghStatus').innerHTML =
+    `репозиторий: <a href="${data.repo.htmlUrl}" target="_blank">${data.repo.fullName}</a>` +
+    (data.repo.private ? ' · <span class="tag bad">приватный</span>' : ' · <span class="tag ok">публичный</span>') +
+    (data.warning ? ` — ${data.warning}` : '');
+  $('ghUpload').disabled = stations.length === 0 || !ghRepoReady;
+}
+
+async function ghUploadLogos() {
+  $('ghUpload').disabled = true;
+  ghLog('Скачиваю недостающие логотипы и заливаю в репозиторий…', true);
+
+  try {
+    const data = await (await fetch('/api/github/sync', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        linkStyle: $('ghLinkStyle').value,
+        stations: stations.map((s) => ({ slug: s.slug, logoCandidates: s.logoCandidates })),
+      }),
+    })).json();
+
+    if (data.error) {
+      ghLog(`Ошибка: ${data.error}`);
+      return;
+    }
+
+    githubLinks = { ...githubLinks, ...data.links };
+    logoFiles = { ...logoFiles, ...data.files };
+    $('logoMode').value = 'github';
+    onLogoModeChange();
+
+    ghLog(
+      `Готово: залито ${data.uploaded}, уже было ${data.existing}` +
+        (data.failed.length ? `, ошибок ${data.failed.length}` : '') +
+        ` · локально: скачано ${data.localDownloaded}, из кэша ${data.localCached}`,
+    );
+    for (const failure of data.failed ?? []) ghLog(`✗ ${failure.file}: ${failure.error}`);
+    $('logoStatus').textContent = `на диске: скачано ${data.localDownloaded}, из кэша ${data.localCached}`;
+    renderStations();
+    syncPlayerFromStations();
+  } catch (error) {
+    ghLog(`Ошибка: ${error.message}`);
+  } finally {
+    $('ghUpload').disabled = false;
+  }
+}
+
+async function ghPushProject() {
+  $('ghPushProject').disabled = true;
+  ghLog('Заливаю файлы приложения в репозиторий…', true);
+
+  try {
+    const response = await fetch('/api/github/push-project', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ includeLogos: $('ghPushLogos').checked }),
+    });
+
+    if (!response.headers.get('content-type')?.includes('ndjson')) {
+      const data = await response.json();
+      ghLog(`Ошибка: ${data.error}`);
+      return;
+    }
+
+    await readNdjson(response, (event) => {
+      if (event.kind === 'line') ghLog(event.message);
+      else if (event.kind === 'done') {
+        ghLog(`Готово: залито ${event.pushed}, ошибок ${event.failed}`);
+        ghLog(event.repoUrl);
+      }
+    });
+  } catch (error) {
+    ghLog(`Ошибка: ${error.message}`);
+  } finally {
+    $('ghPushProject').disabled = false;
+  }
+}
+
+/** Read an NDJSON stream, calling back per event. */
+async function readNdjson(response, onEvent) {
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = '';
+
+  while (true) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split('\n');
+    buffer = lines.pop() ?? '';
+    for (const line of lines) {
+      if (line.trim()) onEvent(JSON.parse(line));
+    }
+  }
+}
+
+function driveLog(message, reset = false) {
+  const box = $('driveLog');
+  box.hidden = false;
+  box.textContent = reset ? message : (box.textContent ? box.textContent + '\n' : '') + message;
+  box.scrollTop = box.scrollHeight;
+}
+
+async function driveLogin() {
+  $('driveLogin').disabled = true;
+  driveLog('Запускаю вход Google (откроется браузер)…', true);
+
+  try {
+    const response = await fetch('/api/drive/login', { method: 'POST' });
+    await readNdjson(response, (event) => {
+      if (event.kind === 'line' || event.kind === 'status') driveLog(event.message);
+      else if (event.kind === 'error') driveLog(`Ошибка: ${event.message}`);
+      else if (event.kind === 'done') driveLog(`Готово: ${event.email ?? 'вход выполнен'}`);
+    });
+  } catch (error) {
+    driveLog(`Ошибка: ${error.message}`);
+  } finally {
+    $('driveLogin').disabled = false;
+    await loadDriveStatus();
+  }
+}
+
+async function driveEnableApi() {
+  driveLog('Включаю Drive API…', true);
+  try {
+    const response = await fetch('/api/drive/enable-api', { method: 'POST' });
+    await readNdjson(response, (event) => {
+      if (event.kind === 'line' || event.kind === 'status') driveLog(event.message);
+      else if (event.kind === 'error') driveLog(`Ошибка: ${event.message}`);
+      else if (event.kind === 'done') driveLog('Drive API включён');
+    });
+  } catch (error) {
+    driveLog(`Ошибка: ${error.message}`);
+  }
+  await loadDriveStatus();
+}
+
+async function driveLogout() {
+  driveLog('Отзываю сохранённый вход…', true);
+  await fetch('/api/drive/logout', { method: 'POST' });
+  await loadDriveStatus();
+  await driveLogin();
+}
+
+// ============================================================================
+// PLAYER SIDE
+// ============================================================================
+
+function syncPlayerFromStations() {
+  playerEntries = [];
+  for (const station of stations) {
+    if (station.selected === false) continue;
+    const [stream] = pickStreams(station);
+    if (!stream) continue;
+    playerEntries.push({
+      slug: station.slug,
+      name: station.name + (station.frequencies[0] ? ` (${station.frequencies[0].label})` : ''),
+      url: stream.url,
+      logo: logoForUi(station),
+      hls: stream.hls,
+      reachable: stream.reachable,
+    });
+  }
+  renderPlaylist();
+}
+
+function renderPlaylist() {
+  const list = $('playlist');
+  list.innerHTML = '';
+  $('playFirst').disabled = playerEntries.length === 0;
+
+  playerEntries.forEach((entry, index) => {
+    const li = document.createElement('li');
+    if (index === currentIndex) li.className = 'playing';
+
+    const play = document.createElement('button');
+    play.textContent = index === currentIndex && !audio.paused ? '⏸' : '▶';
+    play.onclick = () => (index === currentIndex && !audio.paused ? stop() : playIndex(index));
+
+    const img = document.createElement('img');
+    img.src = entry.logo;
+    img.alt = '';
+    img.loading = 'lazy';
+
+    const name = document.createElement('div');
+    name.className = 'name';
+    name.innerHTML = '<b></b><small></small>';
+    name.querySelector('b').textContent = entry.name;
+    name.querySelector('small').textContent = entry.url;
+
+    const tags = document.createElement('div');
+    if (entry.hls) tags.append(tag('HLS', 'hls'));
+    if (entry.reachable === true) tags.append(tag('online', 'ok'));
+    if (entry.reachable === false) tags.append(tag('offline', 'bad'));
+
+    const vlc = document.createElement('a');
+    vlc.href = entry.url;
+    vlc.textContent = '↗';
+    vlc.title = 'Открыть поток напрямую (внешний плеер)';
+    vlc.target = '_blank';
+    tags.append(vlc);
+
+    li.append(play, img, name, tags);
+    list.append(li);
+  });
+}
+
+function canPlayHlsNatively() {
+  return Boolean(audio.canPlayType('application/vnd.apple.mpegurl'));
+}
+
+function renderHlsStatus() {
+  const box = $('hlsStatus');
+  if (canPlayHlsNatively()) {
+    box.textContent = 'HLS (.m3u8): поддерживается браузером нативно.';
+    return;
+  }
+  if (hlsReady) {
+    box.textContent = 'HLS (.m3u8): играет через локальный hls.js.';
+    return;
+  }
+  box.innerHTML = 'HLS (.m3u8) этот браузер сам не играет. ';
+  const button = document.createElement('button');
+  button.textContent = 'Включить поддержку HLS (скачать hls.js один раз)';
+  button.onclick = async () => {
+    button.disabled = true;
+    const data = await (await fetch('/api/vendor/hls', { method: 'POST' })).json();
+    if (data.error) {
+      box.textContent = `Не удалось скачать hls.js: ${data.error}. Открой поток во внешнем плеере (кнопка ↗).`;
+      return;
+    }
+    hlsReady = true;
+    await loadHlsScript();
+    renderHlsStatus();
+  };
+  box.append(button);
+}
+
+let hlsScriptPromise = null;
+function loadHlsScript() {
+  if (window.Hls) return Promise.resolve();
+  hlsScriptPromise ??= new Promise((resolvePromise, rejectPromise) => {
+    const script = document.createElement('script');
+    script.src = '/vendor/hls.min.js';
+    script.onload = resolvePromise;
+    script.onerror = () => rejectPromise(new Error('hls.js не загрузился'));
+    document.head.append(script);
+  });
+  return hlsScriptPromise;
+}
+
+function detachHls() {
+  if (hlsInstance) {
+    hlsInstance.destroy();
+    hlsInstance = null;
+  }
+}
+
+async function playIndex(index) {
+  const entry = playerEntries[index];
+  if (!entry) return;
+
+  currentIndex = index;
+  $('npName').textContent = entry.name;
+  $('npMeta').textContent = entry.url;
+  $('npLogo').src = entry.logo;
+  $('playerStatus').textContent = 'подключаюсь…';
+  detachHls();
+
+  try {
+    if (entry.hls && !canPlayHlsNatively()) {
+      if (!hlsReady) {
+        $('playerStatus').textContent = 'HLS не поддерживается — включи hls.js или открой ↗';
+        renderPlaylist();
+        return;
+      }
+      await loadHlsScript();
+      hlsInstance = new window.Hls({ lowLatencyMode: false });
+      hlsInstance.loadSource(entry.url);
+      hlsInstance.attachMedia(audio);
+      hlsInstance.on(window.Hls.Events.ERROR, (_event, data) => {
+        if (data.fatal) $('playerStatus').textContent = `ошибка HLS: ${data.details}`;
+      });
+    } else {
+      audio.src = entry.url;
+    }
+    await audio.play();
+    $('playerStatus').textContent = 'играет';
+  } catch (error) {
+    $('playerStatus').textContent = `не удалось: ${error.message}`;
+  }
+  renderPlaylist();
+}
+
+function stop() {
+  audio.pause();
+  audio.removeAttribute('src');
+  audio.load();
+  detachHls();
+  $('playerStatus').textContent = 'остановлено';
+  renderPlaylist();
+}
+
+/** Parse a pasted/loaded M3U so an existing playlist can be verified. */
+function parseM3U(text) {
+  const entries = [];
+  const lines = text.split(/\r?\n/);
+  let pending = null;
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+
+    if (trimmed.startsWith('#EXTINF')) {
+      const name = trimmed.slice(trimmed.indexOf(',') + 1).trim();
+      const logo = /tvg-logo="([^"]+)"/.exec(trimmed)?.[1] ?? '';
+      pending = { name, logo };
+    } else if (!trimmed.startsWith('#')) {
+      entries.push({
+        slug: '',
+        name: pending?.name || trimmed,
+        url: trimmed,
+        logo: pending?.logo || '',
+        hls: isHls(trimmed),
+        reachable: undefined,
+      });
+      pending = null;
+    }
+  }
+  return entries;
+}
+
+// ============================================================================
+// WIRING
+// ============================================================================
+
+$('country').onchange = async () => {
+  $('filename').value = `${$('country').value}.m3u`;
+  await loadCities();
+};
+$('scrape').onclick = runScrape;
+$('recheck').onclick = probeAll;
+$('getLogos').onclick = fetchLogos;
+$('download').onclick = downloadM3U;
+$('saveNear').onclick = saveNear;
+$('bitrate').onchange = syncPlayerFromStations;
+$('logoMode').onchange = onLogoModeChange;
+$('driveCheck').onclick = () => connectDriveFolder();
+$('driveUpload').onclick = uploadToDrive;
+$('ghTokenSave').onclick = () => ghSaveToken($('ghToken').value.trim());
+$('ghTokenClear').onclick = () => ghSaveToken('');
+$('ghCheck').onclick = () => ghCheckRepo(false);
+$('ghCreate').onclick = () => ghCheckRepo(true);
+$('ghUpload').onclick = ghUploadLogos;
+$('ghPushProject').onclick = ghPushProject;
+$('driveLogin').onclick = driveLogin;
+$('driveTokenSave').onclick = async () => {
+  const token = $('driveToken').value.trim();
+  driveLog('Проверяю токен…', true);
+  const data = await (await fetch('/api/drive/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ token }),
+  })).json();
+  driveLog(data.error ? `Ошибка: ${data.error}` : `Токен принят: ${data.email ?? 'аккаунт неизвестен'}`);
+  $('driveToken').value = '';
+  await loadDriveStatus();
+};
+$('driveTokenClear').onclick = async () => {
+  await fetch('/api/drive/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ token: '' }),
+  });
+  driveLog('Токен удалён', true);
+  await loadDriveStatus();
+};
+$('driveLogout').onclick = driveLogout;
+$('driveLinkStyle').onchange = () => {
+  fetch('/api/drive/settings', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ linkStyle: $('driveLinkStyle').value }),
+  });
+};
+$('onlyWorking').onchange = () => { renderStations(); syncPlayerFromStations(); };
+
+$('loadM3u').onclick = () => $('m3uFile').click();
+$('m3uFile').onchange = async (event) => {
+  const file = event.target.files?.[0];
+  if (!file) return;
+  playerEntries = parseM3U(await file.text());
+  currentIndex = -1;
+  renderPlaylist();
+  $('playerStatus').textContent = `загружено записей: ${playerEntries.length}`;
+};
+
+$('playFirst').onclick = () => {
+  sequential = true;
+  playIndex(0);
+};
+$('stopAll').onclick = () => {
+  sequential = false;
+  stop();
+};
+
+audio.onplay = renderPlaylist;
+audio.onpause = renderPlaylist;
+audio.onerror = () => {
+  $('playerStatus').textContent = 'поток не отвечает';
+  renderPlaylist();
+};
+
+if (location.protocol === 'file:') {
+  // Opened as a plain file — no server, so nothing here can work
+  $('fileBanner').hidden = false;
+  for (const button of document.querySelectorAll('button')) button.disabled = true;
+} else {
+  onLogoModeChange();
+  loadStatus();
+  loadCities();
+}
+</script>
+</body>
+</html>

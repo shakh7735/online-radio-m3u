@@ -1,0 +1,23 @@
+# Secrets — never commit
+github-token.txt
+drive-token.txt
+
+# Local state
+.cache/
+vendor/
+drive-map.json
+drive-settings.json
+github-map.json
+github-settings.json
+
+# Generated playlists
+*.m3u
+
+# Scratch output
+*.log
+*.ndjson
+*-req.json
+small-city.txt
+
+# macOS
+.DS_Store

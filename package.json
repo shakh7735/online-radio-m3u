@@ -1,0 +1,8 @@
+{
+  "name": "top-radio-m3u",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-strip-types top-radio-app.ts"
+  }
+}
