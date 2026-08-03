@@ -1,0 +1,202 @@
+#EXTM3U
+#PLAYLIST:Радиостанции России
+#EXTINF:-1 tvg-id="avtoradio" tvg-name="Авторадио" tvg-logo="https://top-radio.ru/assets/image/radio/180/auto.png" group-title="Радиостанции России",Авторадио (Волгоград 103.1 FM)
+https://hls-01-gpm.hostingradio.ru/avtoradio495/playlist.m3u8
+#EXTINF:-1 tvg-id="alaniya-fm" tvg-name="Алания FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/alania-fm.jpg" group-title="Радиостанции России",Алания FM (Владикавказ 104.5 FM)
+https://vgtrk15.hostingradio.ru:8011/vgtrk15128.mp3
+#EXTINF:-1 tvg-id="bim" tvg-name="БИМ-радио" tvg-logo="https://top-radio.ru/assets/image/radio/180/bim-radio.png" group-title="Радиостанции России",БИМ-радио (Казань 102.8 FM)
+https://av.bimradio.ru/bim_mp3
+#EXTINF:-1 tvg-id="bolgar-radiosyi" tvg-name="Болгар Радиосы" tvg-logo="https://top-radio.ru/assets/image/radio/180/radiobolgar.png" group-title="Радиостанции России",Болгар Радиосы (Казань 91.5 FM)
+https://live.bolgarradio.com/b_aac_hifi.m3u8
+#EXTINF:-1 tvg-id="buryad-fm" tvg-name="Буряад ФМ" tvg-logo="https://top-radio.ru/assets/image/radio/180/buryad-fm.jpg" group-title="Радиостанции России",Буряад ФМ (Улан-Удэ 90.8 FM)
+https://buryadfm.hostingradio.ru:8018/buryadfm128.mp3
+#EXTINF:-1 tvg-id="vesti-fm" tvg-name="Вести ФМ" tvg-logo="https://top-radio.ru/assets/image/radio/180/vestifm.png" group-title="Радиостанции России",Вести ФМ (Волгоград 106.8 FM)
+https://icecast-vgtrk.cdnvideo.ru/vestifm_mp3_192kbps
+#EXTINF:-1 tvg-id="vladivostok-fm" tvg-name="Владивосток FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/vladivostok-fm.jpg" group-title="Радиостанции России",Владивосток FM (Владивосток 106.4 FM)
+https://stream.pari-radio.ru/vfm
+#EXTINF:-1 tvg-id="govorit-moskva" tvg-name="Говорит Москва" tvg-logo="https://top-radio.ru/assets/image/radio/180//govorit-moskva.jpg" group-title="Радиостанции России",Говорит Москва (Москва 94.8 FM)
+https://media.govoritmoskva.ru/radio/rufm.mp3
+#EXTINF:-1 tvg-id="detskoe" tvg-name="Детское радио" tvg-logo="https://top-radio.ru/assets/image/radio/180/detifm.png" group-title="Радиостанции России",Детское радио (Волгоград 95.7 FM)
+https://hls-01-gpm.hostingradio.ru/detifm495/playlist.m3u8
+#EXTINF:-1 tvg-id="dorozhnoe" tvg-name="Дорожное радио" tvg-logo="https://top-radio.ru/assets/image/radio/180/dorojnoe.png" group-title="Радиостанции России",Дорожное радио (Волгоград 103.6 FM)
+https://hls-01-dorognoe.emgsound.ru/15/112/playlist.m3u8
+#EXTINF:-1 tvg-id="evropa-plyus" tvg-name="Европа Плюс" tvg-logo="https://top-radio.ru/assets/image/radio/180/europa-plus.png" group-title="Радиостанции России",Европа Плюс (Волгоград 100.6 FM)
+https://hls-02-europaplus.emgsound.ru/11/112/playlist.m3u8
+#EXTINF:-1 tvg-id="zhara-fm" tvg-name="Жара FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/Zhara-fm.jpg" group-title="Радиостанции России",Жара FM (Москва 100.5 FM)
+https://live1.zharafm.ru/internet
+#EXTINF:-1 tvg-id="ivanovo-fm" tvg-name="Иваново FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/ivanovo-fm.png" group-title="Радиостанции России",Иваново FM (Иваново 106.7 FM)
+https://stream.ivpromedia.ru:8443/IvanovoFM.ogg
+#EXTINF:-1 tvg-id="kavkaz-vlad" tvg-name="Кавказ Радио Волна" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/kavkaz_radio_volna.webp" group-title="Радиостанции России",Кавказ Радио Волна (Владикавказ 90.8 FM)
+https://radio-volna.com/play/1454-kavkaz-radio.php
+#EXTINF:-1 tvg-id="kazak-fm" tvg-name="Казак FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/kazak-fm.jpg" group-title="Радиостанции России",Казак FM (Абинск 102.4 FM)
+https://radio.kazak.fm/kazak_fm.mp3?radiostatistica=top-radio.ru
+#EXTINF:-1 tvg-id="kommersant-fm" tvg-name="Коммерсантъ FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/komersantfm.png" group-title="Радиостанции России",Коммерсантъ FM (Москва 93.6 FM)
+https://kommersant77.hostingradio.ru:8016/kommersant128.mp3
+#EXTINF:-1 tvg-id="marij-el" tvg-name="Марий Эл Радио" tvg-logo="https://top-radio.ru/assets/image/radio/180/marijel.png" group-title="Радиостанции России",Марий Эл Радио (Йошкар-Ола 105.5 FM)
+https://metr12.ru/play/mer
+#EXTINF:-1 tvg-id="mariya-fm" tvg-name="Мария FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/mariafm.png" group-title="Радиостанции России",Мария FM (Арзамас 105.6 FM)
+https://online.mariafm.ru:8443/MariaFM
+#EXTINF:-1 tvg-id="marusya-fm" tvg-name="Маруся ФМ" tvg-logo="https://top-radio.ru/assets/image/radio/180/marusyafm.png" group-title="Радиостанции России",Маруся ФМ (Нижний Новгород 95.6 FM)
+https://radio-holding.ru:9433/marusya_default
+#EXTINF:-1 tvg-id="miliczejskaya-volna" tvg-name="Милицейская Волна" tvg-logo="https://top-radio.ru/assets/image/radio/180/radiomv.jpg" group-title="Радиостанции России",Милицейская Волна (Москва 107.8 FM)
+https://radiomv.hostingradio.ru:80/radiomv256.mp3
+#EXTINF:-1 tvg-id="kitap-radiosyi" tvg-name="Милли Радио Китап" tvg-logo="https://top-radio.ru/assets/image/radio/180/kitapfm.jpg" group-title="Радиостанции России",Милли Радио Китап (Казань 98.6 FM)
+https://radio.tatmedia.com:8443/kitapfm
+#EXTINF:-1 tvg-id="moskva-fm" tvg-name="Москва FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/moscow-fm.jpg" group-title="Радиостанции России",Москва FM (Москва 92.0 FM)
+https://icecast-vgtrk.cdnvideo.ru/moscowfm128
+#EXTINF:-1 tvg-id="chavash-en" tvg-name="Национальное радио Чувашии" tvg-logo="https://top-radio.ru/assets/image/radio/180/nrch.jpg" group-title="Радиостанции России",Национальное радио Чувашии (Чебоксары 95.9 FM)
+http://icecast.ntrk21.ru:8000/nacradio
+#EXTINF:-1 tvg-id="nashe" tvg-name="НАШЕ Радио" tvg-logo="https://top-radio.ru/assets/image/radio/180/nase-radio.png" group-title="Радиостанции России",НАШЕ Радио (Волгоград 97.2 FM)
+https://nashe1.hostingradio.ru/nashe-256
+#EXTINF:-1 tvg-id="novoe" tvg-name="Новое Радио" tvg-logo="https://top-radio.ru/assets/image/radio/180/novoe-v2.png" group-title="Радиостанции России",Новое Радио (Волгоград 104.0 FM)
+https://hls.newradio.ru/novoeradio/112/playlist.m3u8
+#EXTINF:-1 tvg-id="pi-fm" tvg-name="ПИ FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/Pi-fm.png" group-title="Радиостанции России",ПИ FM (Красноярск 93.1 FM)
+https://cdn.pifm.ru/mp3
+#EXTINF:-1 tvg-id="pioner-fm" tvg-name="Пионер FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/pioner-fm.png" group-title="Радиостанции России",Пионер FM (Березники 98.7 FM)
+https://myradio24.org/pionerfm_256
+#EXTINF:-1 tvg-id="piter-fm" tvg-name="Питер FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/piterfm.png" group-title="Радиостанции России",Питер FM (Санкт-Петербург 100.9 FM)
+https://radiosolo.ru/radio/piterfm/icecast.audio
+#EXTINF:-1 tvg-id="107" tvg-name="Радио 107" tvg-logo="https://top-radio.ru/assets/image/radio/180/Радио 107 Главное Хитовое.jpg" group-title="Радиостанции России",Радио 107 (Анапа 99.4 FM)
+https://online.radio107.ru:8443/radio107_256.mp3
+#EXTINF:-1 tvg-id="radio-7" tvg-name="Радио 7" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/radio7-na7holmah.png" group-title="Радиостанции России",Радио 7 (Волгоград 94.9 FM)
+https://radio7.hostingradio.ru:8040/radio7256.mp3
+#EXTINF:-1 tvg-id="adam" tvg-name="Радио Адам" tvg-logo="https://top-radio.ru/assets/image/radio/180/radio-adam.jpg" group-title="Радиостанции России",Радио Адам (Ижевск 104.5 FM)
+https://radioadam.hostingradio.ru/radioadam256.mp3
+#EXTINF:-1 tvg-id="ashkadar" tvg-name="Радио Ашкадар" tvg-logo="https://top-radio.ru/assets/image/radio/180/ashkadarfm.png" group-title="Радиостанции России",Радио Ашкадар (Уфа 66.88 УКВ)
+https://radio.mediacdn.ru/ashkadar.mp3
+#EXTINF:-1 tvg-id="baltik-plyus" tvg-name="Радио Балтик Плюс" tvg-logo="https://top-radio.ru/assets/image/radio/180/baltik-plyus.png" group-title="Радиостанции России",Радио Балтик Плюс (Калининград 105.2 FM)
+https://bp.koenig.ru:8443/Baltic_Plus_mp3_128.mp3
+#EXTINF:-1 tvg-id="vanya" tvg-name="Радио ВАНЯ" tvg-logo="https://top-radio.ru/assets/image/radio/180/radio-vanya.png" group-title="Радиостанции России",Радио ВАНЯ (Омск 88.1 FM)
+https://radiokrug.ru/radio/vanya/icecast.audio
+#EXTINF:-1 tvg-id="radio-sahalii-viktoriya" tvg-name="Радио Виктория Саха" tvg-logo="https://top-radio.ru/assets/image/radio/180/radio-sahalii-viktoriya.png" group-title="Радиостанции России",Радио Виктория Саха (Якутск 104.5 FM)
+https://radiosolo.ru/radio/viksaha/icecast.audio
+#EXTINF:-1 tvg-id="radio-gordost" tvg-name="Радио Гордость" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/radiogordost.webp" group-title="Радиостанции России",Радио Гордость (Волгоград 106.4 FM)
+https://rgordost.hostingradio.ru/rgordost128.aacp
+#EXTINF:-1 tvg-id="dacha" tvg-name="Радио Дача" tvg-logo="https://top-radio.ru/assets/image/radio/180/radio-dacha.png" group-title="Радиостанции России",Радио Дача (Волгоград 97.6 FM)
+https://www.radiodacha.ru/player.htm
+#EXTINF:-1 tvg-id="dlya-dvoix" tvg-name="Радио для двоих" tvg-logo="https://top-radio.ru/assets/image/radio/180/radio-dlya-dvoix.jpg" group-title="Радиостанции России",Радио для двоих (Красноярск 68.9 УКВ)
+https://radiokrug.ru/radio/radiofortwo/icecast.audio
+#EXTINF:-1 tvg-id="zvezda" tvg-name="Радио ЗВЕЗДА" tvg-logo="https://top-radio.ru/assets/image/radio/180/zvezda-fm.jpg" group-title="Радиостанции России",Радио ЗВЕЗДА (Волгоград 99.6 FM)
+https://zvezda-radio-rzv.mediacdn.ru/radio/zvezda/zvezda_128
+#EXTINF:-1 tvg-id="intervolna" tvg-name="Радио Интерволна" tvg-logo="https://top-radio.ru/assets/image/radio/180/intervolnafm.png" group-title="Радиостанции России",Радио Интерволна (Челябинск 102.9 FM)
+https://online.intervolna.ru:8433/radio192
+#EXTINF:-1 tvg-id="iskatel" tvg-name="Радио ИСКАТЕЛЬ" tvg-logo="https://top-radio.ru/assets/image/radio/180/iskatel.png" group-title="Радиостанции России",Радио ИСКАТЕЛЬ (Абакан 90.6 FM)
+https://iskatel.hostingradio.ru:8015/iskatel-128.mp3
+#EXTINF:-1 tvg-id="kavkaz-xit" tvg-name="Радио Кавказ Хит" tvg-logo="https://top-radio.ru/assets/image/radio/180/kavkaz-hit.png" group-title="Радиостанции России",Радио Кавказ Хит (Анапа 88.3 FM)
+https://kavkazhit.hostingradio.ru:8017/kavkazhit96.mp3
+#EXTINF:-1 tvg-id="kalina-krasnaya" tvg-name="Радио Калина Красная" tvg-logo="https://top-radio.ru/assets/image/radio/180/kalina-krasnaya.png" group-title="Радиостанции России",Радио Калина Красная (Москва 89.5 FM)
+https://icecast-studio21.cdnvideo.ru/KalynaK_1a
+#EXTINF:-1 tvg-id="kniga" tvg-name="Радио Книга" tvg-logo="https://top-radio.ru/assets/image/radio/180/kniga.jpg" group-title="Радиостанции России",Радио Книга (Волгоград 106.4 FM)
+https://bookradio.hostingradio.ru:8069/fm
+#EXTINF:-1 tvg-id="komsomolskaya-pravda" tvg-name="Радио Комсомольская Правда" tvg-logo="https://top-radio.ru/assets/image/radio/180/radiokp.png" group-title="Радиостанции России",Радио Комсомольская Правда (Волгоград 96.5 FM)
+https://kpradio.hostingradio.ru:8000/128?radiostatistica=top-radio.ru
+#EXTINF:-1 tvg-id="kontinental" tvg-name="Радио Континенталь" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/radio-kontinental.webp" group-title="Радиостанции России",Радио Континенталь (Челябинск 100.4 FM)
+https://stream01.radiocon.ru:8443/live
+#EXTINF:-1 tvg-id="kultura" tvg-name="Радио Культура" tvg-logo="https://top-radio.ru/assets/image/radio/180/cultradio.png" group-title="Радиостанции России",Радио Культура (Москва 91.6 FM)
+https://icecast-vgtrk.cdnvideo.ru/kulturafm_mp3_192kbps
+#EXTINF:-1 tvg-id="kunel" tvg-name="Радио Кунел" tvg-logo="https://top-radio.ru/assets/image/radio/180/radio-kunel.jpg" group-title="Радиостанции России",Радио Кунел (Набережные Челны 92.6 FM)
+https://radio.tatmedia.com:8443/kunel
+#EXTINF:-1 tvg-id="mayak" tvg-name="Радио Маяк" tvg-logo="https://top-radio.ru/assets/image/radio/180/radiomayak.png" group-title="Радиостанции России",Радио Маяк (Волгоград 95.3 FM)
+https://icecast-vgtrk.cdnvideo.ru/mayakfm_mp3_192kbps
+#EXTINF:-1 tvg-id="megapolis" tvg-name="Радио Мегаполис" tvg-logo="https://top-radio.ru/assets/image/radio/180/megalopolis-sam.jpg" group-title="Радиостанции России",Радио Мегаполис (Самара 103.6 FM)
+https://online2.radio-megapolis.ru/megapolis_mp3
+#EXTINF:-1 tvg-id="mir" tvg-name="Радио МИР" tvg-logo="https://top-radio.ru/assets/image/radio/180/radiomir.jpg" group-title="Радиостанции России",Радио МИР (Волгоград 93.8 FM)
+https://icecast-mirtv.cdnvideo.ru/radio_mir_256
+#EXTINF:-1 tvg-id="mir-belogorya" tvg-name="Радио Мир Белогорья" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/mirbelogorya.png" group-title="Радиостанции России",Радио Мир Белогорья (Белгород 100.9 FM)
+https://node1.craftradio.ru:8003/63_ABCBD724
+#EXTINF:-1 tvg-id="monte-karlo" tvg-name="Радио Монте-Карло" tvg-logo="https://top-radio.ru/assets/image/radio/180/mc.png" group-title="Радиостанции России",Радио Монте-Карло (Волгоград 87.9 FM)
+https://montecarlo.hostingradio.ru/montecarlo96.aacp
+#EXTINF:-1 tvg-id="mcm" tvg-name="Радио МСМ" tvg-logo="https://top-radio.ru/assets/image/radio/180/mcm.jpg" group-title="Радиостанции России",Радио МСМ (Братск 93.9 FM)
+https://webradio.mcm.fm:10443/hit256
+#EXTINF:-1 tvg-id="obraz" tvg-name="Радио Образ" tvg-logo="https://top-radio.ru/assets/image/radio/180/radioobraz.png" group-title="Радиостанции России",Радио Образ (Нижний Новгород 98.0 FM)
+https://radioobraz.ru/radio/
+#EXTINF:-1 tvg-id="orfej" tvg-name="Радио Орфей" tvg-logo="https://top-radio.ru/assets/image/radio/180/radio-orfej.jpg" group-title="Радиостанции России",Радио Орфей (Волгоград 87.5 FM)
+https://orfeyfm.hostingradio.ru:8034/orfeyfm192.mp3
+#EXTINF:-1 tvg-id="peterburg" tvg-name="Радио Петербург" tvg-logo="https://top-radio.ru/assets/image/radio/180/piterburg.jpg" group-title="Радиостанции России",Радио Петербург (Санкт-Петербург 69.47 УКВ)
+https://radio.5-tv.ru/radio.mp3
+#EXTINF:-1 tvg-id="priboj" tvg-name="Радио Прибой" tvg-logo="https://top-radio.ru/assets/image/radio/180/radiopriboy.png" group-title="Радиостанции России",Радио Прибой (Дербент 100.1 FM)
+http://77.232.167.247:1007/
+#EXTINF:-1 tvg-id="primorskaya-volna" tvg-name="Радио Приморская волна" tvg-logo="https://top-radio.ru/assets/image/radio/180/prim-volna.png" group-title="Радиостанции России",Радио Приморская волна (Арсеньев 88.9 FM)
+https://stream.primvolna.ru/primvolna
+#EXTINF:-1 tvg-id="radio-rbk" tvg-name="Радио РБК" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/radio-rbk.webp" group-title="Радиостанции России",Радио РБК (Воронеж 101.1 FM)
+https://hls-01-rbc.hostingradio.ru/rbc-fed0/112/playlist.m3u8
+#EXTINF:-1 tvg-id="rekord" tvg-name="Радио Рекорд" tvg-logo="https://top-radio.ru/assets/image/radio/180/radiorecod.png" group-title="Радиостанции России",Радио Рекорд (Казань 101.9 FM)
+https://hls-01-radiorecord.hostingradio.ru/record/112/playlist.m3u8
+#EXTINF:-1 tvg-id="rodnyix-dorog" tvg-name="Радио Родных Дорог" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/Rodnyix-doroG.png" group-title="Радиостанции России",Радио Родных Дорог (Нижний Новгород 105.9 FM)
+https://stream1.radiord.ru:8000/live128.mp3
+#EXTINF:-1 tvg-id="rossii" tvg-name="Радио России" tvg-logo="https://top-radio.ru/assets/image/radio/180/radiorussia.png" group-title="Радиостанции России",Радио России (Волгоград 98.3 FM)
+https://icecast-vgtrk.cdnvideo.ru/rrzonam_mp3_192kbps
+#EXTINF:-1 tvg-id="russkij-xit" tvg-name="Радио Русский Хит" tvg-logo="https://top-radio.ru/assets/image/radio/180/ruhitnew.png" group-title="Радиостанции России",Радио Русский Хит (Воронеж 98.1 FM)
+http://www.ruhit.fm/player.htm
+#EXTINF:-1 tvg-id="rus" tvg-name="Радио Русь" tvg-logo="https://top-radio.ru/assets/image/radio/180/rus.png" group-title="Радиостанции России",Радио Русь (Армавир 96.1 FM)
+https://radio-holding.ru:9433/rus
+#EXTINF:-1 tvg-id="si" tvg-name="Радио СИ" tvg-logo="https://top-radio.ru/assets/image/radio/180/radio-si.png" group-title="Радиостанции России",Радио СИ (Екатеринбург 103.7 FM)
+https://www.radioc.ru/broadcast.php
+#EXTINF:-1 tvg-id="sibir" tvg-name="Радио Сибирь" tvg-logo="https://top-radio.ru/assets/image/radio/180/radio-sibir.png" group-title="Радиостанции России",Радио Сибирь (Красноярск 95.8 FM)
+https://stream.radiosibir.ru:8093/rp
+#EXTINF:-1 tvg-id="chocolate" tvg-name="Радио Шоколад" tvg-logo="https://top-radio.ru/assets/image/radio/180/Chocolate.png" group-title="Радиостанции России",Радио Шоколад (Екатеринбург 91.9 FM)
+https://choco.hostingradio.ru:10010/fm
+#EXTINF:-1 tvg-id="energy" tvg-name="Радио ЭНЕРДЖИ (NRG)" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/nrg-energy.webp" group-title="Радиостанции России",Радио ЭНЕРДЖИ (NRG) (Волгоград 98.8 FM)
+https://hls-01-gpm.hostingradio.ru/energyfm495/128/playlist.m3u8
+#EXTINF:-1 tvg-id="ermitazh" tvg-name="Радио Эрмитаж" tvg-logo="https://top-radio.ru/assets/image/radio/180/ermitaj.jpg" group-title="Радиостанции России",Радио Эрмитаж (Санкт-Петербург 90.1 FM)
+https://hermitage.hostingradio.ru/hermitage128.mp3
+#EXTINF:-1 tvg-id="yuldash" tvg-name="Радио Юлдаш" tvg-logo="https://top-radio.ru/assets/image/radio/180/yuldash.png" group-title="Радиостанции России",Радио Юлдаш (Уфа 105.5 FM)
+https://radio.mediacdn.ru/uldash.mp3
+#EXTINF:-1 tvg-id="jazz" tvg-name="Радио JAZZ" tvg-logo="https://top-radio.ru/assets/image/radio/180/jazzradio.png" group-title="Радиостанции России",Радио JAZZ (Москва 89.1 FM)
+https://nashe1.hostingradio.ru/jazz-256
+#EXTINF:-1 tvg-id="maximum" tvg-name="Радио MAXIMUM" tvg-logo="https://top-radio.ru/assets/image/radio/180/mamimum2.jpg" group-title="Радиостанции России",Радио MAXIMUM (Волгоград 99.2 FM)
+https://maximum.hostingradio.ru/maximum96.aacp
+#EXTINF:-1 tvg-id="romantika" tvg-name="Радио Romantika" tvg-logo="https://top-radio.ru/assets/image/radio/180/romantika.png" group-title="Радиостанции России",Радио Romantika (Москва 98.8 FM)
+https://hls-01-gpm.hostingradio.ru/romantika495/playlist.m3u8
+#EXTINF:-1 tvg-id="sputnik-ria-novosti" tvg-name="Радио Sputnik" tvg-logo="https://top-radio.ru/assets/image/radio/180/radio-sputnik.jpg" group-title="Радиостанции России",Радио Sputnik (Волгоград 101.1 FM)
+https://icecast-rian.cdnvideo.ru/voicerus
+#EXTINF:-1 tvg-id="3" tvg-name="Радио-3" tvg-logo="https://top-radio.ru/assets/image/radio/180/radio3.png" group-title="Радиостанции России",Радио-3 (Омск 103.5 FM)
+http://81.23.194.18:8010/radio3.mp3
+#EXTINF:-1 tvg-id="retro-fm" tvg-name="Ретро FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/retro_fm.png" group-title="Радиостанции России",Ретро FM (Волгоград 102.6 FM)
+https://retro.hostingradio.ru:8043/retro256.mp3
+#EXTINF:-1 tvg-id="roksana" tvg-name="Роксана Радио" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/roksanaradio.png" group-title="Радиостанции России",Роксана Радио (Уфа 103.0 FM)
+https://myradio24.org/2761
+#EXTINF:-1 tvg-id="russkoe" tvg-name="Русское Радио" tvg-logo="https://top-radio.ru/assets/image/radio/180/rusradio.png" group-title="Радиостанции России",Русское Радио (Волгоград 105.6 FM)
+https://hls-01-rusradio.hostingradio.ru/rusradio/96/playlist.m3u8
+#EXTINF:-1 tvg-id="sol-fm" tvg-name="Соль FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/solfm.jpg" group-title="Радиостанции России",Соль FM (Кудымкар 101.5 FM)
+https://solfm.ru:8443/online320
+#EXTINF:-1 tvg-id="sputnik-fm" tvg-name="Спутник ФМ" tvg-logo="https://top-radio.ru/assets/image/radio/180/sputnikfm-ufa.png" group-title="Радиостанции России",Спутник ФМ (Уфа 107.0 FM)
+https://radio.mediacdn.ru/sputnik_fm.mp3
+#EXTINF:-1 tvg-id="tavan" tvg-name="Таван радио" tvg-logo="https://top-radio.ru/assets/image/radio/180/59766 (1).jpg" group-title="Радиостанции России",Таван радио (Чебоксары 100.3 FM)
+http://icecast.ntrk21.ru:8000/tavan
+#EXTINF:-1 tvg-id="tartip-fm" tvg-name="Тартип FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/tartip-fm.jpg" group-title="Радиостанции России",Тартип FM (Казань 93.1 FM)
+https://radio.tatmedia.com:8443/tartipfm
+#EXTINF:-1 tvg-id="tatar-radiosyi" tvg-name="Татар Радиосы" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/tatar-radiosyi.png" group-title="Радиостанции России",Татар Радиосы (Казань 100.5 FM)
+https://tatarradio.hostingradio.ru/tatarradio320.mp3
+#EXTINF:-1 tvg-id="top-radio" tvg-name="Топ Радио" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/top-radio.png" group-title="Радиостанции России",Топ Радио (Елец 102.4 FM)
+https://streamer.radiovseti.ru:8000/tr_hd
+#EXTINF:-1 tvg-id="saxa" tvg-name="Тэтим Радио" tvg-logo="https://top-radio.ru/assets/image/radio/180/tatimfm.png" group-title="Радиостанции России",Тэтим Радио (Якутск 107.1 FM)
+https://icecast-saha.cdnvideo.ru/saha
+#EXTINF:-1 tvg-id="xit-fm" tvg-name="Хит FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/hit-fm.png" group-title="Радиостанции России",Хит FM (Екатеринбург 88.3 FM)
+https://hitfm.hostingradio.ru/hitfm96.aacp
+#EXTINF:-1 tvg-id="xoroshee-fm" tvg-name="Хорошее радио" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/horoshee.png" group-title="Радиостанции России",Хорошее радио (Волжский 100.0 FM)
+https://hr.amgradio.ru/Horoshee
+#EXTINF:-1 tvg-id="eldoradio" tvg-name="Эльдорадио" tvg-logo="https://top-radio.ru/assets/image/radio/180/eldo-radio.jpg" group-title="Радиостанции России",Эльдорадио (Санкт-Петербург 101.4 FM)
+https://emgspb.hostingradio.ru/eldoradio128.mp3
+#EXTINF:-1 tvg-id="yumor-fm" tvg-name="Юмор FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/yumor-fm.png" group-title="Радиостанции России",Юмор FM (Волгоград 104.5 FM)
+https://hls-01-gpm.hostingradio.ru/humorfm495/playlist.m3u8
+#EXTINF:-1 tvg-id="business-fm" tvg-name="Business FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/bfm-russia.png" group-title="Радиостанции России",Business FM (Екатеринбург 99.4 FM)
+https://bfm.hostingradio.ru/bfm256.mp3
+#EXTINF:-1 tvg-id="comedy" tvg-name="Comedy Radio" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/comedyradio.png" group-title="Радиостанции России",Comedy Radio (Волгоград 107.2 FM)
+https://hls-01-gpm.hostingradio.ru/comedyradio495/playlist.m3u8
+#EXTINF:-1 tvg-id="dfm" tvg-name="DFM" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/radio-dfm.webp" group-title="Радиостанции России",DFM (Волгоград 94.5 FM)
+https://hls-01-dfm.hostingradio.ru/dfm/96/playlist.m3u8
+#EXTINF:-1 tvg-id="like-fm" tvg-name="Like FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/likefm.png" group-title="Радиостанции России",Like FM (Казань 107.3 FM)
+https://hls-01-gpm.hostingradio.ru/likefm495/playlist.m3u8
+#EXTINF:-1 tvg-id="love" tvg-name="Love Radio" tvg-logo="https://top-radio.ru/assets/image/radio/180/loveradio2.png" group-title="Радиостанции России",Love Radio (Волгоград 96.1 FM)
+https://www.loveradio.ru/
+#EXTINF:-1 tvg-id="relax-fm" tvg-name="Relax FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/uploads-images/relaxfmru.png" group-title="Радиостанции России",Relax FM (Воронеж 94.9 FM)
+https://hls-01-gpm.hostingradio.ru/relaxfm495/128/playlist.m3u8
+#EXTINF:-1 tvg-id="remix-fm" tvg-name="Remix FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/remixfm.png" group-title="Радиостанции России",Remix FM (Белорецк 104.4 FM)
+https://rmx.amgradio.ru/RemixFM
+#EXTINF:-1 tvg-id="rock-fm" tvg-name="Rock FM" tvg-logo="https://top-radio.ru/assets/image/radio/180/rockfm.jpg" group-title="Радиостанции России",Rock FM (Москва 95.2 FM)
+https://nashe1.hostingradio.ru/rock-256
+#EXTINF:-1 tvg-id="royal" tvg-name="Royal Radio" tvg-logo="https://top-radio.ru/assets/image/radio/180/Royal.png" group-title="Радиостанции России",Royal Radio (Санкт-Петербург 98.6 FM)
+https://royalradio.space/986FM
+#EXTINF:-1 tvg-id="studio-21" tvg-name="STUDIO 21" tvg-logo="https://top-radio.ru/assets/image/radio/180/studio21.png" group-title="Радиостанции России",STUDIO 21 (Волгоград 106.0 FM)
+https://stream.studio21.ru/studio2196.aacp
