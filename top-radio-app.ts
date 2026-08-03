@@ -33,6 +33,7 @@
  *   POST /api/github/push-project       → publish the app's own files to the repo
  *   POST /api/publish/playlist          → write a playlist into playlists/ and git push it
  *   POST /api/github/publish-playlist   → same via the Contents API (when there is no SSH)
+ *   POST /api/playlist/fetch            → download a playlist by URL (server-side, avoids CORS)
  *   GET  /logos/<file>, /vendor/<file>  → local static files
  *
  * Ports/paths are CLI-overridable: --port 8787 --dir <workdir>
@@ -744,6 +745,63 @@ async function handleGithubPushProject(req: IncomingMessage, res: ServerResponse
   res.end();
 }
 
+/** Max playlist size accepted by /api/playlist/fetch. */
+const MAX_PLAYLIST_BYTES = 2 * 1024 * 1024;
+
+/**
+ * Download a playlist by URL on the server side.
+ *
+ * Doing it here rather than in the page keeps it working for hosts that send no
+ * CORS headers, and it is also the honest test of what a radio app will get:
+ * a plain unauthenticated GET.
+ */
+async function handlePlaylistFetch(req: IncomingMessage, res: ServerResponse): Promise<void> {
+  const { url } = await readBody<{ url: string }>(req);
+
+  let parsed: URL;
+  try {
+    parsed = new URL((url ?? '').trim());
+  } catch {
+    return void sendJson(res, 400, { error: 'Некорректный URL' });
+  }
+  if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+    return void sendJson(res, 400, { error: 'Поддерживаются только http и https' });
+  }
+
+  try {
+    const response = await fetch(parsed, {
+      headers: { 'User-Agent': USER_AGENT, Accept: '*/*' },
+      redirect: 'follow',
+      signal: AbortSignal.timeout(20_000),
+    });
+
+    if (!response.ok) {
+      return void sendJson(res, 200, {
+        error:
+          response.status === 404
+            ? 'HTTP 404: файл недоступен по этой ссылке (для приватного репозитория raw-ссылки не работают)'
+            : `HTTP ${response.status}`,
+        status: response.status,
+      });
+    }
+
+    const buffer = Buffer.from(await response.arrayBuffer());
+    if (buffer.byteLength > MAX_PLAYLIST_BYTES) {
+      return void sendJson(res, 200, { error: `Файл слишком большой (${buffer.byteLength} байт)` });
+    }
+
+    sendJson(res, 200, {
+      content: buffer.toString('utf8'),
+      status: response.status,
+      contentType: response.headers.get('content-type'),
+      size: buffer.byteLength,
+      finalUrl: response.url,
+    });
+  } catch (error) {
+    sendJson(res, 200, { error: (error as Error).message });
+  }
+}
+
 /** Where published playlists live inside the repository. */
 const PLAYLIST_DIR = 'playlists';
 
@@ -916,6 +974,7 @@ const server = createServer(async (req, res) => {
       return void (await handleGithubPushProject(req, res));
     }
     if (req.method === 'POST' && path === '/api/publish/playlist') return void (await handlePublishPlaylist(req, res));
+    if (req.method === 'POST' && path === '/api/playlist/fetch') return void (await handlePlaylistFetch(req, res));
     if (req.method === 'POST' && path === '/api/github/publish-playlist') {
       return void (await handleGithubPublishPlaylist(req, res));
     }

@@ -368,15 +368,22 @@
       </div>
     </div>
 
+    <label>
+      <span class="lbl">Проверить плейлист по ссылке</span>
+      <input type="text" id="plUrl" placeholder="https://raw.githubusercontent.com/…/playlists/all.m3u">
+    </label>
     <div class="actions">
+      <button class="primary" id="plLoad">Загрузить по ссылке</button>
       <label style="flex:0 0 auto;margin:0">
         <input type="file" id="m3uFile" accept=".m3u,.m3u8,audio/x-mpegurl" style="display:none">
-        <button id="loadM3u">Загрузить .m3u в плеер</button>
+        <button id="loadM3u">Из файла</button>
       </label>
+      <button id="plCheck" disabled>Проверить потоки</button>
       <button id="playFirst" disabled>Проиграть по очереди</button>
       <button id="stopAll">Стоп</button>
-      <span class="status" id="playerStatus"></span>
     </div>
+    <div class="status" id="playerStatus"></div>
+    <div class="status" id="plReport"></div>
 
     <div class="status" id="hlsStatus"></div>
 
@@ -733,6 +740,7 @@ async function publishPlaylist() {
       else if (event.kind === 'done') {
         const url = $('ghLinkStyle').value === 'jsdelivr' ? event.jsdelivr : event.url;
         $('publishedUrl').value = url;
+        $('plUrl').value = url;
         $('publishedWrap').hidden = false;
         $('publishedActions').hidden = false;
         $('openRepo').href = event.repoUrl;
@@ -1241,6 +1249,7 @@ function syncPlayerFromStations() {
     });
   }
   renderPlaylist();
+  $('plCheck').disabled = playerEntries.length === 0;
 }
 
 function renderPlaylist() {
@@ -1282,6 +1291,101 @@ function renderPlaylist() {
     li.append(play, img, name, tags);
     list.append(li);
   });
+}
+
+/** Fetch a playlist through the server (no CORS limits) and load it into the player. */
+async function loadPlaylistByUrl() {
+  const url = $('plUrl').value.trim();
+  if (!url) {
+    $('plReport').textContent = 'вставь ссылку на .m3u';
+    return;
+  }
+
+  $('plLoad').disabled = true;
+  $('plReport').textContent = 'загружаю…';
+
+  try {
+    const data = await (await fetch('/api/playlist/fetch', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url }),
+    })).json();
+
+    if (data.error) {
+      $('plReport').innerHTML = `<span class="tag bad">не загрузилось</span> ${data.error}`;
+      return;
+    }
+
+    playerEntries = parseM3U(data.content);
+    currentIndex = -1;
+    renderPlaylist();
+    $('plCheck').disabled = playerEntries.length === 0;
+
+    const hls = playerEntries.filter((entry) => entry.hls).length;
+    const withLogo = playerEntries.filter((entry) => entry.logo).length;
+    $('plReport').innerHTML =
+      `<span class="tag ok">HTTP ${data.status}</span> ${data.size} байт · записей ${playerEntries.length}` +
+      ` · с логотипом ${withLogo} · HLS ${hls}`;
+    checkPlaylistLogos();
+  } catch (error) {
+    $('plReport').innerHTML = `<span class="tag bad">ошибка</span> ${error.message}`;
+  } finally {
+    $('plLoad').disabled = false;
+  }
+}
+
+/** Load every logo referenced by the playlist to see which ones actually resolve. */
+function checkPlaylistLogos() {
+  const withLogo = playerEntries.filter((entry) => entry.logo);
+  if (withLogo.length === 0) return;
+
+  let ok = 0;
+  let failed = 0;
+  const finish = () => {
+    if (ok + failed < withLogo.length) return;
+    const badge = failed === 0 ? '<span class="tag ok">логотипы ok</span>' : '<span class="tag bad">логотипы</span>';
+    $('plReport').innerHTML += ` · ${badge} ${ok}/${withLogo.length}`;
+  };
+
+  for (const entry of withLogo) {
+    const probe = new Image();
+    probe.onload = () => { ok++; finish(); };
+    probe.onerror = () => { failed++; finish(); };
+    probe.src = entry.logo;
+  }
+}
+
+/** Probe every stream of the loaded playlist and mark it online/offline. */
+async function checkPlaylistStreams() {
+  if (playerEntries.length === 0) return;
+
+  $('plCheck').disabled = true;
+  const previous = $('plReport').innerHTML;
+  $('plReport').innerHTML = `${previous} · проверяю потоки…`;
+
+  try {
+    const urls = [...new Set(playerEntries.map((entry) => entry.url))];
+    const data = await (await fetch('/api/probe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ urls }),
+    })).json();
+
+    let alive = 0;
+    for (const entry of playerEntries) {
+      entry.reachable = data.results[entry.url];
+      if (entry.reachable) alive++;
+    }
+    renderPlaylist();
+
+    const dead = playerEntries.length - alive;
+    $('plReport').innerHTML =
+      `${previous} · <span class="tag ${dead ? 'bad' : 'ok'}">потоки ${alive}/${playerEntries.length}</span>`;
+  } catch (error) {
+    $('plReport').innerHTML = `${previous} · ошибка проверки: ${error.message}`;
+  } finally {
+    $('plCheck').disabled = false;
+  }
 }
 
 function canPlayHlsNatively() {
@@ -1470,6 +1574,11 @@ $('driveLinkStyle').onchange = () => {
 };
 $('onlyWorking').onchange = () => { renderStations(); syncPlayerFromStations(); };
 
+$('plLoad').onclick = loadPlaylistByUrl;
+$('plCheck').onclick = checkPlaylistStreams;
+$('plUrl').onkeydown = (event) => {
+  if (event.key === 'Enter') loadPlaylistByUrl();
+};
 $('loadM3u').onclick = () => $('m3uFile').click();
 $('m3uFile').onchange = async (event) => {
   const file = event.target.files?.[0];
@@ -1477,7 +1586,9 @@ $('m3uFile').onchange = async (event) => {
   playerEntries = parseM3U(await file.text());
   currentIndex = -1;
   renderPlaylist();
-  $('playerStatus').textContent = `загружено записей: ${playerEntries.length}`;
+  $('plCheck').disabled = playerEntries.length === 0;
+  $('plReport').textContent = `из файла: записей ${playerEntries.length}`;
+  checkPlaylistLogos();
 };
 
 $('playFirst').onclick = () => {
