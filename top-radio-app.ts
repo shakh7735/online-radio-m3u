@@ -31,10 +31,13 @@
  *   POST /api/github/repo               → check (or create) the target repository
  *   POST /api/github/sync               → push missing logos, return raw URLs
  *   POST /api/github/push-project       → publish the app's own files to the repo
+ *   POST /api/publish/playlist          → write a playlist into playlists/ and git push it
+ *   POST /api/github/publish-playlist   → same via the Contents API (when there is no SSH)
  *   GET  /logos/<file>, /vendor/<file>  → local static files
  *
  * Ports/paths are CLI-overridable: --port 8787 --dir <workdir>
  */
+import { spawn } from 'node:child_process';
 import { createReadStream } from 'node:fs';
 import { mkdir, readdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
@@ -160,6 +163,37 @@ async function sendFile(res: ServerResponse, dir: string, name: string): Promise
   } catch {
     sendText(res, 404, 'Not found');
   }
+}
+
+/** Run a command in `cwd`, collecting its output lines. Resolves with the exit code. */
+function runCommand(
+  command: string,
+  args: string[],
+  cwd: string,
+  onLine: (line: string) => void,
+  timeoutMs = 120_000,
+): Promise<number | null> {
+  return new Promise((resolvePromise) => {
+    const child = spawn(command, args, { cwd, stdio: ['ignore', 'pipe', 'pipe'] });
+    const timer = setTimeout(() => child.kill('SIGTERM'), timeoutMs);
+
+    const forward = (chunk: Buffer) => {
+      for (const line of chunk.toString('utf8').split(/\r?\n/)) {
+        if (line.trim()) onLine(line.trim());
+      }
+    };
+    child.stdout.on('data', forward);
+    child.stderr.on('data', forward);
+    child.on('error', (error) => {
+      onLine(`${command}: ${error.message}`);
+      clearTimeout(timer);
+      resolvePromise(null);
+    });
+    child.on('close', (code) => {
+      clearTimeout(timer);
+      resolvePromise(code);
+    });
+  });
 }
 
 // ============================================================================
@@ -710,6 +744,116 @@ async function handleGithubPushProject(req: IncomingMessage, res: ServerResponse
   res.end();
 }
 
+/** Where published playlists live inside the repository. */
+const PLAYLIST_DIR = 'playlists';
+
+function sanitizeName(name: string, fallback: string): string {
+  const clean = (name ?? '').trim().replace(/[^\w.\-]+/g, '_');
+  return clean && clean !== '.m3u' ? (clean.endsWith('.m3u') ? clean : `${clean}.m3u`) : fallback;
+}
+
+/**
+ * Publish a playlist by committing it with the local git remote.
+ *
+ * This is the token-free path: the repo was cloned/pushed over SSH, so the
+ * existing key does the authentication. Returns the raw URL to paste into a
+ * radio app.
+ */
+async function handlePublishPlaylist(req: IncomingMessage, res: ServerResponse): Promise<void> {
+  const { filename, content } = await readBody<{ filename: string; content: string }>(req);
+  const name = sanitizeName(filename, 'playlist.m3u');
+
+  res.writeHead(200, { 'Content-Type': 'application/x-ndjson; charset=utf-8', 'Cache-Control': 'no-cache' });
+  const write = (event: unknown) => res.write(`${JSON.stringify(event)}\n`);
+
+  try {
+    await mkdir(join(WORK_DIR, PLAYLIST_DIR), { recursive: true });
+    await writeFile(join(WORK_DIR, PLAYLIST_DIR, name), content ?? '', 'utf8');
+    write({ kind: 'line', message: `✓ записал ${PLAYLIST_DIR}/${name}` });
+
+    const git = async (args: string[]) => {
+      const lines: string[] = [];
+      const code = await runCommand('git', args, WORK_DIR, (line) => lines.push(line));
+      return { code, output: lines.join('\n') };
+    };
+
+    const remote = await git(['remote', 'get-url', 'origin']);
+    if (remote.code !== 0) {
+      write({ kind: 'error', message: 'В папке нет git-remote origin — добавь его или используй публикацию по токену' });
+      res.end();
+      return;
+    }
+    const remoteUrl = remote.output.trim();
+
+    const add = await git(['add', '--', `${PLAYLIST_DIR}/${name}`]);
+    if (add.code !== 0) {
+      write({ kind: 'error', message: `git add: ${add.output}` });
+      res.end();
+      return;
+    }
+
+    const commit = await git(['commit', '-m', `Publish playlist ${name}`, '--', `${PLAYLIST_DIR}/${name}`]);
+    if (commit.code !== 0 && !/nothing to commit|no changes added/i.test(commit.output)) {
+      write({ kind: 'error', message: `git commit: ${commit.output}` });
+      res.end();
+      return;
+    }
+    write({ kind: 'line', message: commit.code === 0 ? '✓ commit' : '— без изменений, коммит не нужен' });
+
+    const push = await git(['push', 'origin', 'HEAD']);
+    if (push.code !== 0) {
+      write({ kind: 'error', message: `git push: ${push.output}` });
+      res.end();
+      return;
+    }
+    write({ kind: 'line', message: '✓ push' });
+
+    // Compose the raw URL from the remote (SSH or HTTPS shape)
+    const match = /github\.com[:/]([^/]+)\/(.+?)(?:\.git)?$/.exec(remoteUrl);
+    const settings = await readGithubSettings(WORK_DIR);
+    const owner = match?.[1] ?? settings.owner;
+    const repo = match?.[2] ?? settings.repo;
+    const branch = (await git(['rev-parse', '--abbrev-ref', 'HEAD'])).output.trim() || settings.branch;
+
+    write({
+      kind: 'done',
+      url: `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${PLAYLIST_DIR}/${name}`,
+      jsdelivr: `https://cdn.jsdelivr.net/gh/${owner}/${repo}@${branch}/${PLAYLIST_DIR}/${name}`,
+      repoUrl: `https://github.com/${owner}/${repo}`,
+    });
+  } catch (error) {
+    write({ kind: 'error', message: (error as Error).message });
+  }
+  res.end();
+}
+
+/** Same, but through the GitHub API — for machines without an SSH key. */
+async function handleGithubPublishPlaylist(req: IncomingMessage, res: ServerResponse): Promise<void> {
+  const { filename, content } = await readBody<{ filename: string; content: string }>(req);
+  const name = sanitizeName(filename, 'playlist.m3u');
+
+  const token = await readGithubToken(WORK_DIR);
+  if (!token) return void sendJson(res, 400, { error: 'Нет токена: используй публикацию через git или сохрани токен' });
+
+  const settings = await readGithubSettings(WORK_DIR);
+  if (!settings.owner || !settings.repo) return void sendJson(res, 400, { error: 'Репозиторий не выбран' });
+
+  const result = await putRepoFile(
+    { ...settings, dir: '' },
+    `${PLAYLIST_DIR}/${name}`,
+    Buffer.from(content ?? '', 'utf8'),
+    token,
+    `Publish playlist ${name}`,
+  );
+  if ('error' in result) return void sendJson(res, 400, { error: result.error });
+
+  sendJson(res, 200, {
+    url: `https://raw.githubusercontent.com/${settings.owner}/${settings.repo}/${settings.branch}/${PLAYLIST_DIR}/${name}`,
+    jsdelivr: `https://cdn.jsdelivr.net/gh/${settings.owner}/${settings.repo}@${settings.branch}/${PLAYLIST_DIR}/${name}`,
+    repoUrl: `https://github.com/${settings.owner}/${settings.repo}`,
+  });
+}
+
 async function handleStatus(res: ServerResponse): Promise<void> {
   let hlsReady = false;
   try {
@@ -770,6 +914,10 @@ const server = createServer(async (req, res) => {
     if (req.method === 'POST' && path === '/api/github/sync') return void (await handleGithubSync(req, res));
     if (req.method === 'POST' && path === '/api/github/push-project') {
       return void (await handleGithubPushProject(req, res));
+    }
+    if (req.method === 'POST' && path === '/api/publish/playlist') return void (await handlePublishPlaylist(req, res));
+    if (req.method === 'POST' && path === '/api/github/publish-playlist') {
+      return void (await handleGithubPublishPlaylist(req, res));
     }
     if ((req.method === 'GET' || req.method === 'POST') && path === '/api/drive/settings') {
       return void (await handleDriveSettings(req, res));

@@ -332,9 +332,23 @@
       </div>
       <div class="actions">
         <button class="primary" id="download" disabled>Скачать M3U</button>
-        <button id="saveNear" disabled>Сохранить рядом с приложением</button>
+        <button id="saveNear" disabled>Сохранить рядом</button>
+        <button id="publish" disabled>Опубликовать на GitHub</button>
       </div>
       <div class="status" id="saveStatus"></div>
+      <label id="publishedWrap" hidden>
+        <span class="lbl">Ссылка для приложения онлайн-радио</span>
+        <input type="text" id="publishedUrl" readonly>
+      </label>
+      <div class="actions" id="publishedActions" hidden>
+        <button id="copyUrl">Скопировать ссылку</button>
+        <a id="openRepo" href="#" target="_blank" style="align-self:center">открыть репозиторий</a>
+      </div>
+      <div class="log" id="publishLog" hidden></div>
+      <p class="hint">
+        Плейлист коммитится в <code>playlists/</code> и пушится в репозиторий — ссылку ниже можно вставить
+        в любое приложение онлайн-радио. Ссылки на логотипы внутри плейлиста тоже ведут на GitHub.
+      </p>
     </fieldset>
 
     <h2 id="listTitle">Станции</h2>
@@ -383,6 +397,8 @@ let logoFiles = {};
 let driveLinks = {};
 /** slug → raw GitHub link, filled after a GitHub upload. */
 let githubLinks = {};
+/** Base URL of the configured repo directory — lets links work without a token. */
+let ghLinkBase = '';
 /** Entries currently shown in the player: {name, url, logo, hls}. */
 let playerEntries = [];
 let currentIndex = -1;
@@ -417,7 +433,12 @@ function logoForPlaylist(station) {
   const file = logoFiles[station.slug];
   const siteUrl = station.logoCandidates[0] ?? '';
 
-  if (mode === 'github') return githubLinks[station.slug] ?? siteUrl;
+  if (mode === 'github') {
+    if (githubLinks[station.slug]) return githubLinks[station.slug];
+    // Logo already committed: the URL shape is predictable from the repo settings
+    if (ghLinkBase && file) return `${ghLinkBase}/${file}`;
+    return siteUrl;
+  }
   if (mode === 'drive') return driveLinks[station.slug] ?? siteUrl;
   if (mode === 'site') return siteUrl;
   if (!file) return siteUrl;
@@ -571,6 +592,7 @@ async function runScrape() {
     $('recheck').disabled = !has;
     $('driveUpload').disabled = !has || !driveFolder;
     $('ghUpload').disabled = !has || !ghRepoReady;
+    $('publish').disabled = !has;
   }
 }
 
@@ -690,6 +712,38 @@ async function downloadM3U() {
   link.download = $('filename').value || 'playlist.m3u';
   link.click();
   URL.revokeObjectURL(link.href);
+}
+
+async function publishPlaylist() {
+  const box = $('publishLog');
+  box.hidden = false;
+  box.textContent = 'Публикую…';
+
+  $('publish').disabled = true;
+  try {
+    const response = await fetch('/api/publish/playlist', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ filename: $('filename').value || 'playlist.m3u', content: buildM3U(currentTitle()) }),
+    });
+
+    await readNdjson(response, (event) => {
+      if (event.kind === 'line') box.textContent += `\n${event.message}`;
+      else if (event.kind === 'error') box.textContent += `\nОшибка: ${event.message}`;
+      else if (event.kind === 'done') {
+        const url = $('ghLinkStyle').value === 'jsdelivr' ? event.jsdelivr : event.url;
+        $('publishedUrl').value = url;
+        $('publishedWrap').hidden = false;
+        $('publishedActions').hidden = false;
+        $('openRepo').href = event.repoUrl;
+        box.textContent += '\nГотово';
+      }
+    });
+  } catch (error) {
+    box.textContent += `\nОшибка: ${error.message}`;
+  } finally {
+    $('publish').disabled = false;
+  }
 }
 
 async function saveNear() {
@@ -942,6 +996,14 @@ async function loadGithubStatus() {
     if (settings.branch) $('ghBranch').value = settings.branch;
     if (settings.dir !== undefined) $('ghDir').value = settings.dir;
     if (settings.linkStyle) $('ghLinkStyle').value = settings.linkStyle;
+
+    if (settings.owner && settings.repo) {
+      const dir = settings.dir ? `/${settings.dir}` : '';
+      ghLinkBase =
+        settings.linkStyle === 'jsdelivr'
+          ? `https://cdn.jsdelivr.net/gh/${settings.owner}/${settings.repo}@${settings.branch}${dir}`
+          : `https://raw.githubusercontent.com/${settings.owner}/${settings.repo}/${settings.branch}${dir}`;
+    }
 
     if (!info.hasToken) {
       who.classList.remove('on');
@@ -1360,6 +1422,12 @@ $('recheck').onclick = probeAll;
 $('getLogos').onclick = fetchLogos;
 $('download').onclick = downloadM3U;
 $('saveNear').onclick = saveNear;
+$('publish').onclick = publishPlaylist;
+$('copyUrl').onclick = async () => {
+  await navigator.clipboard.writeText($('publishedUrl').value);
+  $('copyUrl').textContent = 'Скопировано';
+  setTimeout(() => ($('copyUrl').textContent = 'Скопировать ссылку'), 1500);
+};
 $('bitrate').onchange = syncPlayerFromStations;
 $('logoMode').onchange = onLogoModeChange;
 $('driveCheck').onclick = () => connectDriveFolder();
