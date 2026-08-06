@@ -1282,9 +1282,11 @@ function renderPlaylist() {
     if (entry.reachable === false) tags.append(tag('offline', 'bad'));
 
     const vlc = document.createElement('a');
-    vlc.href = entry.url;
+    vlc.href = playableUrl(entry);
     vlc.textContent = '↗';
-    vlc.title = 'Открыть поток напрямую (внешний плеер)';
+    vlc.title = entry.referer
+      ? 'Открыть через локальный прокси (нужен Referer — прямая ссылка вернёт 403)'
+      : 'Открыть поток напрямую (внешний плеер)';
     vlc.target = '_blank';
     tags.append(vlc);
 
@@ -1365,10 +1367,12 @@ async function checkPlaylistStreams() {
 
   try {
     const urls = [...new Set(playerEntries.map((entry) => entry.url))];
+    const referers = {};
+    for (const entry of playerEntries) if (entry.referer) referers[entry.url] = entry.referer;
     const data = await (await fetch('/api/probe', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ urls }),
+      body: JSON.stringify({ urls, referers }),
     })).json();
 
     let alive = 0;
@@ -1457,6 +1461,12 @@ async function playIndex(index) {
         renderPlaylist();
         return;
       }
+      if (entry.referer) {
+        // hls.js не может подставить Referer сегментам (тот же запрет браузера) — проксируем манифест
+        $('playerStatus').textContent = 'HLS с Referer не поддерживается (только прямые потоки)';
+        renderPlaylist();
+        return;
+      }
       await loadHlsScript();
       hlsInstance = new window.Hls({ lowLatencyMode: false });
       hlsInstance.loadSource(entry.url);
@@ -1465,7 +1475,7 @@ async function playIndex(index) {
         if (data.fatal) $('playerStatus').textContent = `ошибка HLS: ${data.details}`;
       });
     } else {
-      audio.src = entry.url;
+      audio.src = playableUrl(entry);
     }
     await audio.play();
     $('playerStatus').textContent = 'играет';
@@ -1497,13 +1507,18 @@ function parseM3U(text) {
     if (trimmed.startsWith('#EXTINF')) {
       const name = trimmed.slice(trimmed.indexOf(',') + 1).trim();
       const logo = /tvg-logo="([^"]+)"/.exec(trimmed)?.[1] ?? '';
-      pending = { name, logo };
+      pending = { name, logo, referer: undefined };
+    } else if (trimmed.startsWith('#EXTVLCOPT')) {
+      // CDN за антихотлинк-защитой (например, через play.radioplayer.org) требует Referer
+      const referer = /^#EXTVLCOPT:\s*http-referrer\s*=\s*(.+)$/i.exec(trimmed)?.[1]?.trim();
+      if (referer && pending) pending.referer = referer;
     } else if (!trimmed.startsWith('#')) {
       entries.push({
         slug: '',
         name: pending?.name || trimmed,
         url: trimmed,
         logo: pending?.logo || '',
+        referer: pending?.referer || '',
         hls: isHls(trimmed),
         reachable: undefined,
       });
@@ -1511,6 +1526,13 @@ function parseM3U(text) {
     }
   }
   return entries;
+}
+
+/** Ссылка, которую реально ставить в audio.src / открывать во внешнем плеере. */
+function playableUrl(entry) {
+  if (!entry.referer) return entry.url;
+  // Referer нельзя выставить из браузера (запрещённый заголовок) — гоним через локальный сервер
+  return `/api/stream?url=${encodeURIComponent(entry.url)}&referer=${encodeURIComponent(entry.referer)}`;
 }
 
 // ============================================================================

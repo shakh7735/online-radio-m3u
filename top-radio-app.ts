@@ -34,6 +34,7 @@
  *   POST /api/publish/playlist          → write a playlist into playlists/ and git push it
  *   POST /api/github/publish-playlist   → same via the Contents API (when there is no SSH)
  *   POST /api/playlist/fetch            → download a playlist by URL (server-side, avoids CORS)
+ *   GET  /api/stream?url=&referer=      → relay a station, injecting Referer (Range-aware)
  *   GET  /logos/<file>, /vendor/<file>  → local static files
  *
  * Ports/paths are CLI-overridable: --port 8787 --dir <workdir>
@@ -43,6 +44,7 @@ import { createReadStream } from 'node:fs';
 import { mkdir, readdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import { dirname, extname, join, resolve } from 'node:path';
+import { Readable } from 'node:stream';
 import { fileURLToPath } from 'node:url';
 
 import {
@@ -229,11 +231,12 @@ async function handleScrape(req: IncomingMessage, res: ServerResponse): Promise<
 }
 
 async function handleProbe(req: IncomingMessage, res: ServerResponse): Promise<void> {
-  const { urls } = await readBody<{ urls: string[] }>(req);
+  // `referers` — url → Referer, only for the CDNs that require one (#EXTVLCOPT:http-referrer=)
+  const { urls, referers } = await readBody<{ urls: string[]; referers?: Record<string, string> }>(req);
   const results: Record<string, boolean> = {};
 
   await pool(urls ?? [], 6, 0, async (url) => {
-    results[url] = await probeStream(url);
+    results[url] = await probeStream(url, referers?.[url]);
   });
 
   sendJson(res, 200, { results });
@@ -802,6 +805,75 @@ async function handlePlaylistFetch(req: IncomingMessage, res: ServerResponse): P
   }
 }
 
+/**
+ * Streams a station through the server instead of straight from the browser.
+ *
+ * Some CDNs (stations aggregated through play.radioplayer.org, e.g.
+ * de.auroramedia.am) reject requests with no Referer header — and a browser
+ * can't be told to send an arbitrary cross-origin Referer, that header is
+ * off-limits to page JS. The server has no such restriction, so it fetches
+ * the stream with the Referer from the playlist's #EXTVLCOPT and relays the
+ * bytes to the <audio> element, which never sees the real URL.
+ */
+async function handleStreamProxy(req: IncomingMessage, res: ServerResponse, url: URL): Promise<void> {
+  const target = url.searchParams.get('url') ?? '';
+  const referer = url.searchParams.get('referer') ?? undefined;
+
+  let parsed: URL;
+  try {
+    parsed = new URL(target);
+  } catch {
+    return void sendJson(res, 400, { error: 'Некорректный URL потока' });
+  }
+  if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+    return void sendJson(res, 400, { error: 'Поддерживаются только http и https' });
+  }
+
+  // Радиопоток живёт часами — таймаут должен ловить только зависшее подключение,
+  // а не рвать эфир по истечении фиксированного времени
+  const controller = new AbortController();
+  const connectTimeout = setTimeout(() => controller.abort(), 15_000);
+  req.on('close', () => controller.abort());
+
+  try {
+    const upstream = await fetch(parsed, {
+      headers: {
+        'User-Agent': USER_AGENT,
+        // Без Icy-MetaData: 1 — иначе Icecast вклинивает в поток бинарные блоки метаданных,
+        // которые мы не разбираем и не вырезаем, и <audio> получает испорченный MP3
+        Range: req.headers.range ?? 'bytes=0-',
+        ...(referer ? { Referer: referer } : {}),
+      },
+      redirect: 'follow',
+      signal: controller.signal,
+    });
+    clearTimeout(connectTimeout);
+
+    if (!upstream.ok && upstream.status !== 206) {
+      await upstream.body?.cancel();
+      return void sendJson(res, upstream.status, { error: `Поток ответил HTTP ${upstream.status}` });
+    }
+
+    const headers: Record<string, string> = {};
+    for (const key of ['content-type', 'content-length', 'content-range', 'accept-ranges', 'icy-name', 'icy-br']) {
+      const value = upstream.headers.get(key);
+      if (value) headers[key] = value;
+    }
+    res.writeHead(upstream.status, headers);
+
+    if (!upstream.body) return void res.end();
+    const body = Readable.fromWeb(upstream.body as import('node:stream/web').ReadableStream);
+    // Отключение клиента абортит upstream (см. выше) — это бьёт по тому же body,
+    // и без листенера необработанный 'error' на Readable валит весь процесс
+    body.on('error', () => body.destroy());
+    res.on('error', () => body.destroy());
+    body.pipe(res);
+  } catch (error) {
+    clearTimeout(connectTimeout);
+    if (!res.headersSent) sendJson(res, 502, { error: (error as Error).message });
+  }
+}
+
 /** Where published playlists live inside the repository. */
 const PLAYLIST_DIR = 'playlists';
 
@@ -975,6 +1047,7 @@ const server = createServer(async (req, res) => {
     }
     if (req.method === 'POST' && path === '/api/publish/playlist') return void (await handlePublishPlaylist(req, res));
     if (req.method === 'POST' && path === '/api/playlist/fetch') return void (await handlePlaylistFetch(req, res));
+    if (req.method === 'GET' && path === '/api/stream') return void (await handleStreamProxy(req, res, url));
     if (req.method === 'POST' && path === '/api/github/publish-playlist') {
       return void (await handleGithubPublishPlaylist(req, res));
     }

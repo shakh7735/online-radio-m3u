@@ -409,11 +409,19 @@ export async function scrape(
 /**
  * Probe a stream by reading its first bytes. Icecast/Shoutcast servers usually
  * reject HEAD, so a ranged GET is used and aborted right away.
+ *
+ * Some CDNs (e.g. stations aggregated through play.radioplayer.org) reject
+ * requests with no Referer — pass the one from the playlist's #EXTVLCOPT.
  */
-export async function probeStream(url: string): Promise<boolean> {
+export async function probeStream(url: string, referer?: string): Promise<boolean> {
   try {
     const response = await fetch(url, {
-      headers: { 'User-Agent': USER_AGENT, Range: 'bytes=0-2047', 'Icy-MetaData': '1' },
+      headers: {
+        'User-Agent': USER_AGENT,
+        Range: 'bytes=0-2047',
+        'Icy-MetaData': '1',
+        ...(referer ? { Referer: referer } : {}),
+      },
       signal: AbortSignal.timeout(8000),
       redirect: 'follow',
     });
