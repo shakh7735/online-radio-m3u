@@ -1,6 +1,7 @@
 #EXTM3U
 #PLAYLIST:Избранное
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/aurora.png" group-title="Избранное",Aurora
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
 https://de.auroramedia.am/aurora.mp3
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sputnik-armenia.png" group-title="Избранное",Sputnik Армения
 https://icecast-rian.cdnvideo.ru/voicearm1

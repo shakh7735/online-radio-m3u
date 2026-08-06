@@ -1,0 +1,50 @@
+#EXTM3U
+#PLAYLIST:Радиостанции Армении (Radioplayer)
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051102/600/600/mknvxt20.jpeg" group-title="Радиостанции Армении",AUTORADIO YEREVAN FM 89.7
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/autoradio?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051103/600/600/mknvpe8t.png" group-title="Радиостанции Армении",EUROPA PLUS ARMENIA
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/europaplus?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051124/600/600/mn241wuu.jpeg" group-title="Радиостанции Армении",FM 105.5
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://audio.cloudrad.io/3745421d/live?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051108/11/4044-mjobfsui.png" group-title="Радиостанции Армении",KISS FM Armenia
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/kissfm.mp3?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051101/11/4044-mjlqqssd.png" group-title="Радиостанции Армении",Radio Aurora Armenia
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/aurora.mp3?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051116/600/600/mm1ultm1.jpeg" group-title="Радиостанции Армении",Radio Hay
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://audio.cloudrad.io/2b1dbf78/live?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051110/11/4044-mjoazi5a.png" group-title="Радиостанции Армении",Radio Monte Carlo – Retro & Gold
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/montecarlo?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051106/11/4051-mm4vkyug.jpeg" group-title="Радиостанции Армении",Radio Van FM 103.1
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/radiovan?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051113/11/4044-mkl1b71u.png" group-title="Радиостанции Армении",SERFM 1 | Armenian Folk Radio
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/ser1?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051114/11/4044-mkl1ipyf.png" group-title="Радиостанции Армении",SERFM 2  Armenian Pop Hits
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/ser2?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051115/11/4044-mkl1pjuj.png" group-title="Радиостанции Армении",SERFM 3 Armenian Dance
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/ser3?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051109/11/4044-mjoamkef.png" group-title="Радиостанции Армении",Radio Jazz FM
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/jazz.mp3?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051104/600/600/mkp9fv6i.png" group-title="Радиостанции Армении",RADIO YEREVAN FM Armenia
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/yerevanfm?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051105/11/4051-mm23sck2.jpeg" group-title="Радиостанции Армении",Radio Alpha Yerevan
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/rusradio?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051112/11/4044-mjobiuqo.png" group-title="Радиостанции Армении",Classic FM
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/classic?rp_source=1
+#EXTINF:-1 tvg-logo="https://assets.radioplayer.org/051/051111/11/4044-mjob7w4n.png" group-title="Радиостанции Армении",Radio Roks
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/roks?rp_source=1

@@ -1,6 +1,7 @@
 #EXTM3U
 #PLAYLIST:Онлайн-радио — Армения и Россия
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/aurora.png" group-title="Избранное",Aurora
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
 https://de.auroramedia.am/aurora.mp3
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sputnik-armenia.png" group-title="Избранное",Sputnik Армения
 https://icecast-rian.cdnvideo.ru/voicearm1
@@ -15,9 +16,11 @@ https://pub0202.101.ru:8443/stream/pro/aac/64/446
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/women-standup.png" group-title="Избранное",Women StandUP
 https://pub0102.101.ru:8443/stream/pro/aac/64/448
 #EXTINF:-1 tvg-id="avtoradio" tvg-name="Авторадио" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/avtoradio.png" group-title="Армения",Авторадио (Ереван 89.8 FM)
-https://hls-01-gpm.hostingradio.ru/avtoradio495/playlist.m3u8
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/autoradio
 #EXTINF:-1 tvg-id="evropa-plyus" tvg-name="Европа Плюс" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/evropa-plyus.png" group-title="Армения",Европа Плюс (Ереван 87.5 FM)
-https://hls-02-europaplus.emgsound.ru/11/112/playlist.m3u8
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/europaplus
 #EXTINF:-1 tvg-id="arm" tvg-name="Общественное радио Армении" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/arm.png" group-title="Армения",Общественное радио Армении (Ереван 107.6 FM)
 https://eu1.stream4cast.com/proxy/publicra/stream
 #EXTINF:-1 tvg-id="mir" tvg-name="Радио МИР" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/mir.jpg" group-title="Армения",Радио МИР (Ереван 93.7 FM)
@@ -29,6 +32,7 @@ https://hls-01-rusradio.webcaramba.com/rusradio-yerevan/96/playlist.m3u8
 #EXTINF:-1 tvg-id="armenian-news-radio-fm-1065" tvg-name="Armenian News Radio FM 106.5" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/armenian-news-radio-fm-1065.png" group-title="Армения",Armenian News Radio FM 106.5 (Ереван 106.5 FM)
 http://212.34.233.78:8000/live
 #EXTINF:-1 tvg-id="kiss-fm-am" tvg-name="Kiss FM Armenia" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/kiss-fm-am.png" group-title="Армения",Kiss FM Armenia (Ереван 88.3 FM)
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
 https://de.auroramedia.am/kissfm.mp3
 #EXTINF:-1 tvg-id="jan" tvg-name="Radio Jan" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/jan.jpg" group-title="Армения",Radio Jan (Ереван 90.7 FM)
 http://s7.voscast.com:10258/radiojan
@@ -36,6 +40,42 @@ http://s7.voscast.com:10258/radiojan
 https://eu.stream4cast.com/proxy/marshallfm/stream
 #EXTINF:-1 tvg-id="vem" tvg-name="Vem Radio" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/vem.png" group-title="Армения",Vem Radio (Ереван 91.1 FM)
 https://eu1.stream4cast.com/proxy/vemradio/stream
+#EXTINF:-1 tvg-id="radio-yerevan-fm" tvg-name="Radio Yerevan FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-yerevan-fm.png" group-title="Армения",RADIO YEREVAN FM Armenia
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/yerevanfm
+#EXTINF:-1 tvg-id="radio-alpha-yerevan" tvg-name="Radio Alpha Yerevan" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-alpha-yerevan.jpg" group-title="Армения",Radio Alpha Yerevan
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/rusradio
+#EXTINF:-1 tvg-id="radio-van" tvg-name="Radio Van FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-van.jpg" group-title="Армения",Radio Van FM 103.1
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/radiovan
+#EXTINF:-1 tvg-id="radio-jazz-fm-am" tvg-name="Radio Jazz FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-jazz-fm-am.png" group-title="Армения",Radio Jazz FM
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/jazz.mp3
+#EXTINF:-1 tvg-id="monte-karlo-am" tvg-name="Radio Monte Carlo" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/monte-karlo-am.png" group-title="Армения",Radio Monte Carlo – Retro & Gold
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/montecarlo
+#EXTINF:-1 tvg-id="radio-roks" tvg-name="Radio Roks" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-roks.png" group-title="Армения",Radio Roks
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/roks
+#EXTINF:-1 tvg-id="classic-fm-am" tvg-name="Classic FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/classic-fm-am.png" group-title="Армения",Classic FM
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/classic
+#EXTINF:-1 tvg-id="serfm-1" tvg-name="SERFM 1" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/serfm-1.png" group-title="Армения",SERFM 1 | Armenian Folk Radio
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/ser1
+#EXTINF:-1 tvg-id="serfm-2" tvg-name="SERFM 2" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/serfm-2.png" group-title="Армения",SERFM 2 Armenian Pop Hits
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/ser2
+#EXTINF:-1 tvg-id="serfm-3" tvg-name="SERFM 3" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/serfm-3.png" group-title="Армения",SERFM 3 Armenian Dance
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://de.auroramedia.am/ser3
+#EXTINF:-1 tvg-id="radio-hay" tvg-name="Radio Hay" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/radio-hay.jpg" group-title="Армения",Radio Hay
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://audio.cloudrad.io/2b1dbf78/live
+#EXTINF:-1 tvg-id="fm-105-5" tvg-name="FM 105.5" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/fm-105-5.jpg" group-title="Армения",FM 105.5
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
+https://audio.cloudrad.io/3745421d/live
 #EXTINF:-1 tvg-id="100-radio" tvg-name="100% Радио Москва 71.3 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/100-radio.jpg" group-title="Москва",100% Радио Москва 71.3 FM
 https://myradio24.org/93299
 #EXTINF:-1 tvg-id="detskoe" tvg-name="Детское радио Москва 96.8 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/detskoe.png" group-title="Москва",Детское радио Москва 96.8 FM

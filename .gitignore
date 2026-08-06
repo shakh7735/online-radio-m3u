@@ -5,6 +5,8 @@ drive-token.txt
 # Local state
 .cache/
 vendor/
+node_modules/
+package-lock.json
 drive-map.json
 drive-settings.json
 github-map.json

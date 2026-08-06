@@ -17,6 +17,7 @@ https://icecast-rian.cdnvideo.ru/voicearm1
 #EXTINF:-1 tvg-id="armenian-news-radio-fm-1065" tvg-name="Armenian News Radio FM 106.5" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/armenian-news-radio-fm-1065.png" group-title="Радиостанции Армении",Armenian News Radio FM 106.5 (Ереван 106.5 FM)
 http://212.34.233.78:8000/live
 #EXTINF:-1 tvg-id="kiss-fm-am" tvg-name="Kiss FM Armenia" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/kiss-fm-am.png" group-title="Радиостанции Армении",Kiss FM Armenia (Ереван 88.3 FM)
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
 https://de.auroramedia.am/kissfm.mp3
 #EXTINF:-1 tvg-id="jan" tvg-name="Radio Jan" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/jan.jpg" group-title="Радиостанции Армении",Radio Jan (Ереван 90.7 FM)
 http://s7.voscast.com:10258/radiojan
@@ -25,6 +26,7 @@ https://eu.stream4cast.com/proxy/marshallfm/stream
 #EXTINF:-1 tvg-id="vem" tvg-name="Vem Radio" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/vem.png" group-title="Радиостанции Армении",Vem Radio (Ереван 91.1 FM)
 https://eu1.stream4cast.com/proxy/vemradio/stream
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/aurora.png" group-title="Избранное",Aurora
+#EXTVLCOPT:http-referrer=https://play.radioplayer.org/
 https://de.auroramedia.am/aurora.mp3
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sputnik-russia.png" group-title="Избранное",Sputnik Россия
 https://icecast-rian.cdnvideo.ru/voicerus
