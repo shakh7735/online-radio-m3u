@@ -1,0 +1,367 @@
+#EXTM3U tvg-url="http://epg.one/epg.xml.gz"
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2372" tvg-logo="http://epg.one/img/2372.png" tvg-rec="0",5TV AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/5Aliq/SAF-HLS/5Aliq.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="5927" tvg-logo="http://epg.one/img/5927.png" tvg-rec="0",5TV Plus HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/5Aliq_Plus/SAF-HLS/5Aliq_Plus.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="7082" tvg-logo="http://epg.one/img/7082.png" tvg-rec="0",Arma TV AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ArmaTV/SAF-HLS/ArmaTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2064" tvg-logo="http://epg.one/img/2064.png" tvg-rec="3",Armenia TV HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ArmeniaTV-SDI/SAF-HLS/ArmeniaTV-SDI.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="5943" tvg-logo="http://epg.one/img/5943.png" tvg-rec="0",ArmToon HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ArmToonTV/SAF-HLS/ArmToonTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2067" tvg-logo="http://epg.one/img/2067.png" tvg-rec="0",ATV HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ATV/SAF-HLS/ATV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2385" tvg-logo="http://epg.one/img/2385.png" tvg-rec="3",Azatutyun TV HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/AzatutyunTV/SAF-HLS/AzatutyunTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2626" tvg-logo="http://epg.one/img/2626.png" tvg-rec="3",ATV Bazmoc TV HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Bazmoc/SAF-HLS/Bazmoc.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2061" tvg-logo="http://epg.one/img/2061.png" tvg-rec="0",21TV AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/DAR21TV/SAF-HLS/DAR21TV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="7866" tvg-logo="http://epg.one/img/7866.png" tvg-rec="0",Delta TV AM
+http://ncdn-fr-vip1.teamcloud.am/live/eds/DeltaTV/SAF-HLS/DeltaTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2624" tvg-logo="http://epg.one/img/2624.png" tvg-rec="3",ATV Fitness HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/FitnesTV/SAF-HLS/FitnesTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="5942" tvg-logo="http://epg.one/img/5942.png" tvg-rec="0",Fortuna TV HD AM
+http://ncdn-fr-vip1.teamcloud.am/live/eds/FortunaTV/SAF-HLS/FortunaTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="5940" tvg-logo="http://epg.one/img/5940.png" tvg-rec="0",FreeNews AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/FreeNews/SAF-HLS/FreeNews.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="5930" tvg-logo="http://epg.one/img/5930.png" tvg-rec="0",1 Lurer HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/H1-News-SDI/SAF-HLS/H1-News-SDI.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2060" tvg-logo="http://epg.one/img/2060.png" tvg-rec="3",H1 HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/H1-SDI/SAF-HLS/H1-SDI.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2062" tvg-logo="http://epg.one/img/2062.png" tvg-rec="0",H2 AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/H2/SAF-HLS/H2.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2391" tvg-logo="http://epg.one/img/2391.png" tvg-rec="3",ATV Hay TV HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/HAY_TV/SAF-HLS/HAY_TV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="5917" tvg-logo="http://epg.one/img/5917.png" tvg-rec="0",Kentron AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Kentron/SAF-HLS/Kentron.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="5939" tvg-logo="http://epg.one/img/5939.png" tvg-rec="0",Lori TV HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/LoriTV/SAF-HLS/LoriTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2625" tvg-logo="http://epg.one/img/2625.png" tvg-rec="3",ATV Muzzone HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/MuzZone/SAF-HLS/MuzZone.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="7084" tvg-logo="http://epg.one/img/7084.png" tvg-rec="0",Nor Hayastan AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/NorHayastan/SAF-HLS/NorHayastan.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="5928" tvg-logo="http://epg.one/img/5928.png" tvg-rec="0",Nur TV HD AM
+http://ncdn-fr-vip1.teamcloud.am/live/eds/NurTV/SAF-HLS/NurTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://iptvx.one/picons/shant-premium.png",Shant Gumri
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Shant_Gyumri/SAF-HLS/Shant_Gyumri.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://iptvx.one/picons/shant-premium.png",Shant
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ShantTV-SDI/SAF-HLS/ShantTV-SDI.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="5925" tvg-logo="http://epg.one/img/5925.png" tvg-rec="0",Shoghakat AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ShogakatTV/SAF-HLS/ShogakatTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="7765" tvg-logo="http://epg.one/img/7765.png" tvg-rec="3",ATV Tava HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TAVA_TV/SAF-HLS/TAVA_TV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="7089" tvg-logo="http://epg.one/img/7089.png" tvg-rec="0",Fast Sports HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/VMedia/SAF-HLS/VMedia.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2387" tvg-logo="http://epg.one/img/2387.png" tvg-rec="3",ATV Xaxaliq HD AM
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Xaxaliq/SAF-HLS/Xaxaliq.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" ,BoonTV
+http://ncdn-y1-vip2.teamcloud.am/live/eds/BoonTV/SAF-HLS/BoonTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական" ,CAYG
+http://ncdn-fr-vip1.teamcloud.am/live/eds/CAYG/SAF-HLS/CAYG.m3u8
+#EXTINF:0 group-title="Армения | Հայկական",ABN
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ABN/SAF-HLS/ABN.m3u8
+#EXTINF:0 group-title="Армения | Հայկական",AraratTV
+http://ncdn-y1-vip2.teamcloud.am/live/eds/AraratTV/SAF-HLS/AraratTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական",Tavush TV
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TavushTV/SAF-HLS/TavushTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական",ZangezurTV
+http://ncdn-fr-vip1.teamcloud.am/live/eds/ZangezurTV/SAF-HLS/ZangezurTV.m3u8
+#EXTINF:0 group-title="Армения | Հայկական",Geghama
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Geghama/SAF-HLS/Geghama.m3u8
+#EXTINF:0 group-title="Армения | Հայկական",Noyan Tapan
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Noyan_Tapan/SAF-HLS/Noyan_Tapan.m3u8
+#EXTINF:0 group-title="Армения | Հայկական",KotaykTV
+http://ncdn-y1-vip2.teamcloud.am/live/eds/KotaykTV/SAF-HLS/KotaykTV.m3u8
+#EXTINF:0 group-title="Детские" tvg-id="929" tvg-logo="http://epg.one/img/929.png" tvg-rec="7",Cartoonito
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Boomerang/SAF-HLS/Boomerang.m3u8
+#EXTINF:0 group-title="Детские" tvg-id="601" tvg-logo="http://epg.one/img/601.png" tvg-rec="7",Cartoon Network HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/CN/SAF-HLS/CN.m3u8
+#EXTINF:0 group-title="Детские" tvg-id="410" tvg-logo="http://epg.one/img/410.png" tvg-rec="7",Da Vinci
+http://ncdn-y1-vip2.teamcloud.am/live/eds/DaVinci/SAF-HLS/DaVinci.m3u8
+#EXTINF:0 group-title="Детские" tvg-id="923" tvg-logo="http://epg.one/img/923.png" tvg-rec="7",Детский мир
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Detskii_Mir/SAF-HLS/Detskii_Mir.m3u8
+#EXTINF:0 group-title="Детские" tvg-id="923" tvg-logo="http://epg.one/img/923.png" tvg-rec="7",Детский мир
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Discovery/SAF-HLS/Discovery.m3u8
+#EXTINF:0 group-title="Детские" tvg-id="2438" tvg-logo="http://epg.one/img/2438.png" tvg-rec="3",Капитан Фантастика HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Kapitan_fantastika/SAF-HLS/Kapitan_fantastika.m3u8
+#EXTINF:0 group-title="Детские" tvg-id="2239" tvg-logo="http://epg.one/img/2239.png" tvg-rec="3",СуперГерои
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Malish/SAF-HLS/Malish.m3u8
+#EXTINF:0 group-title="Детские" tvg-id="1332" tvg-logo="http://epg.one/img/1332.png" tvg-rec="7",Мульт
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Mult/SAF-HLS/Mult.m3u8
+#EXTINF:0 group-title="Детские" tvg-id="2437" tvg-logo="http://epg.one/img/2437.png" tvg-rec="3",Рыжий
+http://ncdn-y1-vip2.teamcloud.am/live/eds/RYZHIY/SAF-HLS/RYZHIY.m3u8
+#EXTINF:0 group-title="Детские" tvg-id="2481" tvg-logo="http://epg.one/img/2481.png" tvg-rec="7",СТС Kids HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/STS_Kids/SAF-HLS/STS_Kids.m3u8
+#EXTINF:0 group-title="Детские" tvg-id="555" tvg-logo="http://epg.one/img/555.png" tvg-rec="7",Tiji TV
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TiJi/SAF-HLS/TiJi.m3u8
+#EXTINF:0 group-title="Детские" tvg-id="66" tvg-logo="http://epg.one/img/66.png" tvg-rec="7",Уникум
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Unikum_SD/SAF-HLS/Unikum_SD.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="2768" tvg-logo="http://epg.one/img/2768.png" tvg-rec="3",Арсенал HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ARSENAL_HD/SAF-HLS/ARSENAL_HD.m3u8
+#EXTINF:0 group-title="Кино" tvg-logo="https://iptvx.one/picons/bolt.png",Bolt
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Bolt_HD/SAF-HLS/Bolt_HD.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="834" tvg-logo="http://epg.one/img/834.png" tvg-rec="7",Дом Кино
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Dom_Kino/SAF-HLS/Dom_Kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="2020" tvg-logo="http://epg.one/img/2020.png" tvg-rec="7",Дом Кино Премиум HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Dom_Kino_Premium/SAF-HLS/Dom_Kino_Premium.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="352" tvg-logo="http://epg.one/img/352.png" tvg-rec="7",Еврокино
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Eurokino/SAF-HLS/Eurokino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="2181" tvg-logo="http://epg.one/img/2181.png" tvg-rec="3",FilmBox
+http://ncdn-y1-vip2.teamcloud.am/live/eds/FilmBox/SAF-HLS/FilmBox.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="2182" tvg-logo="http://epg.one/img/2182.png" tvg-rec="3",FilmBox ArtHouse orig
+http://ncdn-y1-vip2.teamcloud.am/live/eds/FilmBox_Arthouse/SAF-HLS/FilmBox_Arthouse.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="934" tvg-logo="http://epg.one/img/934.png" tvg-rec="7",Hollywood HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Hwollywood_HD/SAF-HLS/Hwollywood_HD.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="2403" tvg-logo="http://epg.one/img/2403.png" tvg-rec="7",Иллюзион+
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Illuzion_Plus/SAF-HLS/Illuzion_Plus.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="798" tvg-logo="http://epg.one/img/798.png" tvg-rec="7",Индийское Кино
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Indiiskoe_Kino/SAF-HLS/Indiiskoe_Kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="542" tvg-logo="http://epg.one/img/542.png" tvg-rec="7",Кинохит
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Kinohit/SAF-HLS/Kinohit.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="821" tvg-logo="http://epg.one/img/821.png" tvg-rec="7",Кинокомедия
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Kinokomedia/SAF-HLS/Kinokomedia.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="2407" tvg-logo="http://epg.one/img/2407.png" tvg-rec="3",Киноман
+http://ncdn-y1-vip2.teamcloud.am/live/eds/KinomanTV/SAF-HLS/KinomanTV.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="644" tvg-logo="http://epg.one/img/644.png" tvg-rec="7",Киномикс
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Kinomix/SAF-HLS/Kinomix.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="566" tvg-logo="http://epg.one/img/566.png" tvg-rec="7",Кинопремьера HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/KinopremieraHD/SAF-HLS/KinopremieraHD.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="987" tvg-logo="http://epg.one/img/987.png" tvg-rec="7",Киносемья
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Kinosemya/SAF-HLS/Kinosemya.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="799" tvg-logo="http://epg.one/img/799.png" tvg-rec="7",Киносерия
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Kinoseriya/SAF-HLS/Kinoseriya.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="462" tvg-logo="http://epg.one/img/462.png" tvg-rec="7",Киносвидание
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Kinosvidanie/SAF-HLS/Kinosvidanie.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="2493" tvg-logo="http://epg.one/img/2493.png" tvg-rec="3",Киноужас HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Kinoujas/SAF-HLS/Kinoujas.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="477" tvg-logo="http://epg.one/img/477.png" tvg-rec="7",Любимое Кино
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Lubimoe_Kino/SAF-HLS/Lubimoe_Kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="3357" tvg-logo="http://epg.one/img/3357.png" tvg-rec="3",Мосфильм. Золотая коллекция
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Mosfilm/CL1-HLS/Mosfilm.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="1584" tvg-logo="http://epg.one/img/1584.png" tvg-rec="7",Мужское Кино
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Mujskoe_Kino/SAF-HLS/Mujskoe_Kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="485" tvg-logo="http://epg.one/img/485.png" tvg-rec="7",Наше Новое Кино
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Nashe_Novoe_Kino/SAF-HLS/Nashe_Novoe_Kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="518" tvg-logo="http://epg.one/img/518.png" tvg-rec="7",НСТ
+http://ncdn-y1-vip2.teamcloud.am/live/eds/NSTV/CL1-HLS/NSTV.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="1754" tvg-logo="http://epg.one/img/1754.png" tvg-rec="7",НТВ Сериал
+http://ncdn-y1-vip2.teamcloud.am/live/eds/NTV_Serial/SAF-HLS/NTV_Serial.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="2402" tvg-logo="http://epg.one/img/2402.png" tvg-rec="7",Ретро
+http://ncdn-y1-vip2.teamcloud.am/live/eds/RETRO/SAF-HLS/RETRO.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="12" tvg-logo="http://epg.one/img/12.png" tvg-rec="7",Родное Кино
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Rodnoe_Kino/SAF-HLS/Rodnoe_Kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-logo="https://iptvx.one/picons/star-cinema.png",Star Cinema
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Star_Cinema/SAF-HLS/Star_Cinema.m3u8
+#EXTINF:0 group-title="Кино" tvg-logo="https://iptvx.one/picons/star-family-ua.png",Star Family
+http://ncdn-y1-vip2.teamcloud.am/live/eds/StarFamily/SAF-HLS/StarFamily.m3u8
+#EXTINF:0 group-title="Кино" tvg-logo="https://iptvx.one/picons/suspense.png",Suspense HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Suspense/SAF-HLS/Suspense.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="127" tvg-logo="http://epg.one/img/127.png" tvg-rec="7",Viju TV1000
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TV1000/SAF-HLS/TV1000.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="125" tvg-logo="http://epg.one/img/125.png" tvg-rec="7",Viju TV1000 Action
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TV1000Action/SAF-HLS/TV1000Action.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="267" tvg-logo="http://epg.one/img/267.png" tvg-rec="7",Viju TV1000 Русское
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TV1000Russ/SAF-HLS/TV1000Russ.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="309" tvg-logo="http://epg.one/img/309.png" tvg-rec="7",ТВ 21
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TVXXl/SAF-HLS/TVXXl.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="2233" tvg-logo="http://epg.one/img/2233.png" tvg-rec="3",Индия
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ZeeTV/SAF-HLS/ZeeTV.m3u8
+#EXTINF:0 group-title="Музыка" tvg-logo="https://iptvx.one/picons/360-tunebox.png",360TuneBox
+http://ncdn-y1-vip2.teamcloud.am/live/eds/360TuneBox/SAF-HLS/360TuneBox.m3u8
+#EXTINF:0 group-title="Музыка" tvg-id="151" tvg-logo="http://epg.one/img/151.png" tvg-rec="7",Bridge TV
+http://ncdn-y1-vip2.teamcloud.am/live/eds/BRIDGE_TV/SAF-HLS/BRIDGE_TV.m3u8
+#EXTINF:0 group-title="Музыка" tvg-id="2024" tvg-logo="http://epg.one/img/2024.png" tvg-rec="7",Bridge Hits
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Bridge_TV_FRESH/SAF-HLS/Bridge_TV_FRESH.m3u8
+#EXTINF:0 group-title="Музыка" tvg-id="591" tvg-logo="http://epg.one/img/591.png" tvg-rec="3",Bridge Русский Хит
+http://ncdn-y1-vip2.teamcloud.am/live/eds/BRIDGE_TV_RU_HIT/SAF-HLS/BRIDGE_TV_RU_HIT.m3u8
+#EXTINF:0 group-title="Музыка" tvg-id="2022" tvg-logo="http://epg.one/img/2022.png" tvg-rec="7",Bridge Deluxe HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/BridgeTV_Deluxe/SAF-HLS/BridgeTV_Deluxe.m3u8
+#EXTINF:0 group-title="Музыка" tvg-id="4621" tvg-logo="http://epg.one/img/4621.png" tvg-rec="0",Bridge Шлягер
+http://ncdn-y1-vip2.teamcloud.am/live/eds/BridgeTV_Shlyager/SAF-HLS/BridgeTV_Shlyager.m3u8
+#EXTINF:0 group-title="Музыка" tvg-logo="https://iptvx.one/picons/shanson-tv.png",ТВ Шансон
+http://ncdn-y1-vip2.teamcloud.am/live/eds/CHANSON/SAF-HLS/CHANSON.m3u8
+#EXTINF:0 group-title="Музыка" tvg-id="3335" tvg-logo="http://epg.one/img/3335.png" tvg-rec="3",М1 HD UA
+http://ncdn-y1-vip2.teamcloud.am/live/eds/M-1_Global/SAF-HLS/M-1_Global.m3u8
+#EXTINF:0 group-title="Музыка" tvg-id="2276" tvg-logo="http://epg.one/img/2276.png" tvg-rec="7",MCM Top Russia
+http://ncdn-y1-vip2.teamcloud.am/live/eds/MCM_Top/SAF-HLS/MCM_Top.m3u8
+#EXTINF:0 group-title="Музыка" tvg-id="575" tvg-logo="http://epg.one/img/575.png" tvg-rec="7",Mezzo
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Mezzo/SAF-HLS/Mezzo.m3u8
+#EXTINF:0 group-title="Музыка" tvg-id="897" tvg-logo="http://epg.one/img/897.png" tvg-rec="7",МУЗ-ТВ
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Muz_TV/SAF-HLS/Muz_TV.m3u8
+#EXTINF:0 group-title="Музыка" tvg-id="680" tvg-logo="http://epg.one/img/680.png" tvg-rec="7",ТНТ Music
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TNT_Music/SAF-HLS/TNT_Music.m3u8
+#EXTINF:0 group-title="Новостные" tvg-logo="https://iptvx.one/picons/bbc.png",BBC
+http://ncdn-y1-vip2.teamcloud.am/live/eds/BBC/SAF-HLS/BBC.m3u8
+#EXTINF:0 group-title="Новостные" tvg-id="2267" tvg-logo="http://epg.one/img/2267.png" tvg-rec="7",CGTN HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/CGTN_HD/SAF-HLS/CGTN_HD.m3u8
+#EXTINF:0 group-title="Новостные" tvg-id="2268" tvg-logo="http://epg.one/img/2268.png" tvg-rec="3",CGTN Русский HD orig
+http://ncdn-y1-vip2.teamcloud.am/live/eds/CGTN-rus_HD/SAF-HLS/CGTN-rus_HD.m3u8
+#EXTINF:0 group-title="Новостные" tvg-logo="https://iptvx.one/picons/cnn.png",CNN
+http://ncdn-y1-vip2.teamcloud.am/live/eds/CNN/SAF-HLS/CNN.m3u8
+#EXTINF:0 group-title="Новостные" tvg-id="2266" tvg-logo="http://epg.one/img/2266.png" tvg-rec="7",Euronews Россия
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Euronews_Ru/SAF-HLS/Euronews_Ru.m3u8
+#EXTINF:0 group-title="Новостные" tvg-id="2271" tvg-logo="http://epg.one/img/2271.png" tvg-rec="7",Известия
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Izvestiya/SAF-HLS/Izvestiya.m3u8
+#EXTINF:0 group-title="Новостные" tvg-id="2078" tvg-logo="http://epg.one/img/2078.png" tvg-rec="7",Мир 24
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Mir_24/SAF-HLS/Mir_24.m3u8
+#EXTINF:0 group-title="Новостные" tvg-id="743" tvg-logo="http://epg.one/img/743.png" tvg-rec="7",РБК
+http://ncdn-y1-vip2.teamcloud.am/live/eds/RBK/SAF-HLS/RBK.m3u8
+#EXTINF:0 group-title="Новостные" tvg-id="1683" tvg-logo="http://epg.one/img/1683.png" tvg-rec="7",Россия 24
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ROSSIYA24/SAF-HLS/ROSSIYA24.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="427" tvg-logo="http://epg.one/img/427.png" tvg-rec="7",Пятый канал
+http://ncdn-y1-vip2.teamcloud.am/live/eds/5_Kanal/SAF-HLS/5_Kanal.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="304" tvg-logo="http://epg.one/img/304.png" tvg-rec="7",Домашний
+http://ncdn-y1-vip2.teamcloud.am/live/eds/DOMASHNIY/SAF-HLS/DOMASHNIY.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="726" tvg-logo="http://epg.one/img/726.png" tvg-rec="7",Мир
+http://ncdn-y1-vip2.teamcloud.am/live/eds/MIR_TV/SAF-HLS/MIR_TV.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="2142" tvg-logo="http://epg.one/img/2142.png" tvg-rec="3",Настоящее время
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Nastoyashee_Vremya/SAF-HLS/Nastoyashee_Vremya.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="7258" tvg-logo="http://epg.one/img/7258.png" tvg-rec="0",НТВ Мир
+http://ncdn-y1-vip2.teamcloud.am/live/eds/NTVMir/SAF-HLS/NTVMir.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="146" tvg-logo="http://epg.one/img/146.png" tvg-rec="7",Первый канал
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ORT/SAF-HLS/ORT.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="5651" tvg-logo="http://epg.one/img/5651.png" tvg-rec="0",Перец International
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Peretz/SAF-HLS/Peretz.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="1003" tvg-logo="http://epg.one/img/1003.png" tvg-rec="7",Пятница!
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Pyatnica/SAF-HLS/Pyatnica.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="18" tvg-logo="http://epg.one/img/18.png" tvg-rec="7",РЕН ТВ
+http://ncdn-y1-vip2.teamcloud.am/live/eds/REN_TV/SAF-HLS/REN_TV.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="187" tvg-logo="http://epg.one/img/187.png" tvg-rec="7",Россия К
+http://ncdn-y1-vip2.teamcloud.am/live/eds/RossiaK/SAF-HLS/RossiaK.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="2547" tvg-logo="http://epg.one/img/2547.png" tvg-rec="0",РТР Планета
+http://ncdn-y1-vip2.teamcloud.am/live/eds/RTRPlaneta/SAF-HLS/RTRPlaneta.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="79" tvg-logo="http://epg.one/img/79.png" tvg-rec="7",СТС
+http://ncdn-y1-vip2.teamcloud.am/live/eds/STS/SAF-HLS/STS.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="698" tvg-logo="http://epg.one/img/698.png" tvg-rec="7",ТВ-3
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TB3/SAF-HLS/TB3.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="353" tvg-logo="http://epg.one/img/353.png" tvg-rec="7",ТНТ
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TNT/SAF-HLS/TNT.m3u8
+#EXTINF:0 group-title="Общие" tvg-id="405" tvg-logo="http://epg.one/img/405.png" tvg-rec="7",Звезда
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Zvezda/SAF-HLS/Zvezda.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2423" tvg-logo="http://epg.one/img/2423.png" tvg-rec="3",365 дней ТВ
+http://ncdn-y1-vip2.teamcloud.am/live/eds/365days/SAF-HLS/365days.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="365" tvg-logo="http://epg.one/img/365.png" tvg-rec="7",Animal Planet
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Animal_Planet/SAF-HLS/Animal_Planet.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="153" tvg-logo="http://epg.one/img/153.png" tvg-rec="7",Авто Плюс
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Avto_Plus/SAF-HLS/Avto_Plus.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="409" tvg-logo="http://epg.one/img/409.png" tvg-rec="7",Discovery Science PL
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Discovery_Science/SAF-HLS/Discovery_Science.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2186" tvg-logo="http://epg.one/img/2186.png" tvg-rec="3",DocuBox HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/DocuBox_HD/SAF-HLS/DocuBox_HD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2443" tvg-logo="http://epg.one/img/2443.png" tvg-rec="7",Драйв
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Drive/SAF-HLS/Drive.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2485" tvg-logo="http://epg.one/img/2485.png" tvg-rec="7",DTX HD PL
+http://ncdn-y1-vip2.teamcloud.am/live/eds/DTX/SAF-HLS/DTX.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2310" tvg-logo="http://epg.one/img/2310.png" tvg-rec="7",Первый космический HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Evrika_HD/SAF-HLS/Evrika_HD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2741" tvg-logo="http://epg.one/img/2741.png" tvg-rec="3",Food Network HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Food_Network_HD/SAF-HLS/Food_Network_HD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2418" tvg-logo="http://epg.one/img/2418.png" tvg-rec="7",Galaxy
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Galaxy/SAF-HLS/Galaxy.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="415" tvg-logo="http://epg.one/img/415.png" tvg-rec="0",Точка.РФ HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/HDLife/SAF-HLS/HDLife.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2377" tvg-logo="http://epg.one/img/2377.png" tvg-rec="3",HGTV HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/HGTV/SAF-HLS/HGTV.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2356" tvg-logo="http://epg.one/img/2356.png" tvg-rec="3",History 2 HD
+http://ncdn-fr-vip1.teamcloud.am/live/eds/History_2_HD/SAF-HLS/History_2_HD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="1394" tvg-logo="http://epg.one/img/1394.png" tvg-rec="7",History HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/History_HD/SAF-HLS/History_HD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2507" tvg-logo="http://epg.one/img/2507.png" tvg-rec="3",Investigation Discovery
+http://ncdn-y1-vip2.teamcloud.am/live/eds/IDX/SAF-HLS/IDX.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2800" tvg-logo="http://epg.one/img/2800.png" tvg-rec="3",Инсайт ТВ UHD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Insight_HD/SAF-HLS/Insight_HD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="1036" tvg-logo="http://epg.one/img/1036.png" tvg-rec="7",История
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Istoria/CL1-HLS/Istoria.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2432" tvg-logo="http://epg.one/img/2432.png" tvg-rec="3",Живая Планета
+http://ncdn-y1-vip2.teamcloud.am/live/eds/JivayaPlaneta/SAF-HLS/JivayaPlaneta.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2456" tvg-logo="http://epg.one/img/2456.png" tvg-rec="7",Кто есть кто
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ktoestkto/SAF-HLS/ktoestkto.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="614" tvg-logo="http://epg.one/img/614.png" tvg-rec="7",Кухня
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Kuxnya_TV/SAF-HLS/Kuxnya_TV.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="618" tvg-logo="http://epg.one/img/618.png" tvg-rec="7",Мама
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Mama/SAF-HLS/Mama.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="7621" tvg-logo="http://epg.one/img/7621.png" tvg-rec="0",Museum 4K
+http://ncdn-y1-vip2.teamcloud.am/live/eds/MuseumHD/SAF-HLS/MuseumHD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="675" tvg-logo="http://epg.one/img/675.png" tvg-rec="7",Моя Планета
+http://ncdn-y1-vip2.teamcloud.am/live/eds/MyPlanet/SAF-HLS/MyPlanet.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2428" tvg-logo="http://epg.one/img/2428.png" tvg-rec="3",Nano
+http://ncdn-y1-vip2.teamcloud.am/live/eds/NANOTV_HD/SAF-HLS/NANOTV_HD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="1753" tvg-logo="http://epg.one/img/1753.png" tvg-rec="7",НТВ Право
+http://ncdn-y1-vip2.teamcloud.am/live/eds/NTV_Pravo/SAF-HLS/NTV_Pravo.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="1755" tvg-logo="http://epg.one/img/1755.png" tvg-rec="7",НТВ Стиль
+http://ncdn-y1-vip2.teamcloud.am/live/eds/NTV_Style/SAF-HLS/NTV_Style.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="1681" tvg-logo="http://epg.one/img/1681.png" tvg-rec="7",Охотник и Рыболов HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/OHOTNIK_I_RYBOLOV_HD/SAF-HLS/OHOTNIK_I_RYBOLOV_HD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2419" tvg-logo="http://epg.one/img/2419.png" tvg-rec="7",Охота и рыбалка
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Oxota_I_Ribalka_SD/SAF-HLS/Oxota_I_Ribalka_SD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2350" tvg-logo="http://epg.one/img/2350.png" tvg-rec="7",Поехали!
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Poexali/SAF-HLS/Poexali.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2311" tvg-logo="http://epg.one/img/2311.png" tvg-rec="7",Приключения HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Prikluchniya/SAF-HLS/Prikluchniya.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2295" tvg-logo="http://epg.one/img/2295.png" tvg-rec="0",RT Documentary HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/RT_Doc_HD/SAF-HLS/RT_Doc_HD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="648" tvg-logo="http://epg.one/img/648.png" tvg-rec="7",RTG HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/RTG_HD/SAF-HLS/RTG_HD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2280" tvg-logo="http://epg.one/img/2280.png" tvg-rec="7",RTG TV
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Russian_Travel_Guide/SAF-HLS/Russian_Travel_Guide.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="6646" tvg-logo="http://epg.one/img/6646.png" tvg-rec="0",Рыболов HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/RYBOLOV/SAF-HLS/RYBOLOV.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2424" tvg-logo="http://epg.one/img/2424.png" tvg-rec="3",Телепутешествия
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Teleputeshestviya/SAF-HLS/Teleputeshestviya.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="425" tvg-logo="http://epg.one/img/425.png" tvg-rec="7",TLC HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TLC/SAF-HLS/TLC.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="617" tvg-logo="http://epg.one/img/617.png" tvg-rec="7",Точка Отрыва
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TochkaOtryva_HD/SAF-HLS/TochkaOtryva_HD.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="613" tvg-logo="http://epg.one/img/613.png" tvg-rec="7",Travel Channel HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Travel_channel/SAF-HLS/Travel_channel.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2498" tvg-logo="http://epg.one/img/2498.png" tvg-rec="3",В мире животных HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/V_mire_Jivotnix/SAF-HLS/V_mire_Jivotnix.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="521" tvg-logo="http://epg.one/img/521.png" tvg-rec="7",Viju Explore
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Viasat_Explore/SAF-HLS/Viasat_Explore.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="277" tvg-logo="http://epg.one/img/277.png" tvg-rec="7",Viju History
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Viasat_history/SAF-HLS/Viasat_history.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="765" tvg-logo="http://epg.one/img/765.png" tvg-rec="7",Viju Nature
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Viasat_Nature/SAF-HLS/Viasat_Nature.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2451" tvg-logo="http://epg.one/img/2451.png" tvg-rec="7",Вопросы и ответы
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Voprosy_i_otvety/SAF-HLS/Voprosy_i_otvety.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="669" tvg-logo="http://epg.one/img/669.png" tvg-rec="7",Время
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Vremya/SAF-HLS/Vremya.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2298" tvg-logo="http://epg.one/img/2298.png" tvg-rec="7",Загородная Жизнь
+http://ncdn-y1-vip2.teamcloud.am/live/eds/zagorodnaya_jizn/SAF-HLS/zagorodnaya_jizn.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2449" tvg-logo="http://epg.one/img/2449.png" tvg-rec="7",Здоровое ТВ
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Zdorovoe_TV/SAF-HLS/Zdorovoe_TV.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="2431" tvg-logo="http://epg.one/img/2431.png" tvg-rec="3",Зоо ТВ
+http://ncdn-y1-vip2.teamcloud.am/live/eds/ZOO/SAF-HLS/ZOO.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="367" tvg-logo="http://epg.one/img/367.png" tvg-rec="7",Zоопарк
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Zoopark_SD/SAF-HLS/Zoopark_SD.m3u8
+#EXTINF:0 group-title="Развлекательные" tvg-id="2400" tvg-logo="http://epg.one/img/2400.png" tvg-rec="3",Центральное телевидение
+http://ncdn-y1-vip2.teamcloud.am/live/eds/CTV/SAF-HLS/CTV.m3u8
+#EXTINF:0 group-title="Развлекательные" tvg-id="2491" tvg-logo="http://epg.one/img/2491.png" tvg-rec="7",Fashion TV HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/FashionBox/SAF-HLS/FashionBox.m3u8
+#EXTINF:0 group-title="Развлекательные" tvg-id="1700" tvg-logo="http://epg.one/img/1700.png" tvg-rec="7",КВН ТВ
+http://ncdn-y1-vip2.teamcloud.am/live/eds/KVN_TV/SAF-HLS/KVN_TV.m3u8
+#EXTINF:0 group-title="Развлекательные" tvg-id="2759" tvg-logo="http://epg.one/img/2759.png" tvg-rec="3",Luxury
+http://ncdn-y1-vip2.teamcloud.am/live/eds/LUXURY/SAF-HLS/LUXURY.m3u8
+#EXTINF:0 group-title="Развлекательные" tvg-id="783" tvg-logo="http://epg.one/img/783.png" tvg-rec="7",Ностальгия
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Nostalgia/SAF-HLS/Nostalgia.m3u8
+#EXTINF:0 group-title="Развлекательные" tvg-id="663" tvg-logo="http://epg.one/img/663.png" tvg-rec="7",Сарафан
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Sarafan/SAF-HLS/Sarafan.m3u8
+#EXTINF:0 group-title="Развлекательные" tvg-id="1649" tvg-logo="http://epg.one/img/1649.png" tvg-rec="7",ТНТ4
+http://ncdn-y1-vip2.teamcloud.am/live/eds/TNT4/SAF-HLS/TNT4.m3u8
+#EXTINF:0 group-title="Спорт" tvg-id="2285" tvg-logo="http://epg.one/img/2285.png" tvg-rec="0",Бокс ТВ HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/BOXTV_HD/SAF-HLS/BOXTV_HD.m3u8
+#EXTINF:0 group-title="Спорт" tvg-id="2052" tvg-logo="http://epg.one/img/2052.png" tvg-rec="7",Eurosport 1 HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Eurosport_1_HD/SAF-HLS/Eurosport_1_HD.m3u8
+#EXTINF:0 group-title="Спорт" tvg-id="4313" tvg-logo="http://epg.one/img/4313.png" tvg-rec="7",Eurosport 2 HD
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Eurosport_2_HD/SAF-HLS/Eurosport_2_HD.m3u8
+#EXTINF:0 group-title="Спорт" tvg-id="2362" tvg-logo="http://epg.one/img/2362.png" tvg-rec="0",Fast & Fun Box
+http://ncdn-y1-vip2.teamcloud.am/live/eds/FAST_FUN_Box_HD/SAF-HLS/FAST_FUN_Box_HD.m3u8
+#EXTINF:0 group-title="Спорт" tvg-id="113" tvg-logo="http://epg.one/img/113.png" tvg-rec="7",ЖИВИ!
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Jivi/SAF-HLS/Jivi.m3u8
+#EXTINF:0 group-title="Спорт" tvg-logo="https://iptvx.one/picons/kxl.png",KHL
+http://ncdn-y1-vip2.teamcloud.am/live/eds/KXL/SAF-HLS/KXL.m3u8
+#EXTINF:0 group-title="Спорт" tvg-id="2043" tvg-logo="http://epg.one/img/2043.png" tvg-rec="7",Матч! Планета
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Match_Planeta/SAF-HLS/Match_Planeta.m3u8
+#EXTINF:0 group-title="Спорт" tvg-id="2055" tvg-logo="http://epg.one/img/2055.png" tvg-rec="7",Viju+ Sport
+http://ncdn-y1-vip2.teamcloud.am/live/eds/Viasat_Sport/SAF-HLS/Viasat_Sport.m3u8
