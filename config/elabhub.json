@@ -10,9 +10,9 @@
     ]
   },
   "update": {
-    "versionCode": 10010,
-    "versionName": "1.0.10y",
-    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabhub-1.0.10y/ElabHub-1.0.10y-release.apk",
-    "notes": "Вкладка «О программе» и значок обновления на шестерёнке"
+    "versionCode": 10011,
+    "versionName": "1.0.11y",
+    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabhub-1.0.11y/ElabHub-1.0.11y-release.apk",
+    "notes": "Конфиг перечитывается при возврате в окно"
   }
 }
