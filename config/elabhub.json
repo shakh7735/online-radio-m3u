@@ -10,9 +10,9 @@
     ]
   },
   "update": {
-    "versionCode": 10018,
-    "versionName": "1.0.18y",
-    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabhub-1.0.18y/ElabHub-1.0.18y-release.apk",
-    "notes": "Тема тремя режимами и без кнопки в шапке, настройки режимов одной вкладкой, ровное переключение видео YouTube"
+    "versionCode": 10019,
+    "versionName": "1.0.19y",
+    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabhub-1.0.19y/ElabHub-1.0.19y-release.apk",
+    "notes": "Вид и размер списка у каждого режима свои, выбранный ролик подсвечивается сразу по нажатию"
   }
 }
