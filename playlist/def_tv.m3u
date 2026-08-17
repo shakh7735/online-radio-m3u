@@ -3,16 +3,12 @@
 http://ncdn-y1-vip2.teamcloud.am/live/eds/5Aliq/SAF-HLS/5Aliq.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-id="5927" tvg-logo="http://epg.one/img/5927.png" tvg-rec="0",5TV Plus HD AM
 http://ncdn-y1-vip2.teamcloud.am/live/eds/5Aliq_Plus/SAF-HLS/5Aliq_Plus.m3u8
-#EXTINF:0 group-title="Армения | Հայկական" tvg-id="7082" tvg-logo="http://epg.one/img/7082.png" tvg-rec="0",Arma TV AM
-http://ncdn-y1-vip2.teamcloud.am/live/eds/ArmaTV/SAF-HLS/ArmaTV.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-id="2064" tvg-logo="http://epg.one/img/2064.png" tvg-rec="3",Armenia TV HD AM
 http://ncdn-y1-vip2.teamcloud.am/live/eds/ArmeniaTV-SDI/SAF-HLS/ArmeniaTV-SDI.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-id="5943" tvg-logo="http://epg.one/img/5943.png" tvg-rec="0",ArmToon HD AM
 http://ncdn-y1-vip2.teamcloud.am/live/eds/ArmToonTV/SAF-HLS/ArmToonTV.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-id="2067" tvg-logo="http://epg.one/img/2067.png" tvg-rec="0",ATV HD AM
 http://ncdn-y1-vip2.teamcloud.am/live/eds/ATV/SAF-HLS/ATV.m3u8
-#EXTINF:0 group-title="Армения | Հայկական" tvg-id="2385" tvg-logo="http://epg.one/img/2385.png" tvg-rec="3",Azatutyun TV HD AM
-http://ncdn-y1-vip2.teamcloud.am/live/eds/AzatutyunTV/SAF-HLS/AzatutyunTV.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-id="2626" tvg-logo="http://epg.one/img/2626.png" tvg-rec="3",ATV Bazmoc TV HD AM
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Bazmoc/SAF-HLS/Bazmoc.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-id="2061" tvg-logo="http://epg.one/img/2061.png" tvg-rec="0",21TV AM
@@ -41,8 +37,6 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/LoriTV/SAF-HLS/LoriTV.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/MuzZone/SAF-HLS/MuzZone.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-id="7084" tvg-logo="http://epg.one/img/7084.png" tvg-rec="0",Nor Hayastan AM
 http://ncdn-y1-vip2.teamcloud.am/live/eds/NorHayastan/SAF-HLS/NorHayastan.m3u8
-#EXTINF:0 group-title="Армения | Հայկական" tvg-id="5928" tvg-logo="http://epg.one/img/5928.png" tvg-rec="0",Nur TV HD AM
-http://ncdn-fr-vip1.teamcloud.am/live/eds/NurTV/SAF-HLS/NurTV.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://iptvx.one/picons/shant-premium.png",Shant Gumri
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Shant_Gyumri/SAF-HLS/Shant_Gyumri.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://iptvx.one/picons/shant-premium.png",Shant
@@ -101,10 +95,6 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/Unikum_SD/SAF-HLS/Unikum_SD.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/ARSENAL_HD/SAF-HLS/ARSENAL_HD.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="2138" tvg-logo="https://iptvx.one/picons/bolt.png",Bolt
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Bolt_HD/SAF-HLS/Bolt_HD.m3u8
-#EXTINF:0 group-title="Кино" tvg-id="834" tvg-logo="http://epg.one/img/834.png" tvg-rec="7",Дом Кино
-http://ncdn-y1-vip2.teamcloud.am/live/eds/Dom_Kino/SAF-HLS/Dom_Kino.m3u8
-#EXTINF:0 group-title="Кино" tvg-id="2020" tvg-logo="http://epg.one/img/2020.png" tvg-rec="7",Дом Кино Премиум HD
-http://ncdn-y1-vip2.teamcloud.am/live/eds/Dom_Kino_Premium/SAF-HLS/Dom_Kino_Premium.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="352" tvg-logo="http://epg.one/img/352.png" tvg-rec="7",Еврокино
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Eurokino/SAF-HLS/Eurokino.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="2181" tvg-logo="http://epg.one/img/2181.png" tvg-rec="3",FilmBox
@@ -163,8 +153,6 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/TV1000/SAF-HLS/TV1000.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/TV1000Action/SAF-HLS/TV1000Action.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="267" tvg-logo="http://epg.one/img/267.png" tvg-rec="7",Viju TV1000 Русское
 http://ncdn-y1-vip2.teamcloud.am/live/eds/TV1000Russ/SAF-HLS/TV1000Russ.m3u8
-#EXTINF:0 group-title="Кино" tvg-id="309" tvg-logo="http://epg.one/img/309.png" tvg-rec="7",ТВ 21
-http://ncdn-y1-vip2.teamcloud.am/live/eds/TVXXl/SAF-HLS/TVXXl.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="2233" tvg-logo="http://epg.one/img/2233.png" tvg-rec="3",Индия
 http://ncdn-y1-vip2.teamcloud.am/live/eds/ZeeTV/SAF-HLS/ZeeTV.m3u8
 #EXTINF:0 group-title="Музыка" tvg-logo="https://iptvx.one/picons/360-tunebox.png",360TuneBox
@@ -295,8 +283,6 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/NTV_Style/SAF-HLS/NTV_Style.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/OHOTNIK_I_RYBOLOV_HD/SAF-HLS/OHOTNIK_I_RYBOLOV_HD.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2419" tvg-logo="http://epg.one/img/2419.png" tvg-rec="7",Охота и рыбалка
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Oxota_I_Ribalka_SD/SAF-HLS/Oxota_I_Ribalka_SD.m3u8
-#EXTINF:0 group-title="Познавательные" tvg-id="2350" tvg-logo="http://epg.one/img/2350.png" tvg-rec="7",Поехали!
-http://ncdn-y1-vip2.teamcloud.am/live/eds/Poexali/SAF-HLS/Poexali.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2311" tvg-logo="http://epg.one/img/2311.png" tvg-rec="7",Приключения HD
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Prikluchniya/SAF-HLS/Prikluchniya.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2295" tvg-logo="http://epg.one/img/2295.png" tvg-rec="0",RT Documentary HD
@@ -325,8 +311,6 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/Viasat_history/SAF-HLS/Viasat_history.
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Viasat_Nature/SAF-HLS/Viasat_Nature.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2451" tvg-logo="http://epg.one/img/2451.png" tvg-rec="7",Вопросы и ответы
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Voprosy_i_otvety/SAF-HLS/Voprosy_i_otvety.m3u8
-#EXTINF:0 group-title="Познавательные" tvg-id="669" tvg-logo="http://epg.one/img/669.png" tvg-rec="7",Время
-http://ncdn-y1-vip2.teamcloud.am/live/eds/Vremya/SAF-HLS/Vremya.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2298" tvg-logo="http://epg.one/img/2298.png" tvg-rec="7",Загородная Жизнь
 http://ncdn-y1-vip2.teamcloud.am/live/eds/zagorodnaya_jizn/SAF-HLS/zagorodnaya_jizn.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2449" tvg-logo="http://epg.one/img/2449.png" tvg-rec="7",Здоровое ТВ
