@@ -55,23 +55,23 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/TAVA_TV/SAF-HLS/TAVA_TV.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/VMedia/SAF-HLS/VMedia.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-id="2387" tvg-logo="http://epg.one/img/2387.png" tvg-rec="3",ATV Xaxaliq HD AM
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Xaxaliq/SAF-HLS/Xaxaliq.m3u8
-#EXTINF:0 group-title="Армения | Հայկական" ,BoonTV
+#EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/boon-tv.png",BoonTV
 http://ncdn-y1-vip2.teamcloud.am/live/eds/BoonTV/SAF-HLS/BoonTV.m3u8
-#EXTINF:0 group-title="Армения | Հայկական" ,CAYG
+#EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/tsayg-tv.png",CAYG
 http://ncdn-fr-vip1.teamcloud.am/live/eds/CAYG/SAF-HLS/CAYG.m3u8
-#EXTINF:0 group-title="Армения | Հայկական",ABN
+#EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/abnews-tv.png",ABN
 http://ncdn-y1-vip2.teamcloud.am/live/eds/ABN/SAF-HLS/ABN.m3u8
-#EXTINF:0 group-title="Армения | Հայկական",AraratTV
+#EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/ararat-tv.png",AraratTV
 http://ncdn-y1-vip2.teamcloud.am/live/eds/AraratTV/SAF-HLS/AraratTV.m3u8
-#EXTINF:0 group-title="Армения | Հայկական",Tavush TV
+#EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/tavush-tv.png",Tavush TV
 http://ncdn-y1-vip2.teamcloud.am/live/eds/TavushTV/SAF-HLS/TavushTV.m3u8
-#EXTINF:0 group-title="Армения | Հայկական",ZangezurTV
+#EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/zangezur-tv.jpg",ZangezurTV
 http://ncdn-fr-vip1.teamcloud.am/live/eds/ZangezurTV/SAF-HLS/ZangezurTV.m3u8
-#EXTINF:0 group-title="Армения | Հայկական",Geghama
+#EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/geghama-tv.png",Geghama
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Geghama/SAF-HLS/Geghama.m3u8
 #EXTINF:0 group-title="Армения | Հայկական",Noyan Tapan
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Noyan_Tapan/SAF-HLS/Noyan_Tapan.m3u8
-#EXTINF:0 group-title="Армения | Հայկական",KotaykTV
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="5937" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/kotayk-tv.png",KotaykTV
 http://ncdn-y1-vip2.teamcloud.am/live/eds/KotaykTV/SAF-HLS/KotaykTV.m3u8
 #EXTINF:0 group-title="Детские" tvg-id="929" tvg-logo="http://epg.one/img/929.png" tvg-rec="7",Cartoonito
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Boomerang/SAF-HLS/Boomerang.m3u8
