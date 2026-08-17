@@ -12,7 +12,7 @@ drive-settings.json
 github-map.json
 github-settings.json
 
-# Generated playlists in the root are scratch; published ones live in playlists/
+# Generated playlists in the root are scratch; published ones live in temp-playlists/
 /*.m3u
 
 # Scratch output

@@ -31,7 +31,7 @@
  *   POST /api/github/repo               → check (or create) the target repository
  *   POST /api/github/sync               → push missing logos, return raw URLs
  *   POST /api/github/push-project       → publish the app's own files to the repo
- *   POST /api/publish/playlist          → write a playlist into playlists/ and git push it
+ *   POST /api/publish/playlist          → write a playlist into temp-playlists/ and git push it
  *   POST /api/github/publish-playlist   → same via the Contents API (when there is no SSH)
  *   POST /api/playlist/fetch            → download a playlist by URL (server-side, avoids CORS)
  *   GET  /api/stream?url=&referer=      → relay a station, injecting Referer (Range-aware)
@@ -875,7 +875,7 @@ async function handleStreamProxy(req: IncomingMessage, res: ServerResponse, url:
 }
 
 /** Where published playlists live inside the repository. */
-const PLAYLIST_DIR = 'playlists';
+const PLAYLIST_DIR = 'temp-playlists';
 
 function sanitizeName(name: string, fallback: string): string {
   const clean = (name ?? '').trim().replace(/[^\w.\-]+/g, '_');
