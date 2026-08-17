@@ -2,24 +2,11 @@
 github-token.txt
 drive-token.txt
 
-# Local state
-.cache/
-vendor/
-node_modules/
-package-lock.json
-drive-map.json
-drive-settings.json
-github-map.json
-github-settings.json
-
-# Generated playlists in the root are scratch; published ones live in temp-playlists/
+# Generated playlists in the root are scratch; published ones live in playlist/
 /*.m3u
 
-# Scratch output
-*.log
-*.ndjson
-*-req.json
-small-city.txt
+# IDE
+.idea/
 
 # macOS
 .DS_Store
