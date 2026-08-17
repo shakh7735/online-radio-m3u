@@ -99,7 +99,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/TiJi/SAF-HLS/TiJi.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Unikum_SD/SAF-HLS/Unikum_SD.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="2768" tvg-logo="http://epg.one/img/2768.png" tvg-rec="3",Арсенал HD
 http://ncdn-y1-vip2.teamcloud.am/live/eds/ARSENAL_HD/SAF-HLS/ARSENAL_HD.m3u8
-#EXTINF:0 group-title="Кино" tvg-logo="https://iptvx.one/picons/bolt.png",Bolt
+#EXTINF:0 group-title="Кино" tvg-id="2138" tvg-logo="https://iptvx.one/picons/bolt.png",Bolt
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Bolt_HD/SAF-HLS/Bolt_HD.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="834" tvg-logo="http://epg.one/img/834.png" tvg-rec="7",Дом Кино
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Dom_Kino/SAF-HLS/Dom_Kino.m3u8
@@ -151,11 +151,11 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/NTV_Serial/SAF-HLS/NTV_Serial.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/RETRO/SAF-HLS/RETRO.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="12" tvg-logo="http://epg.one/img/12.png" tvg-rec="7",Родное Кино
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Rodnoe_Kino/SAF-HLS/Rodnoe_Kino.m3u8
-#EXTINF:0 group-title="Кино" tvg-logo="https://iptvx.one/picons/star-cinema.png",Star Cinema
+#EXTINF:0 group-title="Кино" tvg-id="3328" tvg-logo="https://iptvx.one/picons/star-cinema.png",Star Cinema
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Star_Cinema/SAF-HLS/Star_Cinema.m3u8
-#EXTINF:0 group-title="Кино" tvg-logo="https://iptvx.one/picons/star-family-ua.png",Star Family
+#EXTINF:0 group-title="Кино" tvg-id="9162" tvg-logo="https://iptvx.one/picons/star-family-ua.png",Star Family
 http://ncdn-y1-vip2.teamcloud.am/live/eds/StarFamily/SAF-HLS/StarFamily.m3u8
-#EXTINF:0 group-title="Кино" tvg-logo="https://iptvx.one/picons/suspense.png",Suspense HD
+#EXTINF:0 group-title="Кино" tvg-id="9180" tvg-logo="https://iptvx.one/picons/suspense.png",Suspense HD
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Suspense/SAF-HLS/Suspense.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="127" tvg-logo="http://epg.one/img/127.png" tvg-rec="7",Viju TV1000
 http://ncdn-y1-vip2.teamcloud.am/live/eds/TV1000/SAF-HLS/TV1000.m3u8
@@ -179,7 +179,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/BRIDGE_TV_RU_HIT/SAF-HLS/BRIDGE_TV_RU_
 http://ncdn-y1-vip2.teamcloud.am/live/eds/BridgeTV_Deluxe/SAF-HLS/BridgeTV_Deluxe.m3u8
 #EXTINF:0 group-title="Музыка" tvg-id="4621" tvg-logo="http://epg.one/img/4621.png" tvg-rec="0",Bridge Шлягер
 http://ncdn-y1-vip2.teamcloud.am/live/eds/BridgeTV_Shlyager/SAF-HLS/BridgeTV_Shlyager.m3u8
-#EXTINF:0 group-title="Музыка" tvg-logo="https://iptvx.one/picons/shanson-tv.png",ТВ Шансон
+#EXTINF:0 group-title="Музыка" tvg-id="2278" tvg-logo="https://iptvx.one/picons/shanson-tv.png",ТВ Шансон
 http://ncdn-y1-vip2.teamcloud.am/live/eds/CHANSON/SAF-HLS/CHANSON.m3u8
 #EXTINF:0 group-title="Музыка" tvg-id="3335" tvg-logo="http://epg.one/img/3335.png" tvg-rec="3",М1 HD UA
 http://ncdn-y1-vip2.teamcloud.am/live/eds/M-1_Global/SAF-HLS/M-1_Global.m3u8
@@ -191,13 +191,13 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/Mezzo/SAF-HLS/Mezzo.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Muz_TV/SAF-HLS/Muz_TV.m3u8
 #EXTINF:0 group-title="Музыка" tvg-id="680" tvg-logo="http://epg.one/img/680.png" tvg-rec="7",ТНТ Music
 http://ncdn-y1-vip2.teamcloud.am/live/eds/TNT_Music/SAF-HLS/TNT_Music.m3u8
-#EXTINF:0 group-title="Новостные" tvg-logo="https://iptvx.one/picons/bbc.png",BBC
+#EXTINF:0 group-title="Новостные" tvg-id="828" tvg-logo="https://iptvx.one/picons/bbc.png",BBC
 http://ncdn-y1-vip2.teamcloud.am/live/eds/BBC/SAF-HLS/BBC.m3u8
 #EXTINF:0 group-title="Новостные" tvg-id="2267" tvg-logo="http://epg.one/img/2267.png" tvg-rec="7",CGTN HD
 http://ncdn-y1-vip2.teamcloud.am/live/eds/CGTN_HD/SAF-HLS/CGTN_HD.m3u8
 #EXTINF:0 group-title="Новостные" tvg-id="2268" tvg-logo="http://epg.one/img/2268.png" tvg-rec="3",CGTN Русский HD orig
 http://ncdn-y1-vip2.teamcloud.am/live/eds/CGTN-rus_HD/SAF-HLS/CGTN-rus_HD.m3u8
-#EXTINF:0 group-title="Новостные" tvg-logo="https://iptvx.one/picons/cnn.png",CNN
+#EXTINF:0 group-title="Новостные" tvg-id="8038" tvg-logo="https://iptvx.one/picons/cnn.png",CNN
 http://ncdn-y1-vip2.teamcloud.am/live/eds/CNN/SAF-HLS/CNN.m3u8
 #EXTINF:0 group-title="Новостные" tvg-id="2266" tvg-logo="http://epg.one/img/2266.png" tvg-rec="7",Euronews Россия
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Euronews_Ru/SAF-HLS/Euronews_Ru.m3u8
@@ -359,7 +359,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/Eurosport_2_HD/SAF-HLS/Eurosport_2_HD.
 http://ncdn-y1-vip2.teamcloud.am/live/eds/FAST_FUN_Box_HD/SAF-HLS/FAST_FUN_Box_HD.m3u8
 #EXTINF:0 group-title="Спорт" tvg-id="113" tvg-logo="http://epg.one/img/113.png" tvg-rec="7",ЖИВИ!
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Jivi/SAF-HLS/Jivi.m3u8
-#EXTINF:0 group-title="Спорт" tvg-logo="https://iptvx.one/picons/kxl.png",KHL
+#EXTINF:0 group-title="Спорт" tvg-id="2048" tvg-logo="https://iptvx.one/picons/kxl.png",KHL
 http://ncdn-y1-vip2.teamcloud.am/live/eds/KXL/SAF-HLS/KXL.m3u8
 #EXTINF:0 group-title="Спорт" tvg-id="2043" tvg-logo="http://epg.one/img/2043.png" tvg-rec="7",Матч! Планета
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Match_Planeta/SAF-HLS/Match_Planeta.m3u8
