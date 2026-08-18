@@ -1,0 +1,8 @@
+{
+  "update": {
+    "versionCode": 20000,
+    "versionName": "2.0.0",
+    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabtv-2.0.0/ElabTV-2.0.0-release.apk",
+    "notes": "Интерфейс под пульт Android TV: список каналов по OK, категории стрелками, настройки долгим нажатием"
+  }
+}

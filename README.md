@@ -12,7 +12,7 @@
 | --- | --- |
 | `playlist/` | плейлисты по умолчанию: `default.m3u` (радио), `def_tv.m3u` (ТВ) |
 | `logos/` | логотипы радиостанций, на них ссылаются `tvg-logo` в плейлистах |
-| `config/` | `elabhub.json` — конфиг ElabHub: резолверы YouTube и данные об обновлении |
+| `config/` | `elabhub.json` — конфиг ElabHub (резолверы YouTube, данные об обновлении); `elabtv.json` — конфиг ElabTV (данные об обновлении) |
 
 ## Ссылки
 
@@ -20,6 +20,7 @@
 https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/playlist/default.m3u
 https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/playlist/def_tv.m3u
 https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/config/elabhub.json
+https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/config/elabtv.json
 ```
 
 Через CDN (кэш, но задержка обновления до 12 часов):
@@ -28,7 +29,8 @@ https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/config/elabhub
 https://cdn.jsdelivr.net/gh/shakh7735/online-radio-m3u@main/playlist/default.m3u
 ```
 
-Релизы APK ElabHub — во вкладке [Releases](https://github.com/shakh7735/online-radio-m3u/releases).
+Релизы APK ElabHub и ElabTV — во вкладке [Releases](https://github.com/shakh7735/online-radio-m3u/releases)
+(теги вида `elabhub-1.0.19y`, `elabtv-2.0.0`).
 
 ## Потоки ТВ и резервный узел
 
