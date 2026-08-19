@@ -1,8 +1,8 @@
 {
   "update": {
-    "versionCode": 20100,
-    "versionName": "2.1.0",
-    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabtv-2.1.0/ElabTV-2.1.0-release.apk",
-    "notes": "Плитка с названием в лаунчере, программа передач в плеере вместо кнопок, настройки по группам, быстрое переключение каналов и мёртвый канал больше не держит приложение"
+    "versionCode": 20200,
+    "versionName": "2.2.0",
+    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabtv-2.2.0/ElabTV-2.2.0-release.apk",
+    "notes": "Своя ссылка на программу передач и логотипы каналов из гида, избранное — удержанием OK с пульта"
   }
 }
