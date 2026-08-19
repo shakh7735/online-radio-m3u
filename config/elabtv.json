@@ -1,8 +1,8 @@
 {
   "update": {
-    "versionCode": 20200,
-    "versionName": "2.2.0",
-    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabtv-2.2.0/ElabTV-2.2.0-release.apk",
-    "notes": "Своя ссылка на программу передач и логотипы каналов из гида, избранное — удержанием OK с пульта"
+    "versionCode": 20201,
+    "versionName": "2.2.1",
+    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabtv-2.2.1/ElabTV-2.2.1-release.apk",
+    "notes": "Выбор декодера видео (аппаратный/программный), список каналов открывается без рывка, понятнее добавление своих ссылок в настройках"
   }
 }
