@@ -1,8 +1,8 @@
 {
   "update": {
-    "versionCode": 20201,
-    "versionName": "2.2.1",
-    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabtv-2.2.1/ElabTV-2.2.1-release.apk",
-    "notes": "Выбор декодера видео (аппаратный/программный), список каналов открывается без рывка, понятнее добавление своих ссылок в настройках"
+    "versionCode": 20202,
+    "versionName": "2.2.2",
+    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabtv-2.2.2/ElabTV-2.2.2-release.apk",
+    "notes": "Ссылка на плейлист или гид добавляется в один шаг, у источников появились отдельные кнопки «изменить» и «удалить» — их удобно нажимать пультом"
   }
 }
