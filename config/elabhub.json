@@ -10,9 +10,9 @@
     ]
   },
   "update": {
-    "versionCode": 10020,
-    "versionName": "1.0.20y",
-    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabhub-1.0.20y/ElabHub-1.0.20y-release.apk",
+    "versionCode": 10021,
+    "versionName": "1.0.21",
+    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabhub-1.0.21/ElabHub-1.0.21-release.apk",
     "notes": "Настройки как в ElabTV: разделы слева, шаговые кнопки размера. В плеер уходит только играющий канал. Мёртвый канал больше не блокирует переключение. Гид даёт логотипы каналов, можно указать свою ссылку на EPG"
   }
 }
