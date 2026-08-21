@@ -10,7 +10,8 @@
     ],
     "invidious": [
       "https://inv.nadeko.net"
-    ]
+    ],
+    "region": "RU"
   },
   "update": {
     "versionCode": 10022,
