@@ -1,6 +1,9 @@
 {
   "youtube": {
-    "resolvers": ["newpipe", "piped"],
+    "resolvers": [
+      "newpipe",
+      "piped"
+    ],
     "piped": [
       "https://pipedapi.kavin.rocks",
       "https://pipedapi.adminforge.de"
@@ -10,9 +13,9 @@
     ]
   },
   "update": {
-    "versionCode": 10021,
-    "versionName": "1.0.21",
-    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabhub-1.0.21/ElabHub-1.0.21-release.apk",
-    "notes": "Настройки как в ElabTV: разделы слева, шаговые кнопки размера. В плеер уходит только играющий канал. Мёртвый канал больше не блокирует переключение. Гид даёт логотипы каналов, можно указать свою ссылку на EPG"
+    "versionCode": 10022,
+    "versionName": "1.0.22",
+    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabhub-1.0.22/ElabHub-1.0.22-release.apk",
+    "notes": "YouTube: экран больше не пустует до первого запроса — на нём лента, и она бесконечна (настраивается в «Настройки → YouTube → Главная до первого запроса»). Выдача поиска тоже больше не обрывается на двадцати результатах. Добавлены голосовой поиск и крестик очистки в строке поиска"
   }
 }
