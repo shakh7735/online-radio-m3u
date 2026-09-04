@@ -5,18 +5,14 @@
       "piped"
     ],
     "piped": [
-      "https://pipedapi.kavin.rocks",
-      "https://pipedapi.adminforge.de"
-    ],
-    "invidious": [
-      "https://inv.nadeko.net"
+      "https://api.piped.private.coffee"
     ],
     "region": "RU"
   },
   "update": {
-    "versionCode": 10023,
-    "versionName": "1.0.23",
-    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabhub-1.0.23/ElabHub-1.0.23-release.apk",
-    "notes": "Список каналов теперь следует за играющим: переключая кнопками руля, больше не упираешься в край окна. Кнопка «следующий» на руле больше не включает радиостанцию вместо соседнего канала, когда канал завис. Быстрые нажатия подряд не теряются"
+    "versionCode": 10024,
+    "versionName": "1.0.24",
+    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabhub-1.0.24/ElabHub-1.0.24-release.apk",
+    "notes": "Ролики YouTube играют в полном качестве, а не в 360p: качество подбирается само по скорости связи и размеру экрана"
   }
 }
