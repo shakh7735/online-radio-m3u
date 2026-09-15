@@ -111,7 +111,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/Indiiskoe_Kino/SAF-HLS/Indiiskoe_Kino.
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Kinohit/SAF-HLS/Kinohit.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="821" tvg-logo="http://epg.one/img/821.png" tvg-rec="7",Кинокомедия
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Kinokomedia/SAF-HLS/Kinokomedia.m3u8
-#EXTINF:0 group-title="Кино" tvg-id="2407" tvg-logo="http://epg.one/img/2407.png" tvg-rec="3",Киноман
+#EXTINF:0 group-title="Кино" tvg-id="2393" tvg-logo="http://epg.one/img/2393.png" tvg-rec="3",Киноман АТВ
 http://ncdn-y1-vip2.teamcloud.am/live/eds/KinomanTV/SAF-HLS/KinomanTV.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="644" tvg-logo="http://epg.one/img/644.png" tvg-rec="7",Киномикс
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Kinomix/SAF-HLS/Kinomix.m3u8
