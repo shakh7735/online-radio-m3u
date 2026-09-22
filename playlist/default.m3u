@@ -3,10 +3,6 @@
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/aurora.png" group-title="Избранное",Aurora
 #EXTVLCOPT:http-referrer=https://play.radioplayer.org/
 https://de.auroramedia.am/aurora.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sputnik-armenia.png" group-title="Избранное",Sputnik Армения
-https://icecast-rian.cdnvideo.ru/voicearm1
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sputnik-russia.png" group-title="Избранное",Sputnik Россия
-https://icecast-rian.cdnvideo.ru/voicerus
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/comedy-radio.png" group-title="Избранное",Comedy Radio
 https://hls-01-gpm.hostingradio.ru/comedyradio495/128/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/standup-comedy-radio.png" group-title="Избранное",StandUP — Comedy Radio
@@ -76,6 +72,10 @@ https://audio.cloudrad.io/2b1dbf78/live
 #EXTINF:-1 tvg-id="fm-105-5" tvg-name="FM 105.5" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/fm-105-5.jpg" group-title="Армения",FM 105.5
 #EXTVLCOPT:http-referrer=https://play.radioplayer.org/
 https://audio.cloudrad.io/3745421d/live
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sputnik-armenia.png" group-title="Избранное",Sputnik Армения
+https://icecast-rian.cdnvideo.ru/voicearm1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/sputnik-russia.png" group-title="Избранное",Sputnik Россия
+https://icecast-rian.cdnvideo.ru/voicerus
 #EXTINF:-1 tvg-id="100-radio" tvg-name="100% Радио Москва 71.3 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/100-radio.jpg" group-title="Москва",100% Радио Москва 71.3 FM
 https://myradio24.org/93299
 #EXTINF:-1 tvg-id="detskoe" tvg-name="Детское радио Москва 96.8 FM" tvg-logo="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/main/logos/detskoe.png" group-title="Москва",Детское радио Москва 96.8 FM
