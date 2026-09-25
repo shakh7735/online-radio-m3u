@@ -10,9 +10,9 @@
     "region": "RU"
   },
   "update": {
-    "versionCode": 10024,
-    "versionName": "1.0.24",
-    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabhub-1.0.24/ElabHub-1.0.24-release.apk",
-    "notes": "Ролики YouTube играют в полном качестве, а не в 360p: качество подбирается само по скорости связи и размеру экрана"
+    "versionCode": 10025,
+    "versionName": "1.0.27",
+    "url": "https://github.com/shakh7735/online-radio-m3u/releases/download/elabhub-1.0.27/ElabHub-1.0.27-release.apk",
+    "notes": "Архив ТВ-передач, как в ElabTV: у канала кнопка программы, прошедшая передача включается нажатием, полоса под видео идёт по времени эфира. Меньше буферизации — поток качается несколькими соединениями, зависший поток поднимается сам. В «Обновлении» видна вся история версий, поставить можно и сборку постарше"
   }
 }
