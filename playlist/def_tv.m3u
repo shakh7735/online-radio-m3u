@@ -75,7 +75,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/CN/SAF-HLS/CN.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/DaVinci/SAF-HLS/DaVinci.m3u8
 #EXTINF:0 group-title="Детские" tvg-id="923" tvg-logo="http://epg.one/img/923.png" tvg-rec="7",Детский мир
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Detskii_Mir/SAF-HLS/Detskii_Mir.m3u8
-#EXTINF:0 group-title="Детские" tvg-id="923" tvg-logo="http://epg.one/img/923.png" tvg-rec="7",Детский мир
+#EXTINF:0 group-title="Познавательные" tvg-id="325" tvg-logo="http://epg.one/img/325.png" tvg-rec="7",Discovery Channel
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Discovery/SAF-HLS/Discovery.m3u8
 #EXTINF:0 group-title="Детские" tvg-id="2438" tvg-logo="http://epg.one/img/2438.png" tvg-rec="3",Капитан Фантастика HD
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Kapitan_fantastika/SAF-HLS/Kapitan_fantastika.m3u8
