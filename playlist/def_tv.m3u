@@ -1,4 +1,4 @@
-#EXTM3U tvg-url="http://epg.one/epg.xml.gz"
+#EXTM3U tvg-url="https://raw.githubusercontent.com/shakh7735/online-radio-m3u/epg/epg.xml.gz"
 #EXTINF:0 group-title="Армения | Հայկական" tvg-id="2372" tvg-logo="http://epg.one/img/2372.png" tvg-rec="0",5TV AM
 http://ncdn-y1-vip2.teamcloud.am/live/eds/5Aliq/SAF-HLS/5Aliq.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-id="5927" tvg-logo="http://epg.one/img/5927.png" tvg-rec="0",5TV Plus HD AM
