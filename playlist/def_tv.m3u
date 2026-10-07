@@ -233,7 +233,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/365days/SAF-HLS/365days.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Animal_Planet/SAF-HLS/Animal_Planet.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="153" tvg-logo="http://epg.one/img/153.png" tvg-rec="7",Авто Плюс
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Avto_Plus/SAF-HLS/Avto_Plus.m3u8
-#EXTINF:0 group-title="Познавательные" tvg-id="409" tvg-logo="http://epg.one/img/409.png" tvg-rec="7",Discovery Science PL
+#EXTINF:0 group-title="Познавательные" tvg-id="723" tvg-logo="http://epg.one/img/723.png" tvg-rec="7",Наука
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Discovery_Science/SAF-HLS/Discovery_Science.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2186" tvg-logo="http://epg.one/img/2186.png" tvg-rec="3",DocuBox HD
 http://ncdn-y1-vip2.teamcloud.am/live/eds/DocuBox_HD/SAF-HLS/DocuBox_HD.m3u8
