@@ -1,0 +1,23 @@
+{
+  "_comment": "Источники гида. primary — основной, его id совпадают с tvg-id плейлиста. fallback — откуда брать программу каналу, у которого в основном гиде её нет или она кончилась: ключ — tvg-id в плейлисте, значение — [источник, id канала в нём]. Соответствия проверены по кадрам эфира (html-viewer: npm run audit).",
+  "sources": {
+    "epgone": "http://epg.one/epg.xml.gz",
+    "iptvx": "https://iptvx.one/epg/epg_lite.xml.gz",
+    "antifriz": "https://antifriz.tv/storage/epg/xmltv.xml.gz"
+  },
+  "primary": "epgone",
+  "fallback": {
+    "1683": ["iptvx", "rossia-24"],
+    "2768": ["iptvx", "arsenaltv"],
+    "799": ["iptvx", "kinoseria"],
+    "415": ["iptvx", "hd-life"],
+    "66": ["iptvx", "detsky"],
+    "9180": ["iptvx", "suspense"],
+    "2423": ["iptvx", "365-dnej"],
+    "6646": ["iptvx", "oxotnik-i-rybolov"],
+    "2055": ["iptvx", "viasat-sport"],
+    "2062": ["iptvx", "h2-am"],
+    "elab-360tunebox": ["iptvx", "360-tunebox"],
+    "elab-shant": ["antifriz", "shant-am-hd-orig"]
+  }
+}

@@ -39,7 +39,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/MuzZone/SAF-HLS/MuzZone.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/NorHayastan/SAF-HLS/NorHayastan.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://iptvx.one/picons/shant-premium.png",Shant Gumri
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Shant_Gyumri/SAF-HLS/Shant_Gyumri.m3u8
-#EXTINF:0 group-title="Армения | Հայկական" tvg-logo="https://iptvx.one/picons/shant-premium.png",Shant
+#EXTINF:0 group-title="Армения | Հայկական" tvg-id="elab-shant" tvg-logo="https://iptvx.one/picons/shant-premium.png",Shant
 http://ncdn-y1-vip2.teamcloud.am/live/eds/ShantTV-SDI/SAF-HLS/ShantTV-SDI.m3u8
 #EXTINF:0 group-title="Армения | Հայկական" tvg-id="5925" tvg-logo="http://epg.one/img/5925.png" tvg-rec="0",Shoghakat AM
 http://ncdn-y1-vip2.teamcloud.am/live/eds/ShogakatTV/SAF-HLS/ShogakatTV.m3u8
@@ -155,7 +155,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/TV1000Action/SAF-HLS/TV1000Action.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/TV1000Russ/SAF-HLS/TV1000Russ.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="2233" tvg-logo="http://epg.one/img/2233.png" tvg-rec="3",Индия
 http://ncdn-y1-vip2.teamcloud.am/live/eds/ZeeTV/SAF-HLS/ZeeTV.m3u8
-#EXTINF:0 group-title="Музыка" tvg-logo="https://iptvx.one/picons/360-tunebox.png",360TuneBox
+#EXTINF:0 group-title="Музыка" tvg-id="elab-360tunebox" tvg-logo="https://iptvx.one/picons/360-tunebox.png",360TuneBox
 http://ncdn-y1-vip2.teamcloud.am/live/eds/360TuneBox/SAF-HLS/360TuneBox.m3u8
 #EXTINF:0 group-title="Музыка" tvg-id="151" tvg-logo="http://epg.one/img/151.png" tvg-rec="7",Bridge TV
 http://ncdn-y1-vip2.teamcloud.am/live/eds/BRIDGE_TV/SAF-HLS/BRIDGE_TV.m3u8

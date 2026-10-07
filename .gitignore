@@ -10,3 +10,5 @@ drive-token.txt
 
 # macOS
 .DS_Store
+.epg-cache/
+out/

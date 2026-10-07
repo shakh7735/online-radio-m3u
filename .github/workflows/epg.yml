@@ -1,0 +1,47 @@
+# Свой гид программы передач: каждые 6 часов собирает XMLTV только по каналам плейлиста
+# (epg.one + запасные источники, см. epg/sources.json и tools/build_epg.py) и выкладывает его в
+# ветку epg. Ветка перезаписывается целиком — история репозитория от гида не растёт.
+# Ссылка для плейлиста: https://raw.githubusercontent.com/shakh7735/online-radio-m3u/epg/epg.xml.gz
+name: EPG
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["playlist/def_tv.m3u", "epg/**", "tools/build_epg.py", ".github/workflows/epg.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: epg
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Собрать гид
+        run: python3 tools/build_epg.py .epg-cache out/epg.xml.gz
+      - name: Выложить в ветку epg
+        run: |
+          cd out
+          cat > README.md <<'MD'
+          # Гид программы передач ElabTV
+
+          Собирается автоматически (workflow EPG в ветке main) — руками не править.
+          Ссылка: https://raw.githubusercontent.com/shakh7735/online-radio-m3u/epg/epg.xml.gz
+          MD
+          git init -q -b epg
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Гид $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" epg
