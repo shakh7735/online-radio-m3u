@@ -101,7 +101,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/Eurokino/SAF-HLS/Eurokino.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/FilmBox/SAF-HLS/FilmBox.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="2182" tvg-logo="http://epg.one/img/2182.png" tvg-rec="3",FilmBox ArtHouse orig
 http://ncdn-y1-vip2.teamcloud.am/live/eds/FilmBox_Arthouse/SAF-HLS/FilmBox_Arthouse.m3u8
-#EXTINF:0 group-title="Кино" tvg-id="934" tvg-logo="http://epg.one/img/934.png" tvg-rec="7",Hollywood HD
+#EXTINF:0 group-title="Кино" tvg-id="608" tvg-logo="http://epg.one/img/934.png" tvg-rec="7",Hollywood HD
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Hwollywood_HD/SAF-HLS/Hwollywood_HD.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="2403" tvg-logo="http://epg.one/img/2403.png" tvg-rec="7",Иллюзион+
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Illuzion_Plus/SAF-HLS/Illuzion_Plus.m3u8
