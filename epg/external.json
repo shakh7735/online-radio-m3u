@@ -1,9 +1,0 @@
-{
-  "_comment": "Гиды для внешних плейлистов (tools/build_epg_external.py). Ключ — имя гида: https://raw.githubusercontent.com/shakh7735/online-radio-m3u/epg/ext/<ключ>.xml.gz, рядом <ключ>.txt — откуда каждый канал взял программу. env — секрет Actions с адресом плейлиста (в адресе ключ провайдера, сюда его не писать) — его же надо перечислить в env шага в .github/workflows/epg.yml. map — явные соответствия, сильнее подбора по названию: \"название в плейлисте\": [источник, id канала в нём] или [источник, id, сдвиг в часах]; null — оставить канал без программы.",
-  "playlists": {
-    "personal": {
-      "env": "PLAYLIST_PERSONAL",
-      "map": {}
-    }
-  }
-}

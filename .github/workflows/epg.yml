@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["playlist/def_tv.m3u", "epg/**", "tools/build_epg.py", "tools/build_epg_external.py", ".github/workflows/epg.yml"]
+    paths: ["playlist/def_tv.m3u", "epg/**", "tools/build_epg.py", ".github/workflows/epg.yml"]
 
 permissions:
   contents: write
@@ -30,12 +30,6 @@ jobs:
           python-version: "3.12"
       - name: Собрать гид
         run: python3 tools/build_epg.py .epg-cache out/epg.xml.gz
-      # Гиды внешних плейлистов (epg/external.json). Адрес плейлиста — секрет: в нём ключ
-      # провайдера. Новый плейлист — новый секрет, и его надо перечислить здесь же
-      - name: Собрать гиды внешних плейлистов
-        env:
-          PLAYLIST_PERSONAL: ${{ secrets.PLAYLIST_PERSONAL }}
-        run: python3 tools/build_epg_external.py .epg-cache out/ext
       - name: Выложить в ветку epg
         run: |
           cd out
@@ -44,7 +38,6 @@ jobs:
 
           Собирается автоматически (workflow EPG в ветке main) — руками не править.
           Ссылка: https://raw.githubusercontent.com/shakh7735/online-radio-m3u/epg/epg.xml.gz
-          Гиды внешних плейлистов: ext/<имя>.xml.gz, рядом ext/<имя>.txt — откуда какой канал взял программу.
           MD
           git init -q -b epg
           git config user.name "github-actions[bot]"
