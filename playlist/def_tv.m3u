@@ -299,7 +299,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/Teleputeshestviya/SAF-HLS/Teleputeshes
 http://ncdn-y1-vip2.teamcloud.am/live/eds/TLC/SAF-HLS/TLC.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="617" tvg-logo="http://epg.one/img/617.png" tvg-rec="7",Точка Отрыва
 http://ncdn-y1-vip2.teamcloud.am/live/eds/TochkaOtryva_HD/SAF-HLS/TochkaOtryva_HD.m3u8
-#EXTINF:0 group-title="Познавательные" tvg-id="613" tvg-logo="http://epg.one/img/613.png" tvg-rec="7",Travel Channel
+#EXTINF:0 group-title="Кино" tvg-id="2831" tvg-logo="http://epg.one/img/2831.png" tvg-rec="7",Наш Кинопоказ
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Travel_channel/SAF-HLS/Travel_channel.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2498" tvg-logo="http://epg.one/img/2498.png" tvg-rec="3",В мире животных
 http://ncdn-y1-vip2.teamcloud.am/live/eds/V_mire_Jivotnix/SAF-HLS/V_mire_Jivotnix.m3u8
