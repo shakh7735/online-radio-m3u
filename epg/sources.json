@@ -18,6 +18,7 @@
     "2055": ["iptvx", "viasat-sport"],
     "2062": ["iptvx", "h2-am"],
     "elab-360tunebox": ["iptvx", "360-tunebox"],
-    "elab-shant": ["antifriz", "shant-am-hd-orig"]
+    "elab-shant": ["antifriz", "shant-am-hd-orig"],
+    "elab-hollywood-eu": ["iptvx", "hollywood-eu"]
   }
 }
