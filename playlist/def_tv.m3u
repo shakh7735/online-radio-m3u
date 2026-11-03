@@ -239,7 +239,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/Discovery_Science/SAF-HLS/Discovery_Sc
 http://ncdn-y1-vip2.teamcloud.am/live/eds/DocuBox_HD/SAF-HLS/DocuBox_HD.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2443" tvg-logo="http://epg.one/img/2443.png" tvg-rec="7",Драйв
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Drive/SAF-HLS/Drive.m3u8
-#EXTINF:0 group-title="Познавательные" tvg-id="2485" tvg-logo="http://epg.one/img/2485.png" tvg-rec="7",DTX
+#EXTINF:0 group-title="Познавательные" tvg-id="2762" tvg-logo="http://epg.one/img/2762.png" tvg-rec="7",Т24
 http://ncdn-y1-vip2.teamcloud.am/live/eds/DTX/SAF-HLS/DTX.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2310" tvg-logo="http://epg.one/img/2310.png" tvg-rec="7",Первый космический
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Evrika_HD/SAF-HLS/Evrika_HD.m3u8
@@ -252,7 +252,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/HDLife/SAF-HLS/HDLife.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2377" tvg-logo="http://epg.one/img/2377.png" tvg-rec="3",HGTV
 http://ncdn-y1-vip2.teamcloud.am/live/eds/HGTV/SAF-HLS/HGTV.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2356" tvg-logo="http://epg.one/img/2356.png" tvg-rec="3",History 2
-http://ncdn-fr-vip1.teamcloud.am/live/eds/History_2_HD/SAF-HLS/History_2_HD.m3u8
+http://ncdn-y1-vip2.teamcloud.am/live/eds/History_2_HD/SAF-HLS/History_2_HD.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="1394" tvg-logo="http://epg.one/img/1394.png" tvg-rec="7",History
 http://ncdn-y1-vip2.teamcloud.am/live/eds/History_HD/SAF-HLS/History_HD.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2507" tvg-logo="http://epg.one/img/2507.png" tvg-rec="3",Investigation Discovery
@@ -321,7 +321,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/ZOO/SAF-HLS/ZOO.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Zoopark_SD/SAF-HLS/Zoopark_SD.m3u8
 #EXTINF:0 group-title="Развлекательные" tvg-id="2400" tvg-logo="http://epg.one/img/2400.png" tvg-rec="3",Центральное телевидение
 http://ncdn-y1-vip2.teamcloud.am/live/eds/CTV/SAF-HLS/CTV.m3u8
-#EXTINF:0 group-title="Развлекательные" tvg-id="2491" tvg-logo="http://epg.one/img/2491.png" tvg-rec="7",Fashion TV
+#EXTINF:0 group-title="Развлекательные" tvg-id="9097" tvg-logo="http://epg.one/img/9097.png" tvg-rec="7",FashionBox
 http://ncdn-y1-vip2.teamcloud.am/live/eds/FashionBox/SAF-HLS/FashionBox.m3u8
 #EXTINF:0 group-title="Развлекательные" tvg-id="1700" tvg-logo="http://epg.one/img/1700.png" tvg-rec="7",КВН ТВ
 http://ncdn-y1-vip2.teamcloud.am/live/eds/KVN_TV/SAF-HLS/KVN_TV.m3u8
