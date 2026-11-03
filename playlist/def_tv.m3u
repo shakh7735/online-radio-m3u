@@ -97,7 +97,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/ARSENAL_HD/SAF-HLS/ARSENAL_HD.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Bolt_HD/SAF-HLS/Bolt_HD.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="352" tvg-logo="http://epg.one/img/352.png" tvg-rec="7",Еврокино
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Eurokino/SAF-HLS/Eurokino.m3u8
-#EXTINF:0 group-title="Кино" tvg-id="2181" tvg-logo="http://epg.one/img/2181.png" tvg-rec="3",FilmBox
+#EXTINF:0 group-title="Кино" tvg-id="2181" tvg-logo="http://epg.one/img/2181.png" tvg-rec="3",FilmBox+ One
 http://ncdn-y1-vip2.teamcloud.am/live/eds/FilmBox/SAF-HLS/FilmBox.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="2182" tvg-logo="http://epg.one/img/2182.png" tvg-rec="3",FilmBox ArtHouse orig
 http://ncdn-y1-vip2.teamcloud.am/live/eds/FilmBox_Arthouse/SAF-HLS/FilmBox_Arthouse.m3u8
@@ -145,7 +145,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/Rodnoe_Kino/SAF-HLS/Rodnoe_Kino.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Star_Cinema/SAF-HLS/Star_Cinema.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="9162" tvg-logo="https://iptvx.one/picons/star-family-ua.png",Star Family
 http://ncdn-y1-vip2.teamcloud.am/live/eds/StarFamily/SAF-HLS/StarFamily.m3u8
-#EXTINF:0 group-title="Кино" tvg-id="9180" tvg-logo="https://iptvx.one/picons/suspense.png",Suspense HD
+#EXTINF:0 group-title="Кино" tvg-id="9180" tvg-logo="http://epg.one/img/9180.png",9-1-1 HD
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Suspense/SAF-HLS/Suspense.m3u8
 #EXTINF:0 group-title="Кино" tvg-id="127" tvg-logo="http://epg.one/img/127.png" tvg-rec="7",Viju TV1000
 http://ncdn-y1-vip2.teamcloud.am/live/eds/TV1000/SAF-HLS/TV1000.m3u8
@@ -169,7 +169,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/BridgeTV_Deluxe/SAF-HLS/BridgeTV_Delux
 http://ncdn-y1-vip2.teamcloud.am/live/eds/BridgeTV_Shlyager/SAF-HLS/BridgeTV_Shlyager.m3u8
 #EXTINF:0 group-title="Музыка" tvg-id="2278" tvg-logo="https://iptvx.one/picons/shanson-tv.png",ТВ Шансон
 http://ncdn-y1-vip2.teamcloud.am/live/eds/CHANSON/SAF-HLS/CHANSON.m3u8
-#EXTINF:0 group-title="Музыка" tvg-id="3335" tvg-logo="http://epg.one/img/3335.png" tvg-rec="3",М1 HD UA
+#EXTINF:0 group-title="Спорт" tvg-id="2326" tvg-logo="http://epg.one/img/2326.png" tvg-rec="3",MMA-TV
 http://ncdn-y1-vip2.teamcloud.am/live/eds/M-1_Global/SAF-HLS/M-1_Global.m3u8
 #EXTINF:0 group-title="Музыка" tvg-id="2276" tvg-logo="http://epg.one/img/2276.png" tvg-rec="7",MCM Top Russia
 http://ncdn-y1-vip2.teamcloud.am/live/eds/MCM_Top/SAF-HLS/MCM_Top.m3u8
@@ -177,7 +177,7 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/MCM_Top/SAF-HLS/MCM_Top.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Mezzo/SAF-HLS/Mezzo.m3u8
 #EXTINF:0 group-title="Музыка" tvg-id="897" tvg-logo="http://epg.one/img/897.png" tvg-rec="7",МУЗ-ТВ
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Muz_TV/SAF-HLS/Muz_TV.m3u8
-#EXTINF:0 group-title="Музыка" tvg-id="680" tvg-logo="http://epg.one/img/680.png" tvg-rec="7",ТНТ Music
+#EXTINF:0 group-title="Музыка" tvg-id="680" tvg-logo="http://epg.one/img/680.png" tvg-rec="7",FON Music
 http://ncdn-y1-vip2.teamcloud.am/live/eds/TNT_Music/SAF-HLS/TNT_Music.m3u8
 #EXTINF:0 group-title="Новостные" tvg-id="828" tvg-logo="https://iptvx.one/picons/bbc.png",BBC
 http://ncdn-y1-vip2.teamcloud.am/live/eds/BBC/SAF-HLS/BBC.m3u8
@@ -217,15 +217,15 @@ http://ncdn-y1-vip2.teamcloud.am/live/eds/Pyatnica/SAF-HLS/Pyatnica.m3u8
 http://ncdn-y1-vip2.teamcloud.am/live/eds/REN_TV/SAF-HLS/REN_TV.m3u8
 #EXTINF:0 group-title="Общие" tvg-id="187" tvg-logo="http://epg.one/img/187.png" tvg-rec="7",Россия К
 http://ncdn-y1-vip2.teamcloud.am/live/eds/RossiaK/SAF-HLS/RossiaK.m3u8
-#EXTINF:0 group-title="Общие" tvg-id="2547" tvg-logo="http://epg.one/img/2547.png" tvg-rec="0",РТР Планета
+#EXTINF:0 group-title="Общие" tvg-id="elab-rtr-planeta-arm" tvg-logo="http://epg.one/img/2547.png" tvg-rec="0",РТР Планета Армения
 http://ncdn-y1-vip2.teamcloud.am/live/eds/RTRPlaneta/SAF-HLS/RTRPlaneta.m3u8
-#EXTINF:0 group-title="Общие" tvg-id="79" tvg-logo="http://epg.one/img/79.png" tvg-rec="7",СТС
+#EXTINF:0 group-title="Общие" tvg-id="3008" tvg-logo="http://epg.one/img/3008.png" tvg-rec="7",СТС +4
 http://ncdn-y1-vip2.teamcloud.am/live/eds/STS/SAF-HLS/STS.m3u8
 #EXTINF:0 group-title="Общие" tvg-id="698" tvg-logo="http://epg.one/img/698.png" tvg-rec="7",ТВ-3
 http://ncdn-y1-vip2.teamcloud.am/live/eds/TB3/SAF-HLS/TB3.m3u8
-#EXTINF:0 group-title="Общие" tvg-id="353" tvg-logo="http://epg.one/img/353.png" tvg-rec="7",ТНТ
+#EXTINF:0 group-title="Общие" tvg-id="3024" tvg-logo="http://epg.one/img/3024.png" tvg-rec="7",ТНТ +7
 http://ncdn-y1-vip2.teamcloud.am/live/eds/TNT/SAF-HLS/TNT.m3u8
-#EXTINF:0 group-title="Общие" tvg-id="405" tvg-logo="http://epg.one/img/405.png" tvg-rec="7",Звезда
+#EXTINF:0 group-title="Общие" tvg-id="4661" tvg-logo="http://epg.one/img/4661.png" tvg-rec="7",Звезда Плюс
 http://ncdn-y1-vip2.teamcloud.am/live/eds/Zvezda/SAF-HLS/Zvezda.m3u8
 #EXTINF:0 group-title="Познавательные" tvg-id="2423" tvg-logo="http://epg.one/img/2423.png" tvg-rec="3",365 дней ТВ
 http://ncdn-y1-vip2.teamcloud.am/live/eds/365days/SAF-HLS/365days.m3u8
