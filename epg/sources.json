@@ -19,7 +19,9 @@
     "2062": ["iptvx", "h2-am"],
     "elab-360tunebox": ["iptvx", "360-tunebox"],
     "elab-shant": ["antifriz", "shant-am-hd-orig"],
-    "elab-hollywood-eu": ["iptvx", "hollywood-eu"]
+    "elab-hollywood-eu": ["iptvx", "hollywood-eu"],
+    "1584": ["iptvx", "muzhskoe-kino"],
+    "2233": ["iptvx", "zee-tv"]
   },
   "descriptions": {
     "elab-hollywood-eu": ["608", "934"]
