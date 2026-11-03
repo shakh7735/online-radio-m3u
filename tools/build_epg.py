@@ -111,6 +111,23 @@ def coverage(programmes):
     return on_air, max(e for _, e, _, _ in programmes)
 
 
+def title_key(title):
+    """Название без пометок источника: «х/ф Зов волка» и «Зов волка.» — одна передача."""
+    t = re.sub(r"^(х/ф|т/с|м/ф|м/с|д/ф|д/с)\s+", "", title.strip().lower().replace("ё", "е"))
+    t = re.sub(r"\s*(┊.*|\.\s*сезон.*)$", "", t)
+    return re.sub(r"[^\w]+", " ", t).strip()
+
+
+def borrow_descs(programmes, donors):
+    """Описания по названию у каналов-доноров: та же фильмотека, другая сетка."""
+    descs = {}
+    for donor in donors:
+        for _, _, title, desc in donor["programmes"]:
+            if desc:
+                descs.setdefault(title_key(title), desc)
+    return [(s, e, t, d or descs.get(title_key(t), "")) for s, e, t, d in programmes]
+
+
 def fmt(t):
     return t.strftime("%Y%m%d%H%M%S +0000")
 
@@ -118,9 +135,12 @@ def fmt(t):
 def main():
     channels = playlist_channels()
     fallback = CONFIG["fallback"]
+    desc_from = CONFIG.get("descriptions", {})
     wanted = {CONFIG["primary"]: set(channels)}
     for tvg, (src, sid) in fallback.items():
         wanted.setdefault(src, set()).add(sid)
+    for donors in desc_from.values():
+        wanted[CONFIG["primary"]].update(donors)
 
     guides = {}
     for src, ids in wanted.items():
@@ -141,6 +161,9 @@ def main():
                 best, label = alt, f"{src}:{sid}"
                 if not best["icon"]:
                     best["icon"] = primary["icon"]
+        if tvg in desc_from:
+            donors = [guides[CONFIG["primary"]][d] for d in desc_from[tvg]]
+            best = {**best, "programmes": borrow_descs(best["programmes"], donors)}
         if best["programmes"]:
             chosen[tvg] = best
         report.append((channels[tvg]["name"], label, *coverage(best["programmes"])))

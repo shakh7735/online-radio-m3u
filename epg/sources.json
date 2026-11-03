@@ -1,5 +1,5 @@
 {
-  "_comment": "Источники гида. primary — основной, его id совпадают с tvg-id плейлиста. fallback — откуда брать программу каналу, у которого в основном гиде её нет или она кончилась: ключ — tvg-id в плейлисте, значение — [источник, id канала в нём]. Соответствия проверены по кадрам эфира (html-viewer: npm run audit).",
+  "_comment": "Источники гида. primary — основной, его id совпадают с tvg-id плейлиста. fallback — откуда брать программу каналу, у которого в основном гиде её нет или она кончилась: ключ — tvg-id в плейлисте, значение — [источник, id канала в нём]. Соответствия проверены по кадрам эфира (html-viewer: npm run audit). descriptions — у кого из каналов основного гида брать описания по названию передачи, когда в запасном источнике их нет: id каналов с той же фильмотекой.",
   "sources": {
     "epgone": "http://epg.one/epg.xml.gz",
     "iptvx": "https://iptvx.one/epg/epg_lite.xml.gz",
@@ -20,5 +20,8 @@
     "elab-360tunebox": ["iptvx", "360-tunebox"],
     "elab-shant": ["antifriz", "shant-am-hd-orig"],
     "elab-hollywood-eu": ["iptvx", "hollywood-eu"]
+  },
+  "descriptions": {
+    "elab-hollywood-eu": ["608", "934"]
   }
 }
