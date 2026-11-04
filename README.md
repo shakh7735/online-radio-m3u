@@ -77,7 +77,7 @@ http://ncdn-y1-vip1.teamcloud.am/live/eds/<Канал>/SAF-HLS/<Канал>.m3u8
 - Новый запасной канал: найти его id в источнике, проверить по кадрам эфира
   (`html-viewer`: `npm run audit`), дописать строку в `epg/sources.json`. Сборка запустится сама.
 - Нет описаний в запасном источнике — их можно взять по названию передачи у каналов основного
-  гида с той же фильмотекой (`descriptions` в `epg/sources.json`): так Hollywood HD (сетка
-  Hollywood Europe из iptvx) получает описания фильмов у Hollywood 608 и 934.
+  гида с той же фильмотекой (`descriptions` в `epg/sources.json`: tvg-id → список id в epg.one).
+  Так 03.11 Hollywood на сетке Hollywood Europe из iptvx брал описания у Hollywood 608 и 934.
 - Собрать вручную: `python3 tools/build_epg.py` или «Run workflow» у EPG на GitHub.
 
